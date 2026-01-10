@@ -1,0 +1,53 @@
+{
+    "sections": {
+        "content": {
+            "type": "content",
+            "blocks": {
+                "heading": {
+                    "type": "heading",
+                    "name": "Heading"
+                },
+                "_paragraph": {
+                    "type": "_paragraph",
+                    "name": "Paragraph"
+                },
+                "button-wrapper": {
+                    "type": "button-wrapper",
+                    "name": "Button Wrapper"
+                }
+            },
+            "block_order": [
+                "heading",
+                "_paragraph",
+                "button-wrapper"
+            ]
+        },
+        "content_2": {
+            "type": "content_2",
+            "blocks": {
+                "content-3": {
+                    "type": "content-3",
+                    "name": "Content 3"
+                },
+                "content-4": {
+                    "type": "content-4",
+                    "name": "Content 4"
+                }
+            },
+            "block_order": [
+                "content-3",
+                "content-4"
+            ]
+        },
+        "video": {
+            "type": "video"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main#main.page_main[li-cf-layout=]",
+    "order": [
+        "content",
+        "content_2",
+        "video"
+    ]
+}
