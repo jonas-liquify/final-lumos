@@ -1,0 +1,210 @@
+<div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+        <div class="u-container  ">
+          <div data-wf--layout--variant="stack-centered" class="u-layout-wrapper">
+            <div class="u-layout">
+              {% content_for "block", type: "column-1", id: "column-1", class: section.settings.layout %}
+              {% content_for "block", type: "column-2", id: "column-2", class: section.settings.layout %}
+            </div>
+          </div>
+        </div>
+        <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        {% content_for "block", type: "background", id: "background" %} {% schema %} {
+    "tag": "section",
+    "name": "Bento Simple",
+    "class": "u-section",
+    "blocks": [
+        {
+            "type": "@theme"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section Settings"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "container_width",
+            "label": "Container width",
+            "default": "large",
+            "options": [
+                {
+                    "label": "Large",
+                    "value": "large"
+                },
+                {
+                    "label": "Medium",
+                    "value": "medium"
+                },
+                {
+                    "label": "Small",
+                    "value": "small"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "w-variant-857e5430-97c7-deb6-3c1a-d3063f9fe2c7"
+                },
+                {
+                    "label": "Light",
+                    "value": "w-variant-a4eabb01-8ed6-63d0-157e-0a7b56aedaa1"
+                },
+                {
+                    "label": "Brand",
+                    "value": "w-variant-25bf08d9-3196-322b-5616-019ac7f0f4f7"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Bento Simple",
+            "category": "Liquiflow",
+            "blocks": [
+                {
+                    "type": "column-1",
+                    "static": true,
+                    "id": "column-1",
+                    "blocks": [
+                        {
+                            "type": "eyebrow"
+                        },
+                        {
+                            "type": "heading"
+                        },
+                        {
+                            "type": "paragraph"
+                        },
+                        {
+                            "type": "button-group",
+                            "blocks": [
+                                {
+                                    "type": "button"
+                                },
+                                {
+                                    "type": "button"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "column-2",
+                    "static": true,
+                    "id": "column-2",
+                    "blocks": [
+                        {
+                            "type": "grid",
+                            "blocks": [
+                                {
+                                    "type": "card"
+                                },
+                                {
+                                    "type": "card"
+                                },
+                                {
+                                    "type": "card"
+                                },
+                                {
+                                    "type": "card"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "background",
+                    "static": true,
+                    "id": "background",
+                    "blocks": null
+                }
+            ]
+        }
+    ]
+} {% endschema %}

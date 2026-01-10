@@ -1,0 +1,386 @@
+<div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+        <div class="u-container  ">
+          <div data-pause-on-hover="false" data-loop-controls="false" data-tab-component-id="" data-slide-tabs="false" data-autoplay-duration="" data-duration="0.6" data-wf--tab--variant="horizontal" class="tab_wrap w-variant-490ac534-1fb5-5322-5b2f-0dc20ea2f909">
+            <div class="u-embed-css w-embed">
+              <style>
+.tab_content_list[data-preview="false"] > :not(.w-dyn-list,.u-display-contents),
+.tab_content_list[data-preview="false"] > .w-dyn-list > * > * > *,
+.tab_content_list[data-preview="false"] > .u-display-contents > .w-dyn-list > * > * > *,
+.tab_content_list[data-preview="false"] > .u-display-contents > .u-display-contents > .w-dyn-list > * > * > *,
+.tab_content_list[data-preview="false"] > .u-display-contents > :not(.w-dyn-list,.u-display-contents),
+.tab_content_list[data-preview="false"] > .u-display-contents > .u-display-contents > :not(.w-dyn-list,.u-display-contents) {
+	display: none;
+}
+.tab_content_list > :first-child:not(.w-dyn-list,.u-display-contents),
+.tab_content_list > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > :not(.w-dyn-list,.u-display-contents):first-child,
+.tab_content_list > .u-display-contents > .u-display-contents > :not(.w-dyn-list,.u-display-contents):first-child {
+	display: block;
+}
+.wf-design-mode .tab_button_list > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .w-dyn-list > * > :first-child > *,
+.wf-design-mode .tab_button_list > .u-display-contents > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .u-display-contents > .u-display-contents > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.wf-design-mode .tab_button_list > .u-display-contents > .u-display-contents > .w-dyn-list > * > :first-child > * {
+	--_state---true: 0;
+  --_state---false: 1;
+}
+.tab_button_list:has([data-wf--tab-link--variant="link"]) { gap: 0rem; }
+</style>
+            </div>
+            <div class="tab_left w-variant-490ac534-1fb5-5322-5b2f-0dc20ea2f909">
+              <div class="u-hide-if-empty u-margin-trim">
+                {% for block in section.blocks %}
+    {% if block.type == "heading" %}
+                    <div li-block="Heading" data-number="20" data-wf--typography-heading--variant="h2" class="u-text w-variant-433d40c6-c261-f13f-c899-61d2cadf150f w-richtext ">
+                                    
+                  
+                                    <h2>Services</h2>
+                                    
+                
+                            </div>
+            {% endif %}
+{% endfor %}
+                {% for block in section.blocks %}
+    {% if block.type == "paragraph" %}
+                    <div li-block="Paragraph" data-number="60" data-wf--typography-paragraph--variant="inherit" class="u-text u-rich-text w-richtext ">
+                                    
+                  
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    
+                
+                            </div>
+            {% endif %}
+{% endfor %}
+              </div>
+              {% content_for "block", type: "tab-navigation", id: "tab-navigation" %}
+            </div>
+            <div class="tab_right w-variant-490ac534-1fb5-5322-5b2f-0dc20ea2f909">
+              {% content_for "block", type: "tab-content", id: "tab-content" %}
+            </div>
+            <div class="u-embed-js w-embed w-script">
+              <script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.querySelectorAll(".tab_wrap").forEach((tabWrap, componentIndex) => {
+		if (tabWrap.dataset.scriptInitialized) return;
+		tabWrap.dataset.scriptInitialized = "true";
+		let loopControls = tabWrap.getAttribute("data-loop-controls") === "true",
+			slideTabs = tabWrap.getAttribute("data-slide-tabs") === "true",
+			pauseOnHover = tabWrap.getAttribute("data-pause-on-hover") === "true",
+			autoplay = Number(tabWrap.getAttribute("data-autoplay-duration")) || 0,
+			duration = Number(tabWrap.getAttribute("data-duration")) || 0.3,
+			buttonList = tabWrap.querySelector(".tab_button_list"),
+			panelList = tabWrap.querySelector(".tab_content_list"),
+			previousButton = tabWrap.querySelector("[data-tab='previous'] button"),
+			nextButton = tabWrap.querySelector("[data-tab='next'] button"),
+			toggleWrap = tabWrap.querySelector("[data-tab-button='toggle']"),
+			toggleButton = tabWrap.querySelector("[data-tab-button='toggle'] button"),
+      animating = false,
+      canPlay = true,
+      autoplayTl;
+    function flattenDisplayContents(slot) {
+      if (!slot) return;
+      let child = slot.firstElementChild;
+      while (child && child.classList.contains("u-display-contents")) {
+        while (child.firstChild) {
+          slot.insertBefore(child.firstChild, child);
+        }
+        slot.removeChild(child);
+        child = slot.firstElementChild;
+      }
+    }
+		flattenDisplayContents(buttonList);
+		flattenDisplayContents(panelList);
+    function removeCMSList(slot) {
+      const dynList = Array.from(slot.children).find((child) => child.classList.contains("w-dyn-list"));
+      if (!dynList) return;
+      const nestedItems = dynList?.querySelector(".w-dyn-items")?.children;
+      if (!nestedItems) return;
+      const staticWrapper = [...slot.children];
+			[...nestedItems].forEach(el => { const c = [...el.children].find(c => !c.classList.contains('w-condition-invisible')); c && slot.appendChild(c); });
+      staticWrapper.forEach((el) => el.remove());
+    }
+    removeCMSList(buttonList);
+    removeCMSList(panelList);
+		let buttonItems = Array.from(buttonList.children);
+    let panelItems = Array.from(panelList.children);
+		if (!buttonList || !panelList || !buttonItems.length || !panelItems.length) {
+			console.warn("Missing elements in:", tabWrap);
+			return;
+		}
+		panelItems.forEach((panel, i) => {panel.style.display = "none"; panel.setAttribute("role", "tabpanel");});
+		buttonItems.forEach((button, i) => {button.setAttribute("role", "tab");});
+		panelList.removeAttribute("role");
+		buttonList.setAttribute("role", "tablist");
+		buttonItems.forEach((btn) => btn.setAttribute("role", "tab"));
+		panelItems.forEach((panel) => panel.setAttribute("role", "tabpanel"));
+		let activeIndex = 0;
+		const makeActive = (index, focus = false, animate = true, pause = true) => {
+			if (animating) return;
+			buttonItems.forEach((btn, i) => {
+				btn.classList.toggle("is-active", i === index);
+				btn.setAttribute("aria-selected", i === index ? "true" : "false");
+				btn.setAttribute("tabindex", i === index ? "0" : "-1");
+			});
+			panelItems.forEach((panel, i) => panel.classList.toggle("is-active", i === index));
+			if (nextButton) nextButton.disabled = index === buttonItems.length - 1 && !loopControls;
+			if (previousButton) previousButton.disabled = index === 0 && !loopControls;
+			if (focus) buttonItems[index].focus();
+			const previousPanel = panelItems[activeIndex];
+      const currentPanel = panelItems[index];
+      let direction = 1;
+      if (activeIndex > index) direction = -1;
+			if (typeof gsap !== "undefined" && animate && activeIndex !== index) {
+				if (autoplayTl && !canPlay && typeof autoplayTl.restart === "function") {
+					autoplayTl.restart();
+				}
+				animating = true;
+				let tl = gsap.timeline({ onComplete: () => {animating = false; if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();}, defaults: { duration: duration, ease: "power1.out" } });
+				if (slideTabs) {
+					tl.set(currentPanel, { display: "block", position: "relative" });
+					if (previousPanel) tl.set(previousPanel, { position: "absolute", top: 0, left: 0, width: "100%" });
+					if (previousPanel) tl.fromTo(previousPanel, { xPercent: 0 }, { xPercent: -120 * direction });
+					tl.fromTo(currentPanel, { xPercent: 120 * direction }, { xPercent: 0 }, "<");
+        	if (previousPanel) tl.set(previousPanel, { display: "none" });
+				} else {
+					if (previousPanel) tl.to(previousPanel, { opacity: 0 });
+        	if (previousPanel) tl.set(previousPanel, { display: "none" });
+					tl.set(currentPanel, { display: "block" });
+					tl.fromTo(currentPanel, { opacity: 0 }, { opacity: 1 });
+				}
+			} else {
+				if (previousPanel) previousPanel.style.display = "none";
+				if (currentPanel) currentPanel.style.display = "block";
+			}
+  		buttonList.scrollTo({ left: buttonItems[index].offsetLeft, behavior: 'smooth' });
+			activeIndex = index;
+		};
+		makeActive(0, false, false);
+		const updateIndex = (delta, focus = false, pause = true) => makeActive((activeIndex + delta + buttonItems.length) % buttonItems.length, focus, true, pause);
+		nextButton?.addEventListener("click", () => updateIndex(1));
+		previousButton?.addEventListener("click", () => updateIndex(-1));
+		buttonItems.forEach((btn, index) => {
+			let tabId = tabWrap.getAttribute("data-tab-component-id");
+			tabId = tabId ? tabId.toLowerCase().replaceAll(" ", "-") : componentIndex + 1;
+			let itemId = btn.getAttribute("data-tab-item-id");
+			itemId = itemId ? itemId.toLowerCase().replaceAll(" ", "-") : index + 1;
+			btn.setAttribute("id", "tab-button-" + tabId + "-" + itemId);
+			btn.setAttribute("aria-controls", "tab-panel-" + tabId + "-" + itemId);
+			panelItems[index]?.setAttribute("id", "tab-panel-" + tabId + "-" + itemId);
+			panelItems[index]?.setAttribute("aria-labelledby", btn.id);
+			if (new URLSearchParams(location.search).get("tab-id") === tabId + "-" + itemId) makeActive(index), autoplay = 0, tabWrap.scrollIntoView({behavior: "smooth", block: "start"}), history.replaceState({}, "", ((u) => (u.searchParams.delete("tab-id"), u))(new URL(location.href)));
+			btn.addEventListener("click", () => makeActive(index));
+			btn.addEventListener("keydown", (e) => {
+				if (["ArrowRight", "ArrowDown"].includes(e.key)) updateIndex(1, true);
+				else if (["ArrowLeft", "ArrowUp"].includes(e.key)) updateIndex(-1, true);
+			});
+		});
+    if (autoplay !== 0 && typeof gsap !== "undefined") {
+      autoplayTl = gsap.timeline({ repeat: -1 }).fromTo(tabWrap, {"--progress": 0}, { onComplete: () => updateIndex(1, false, false), "--progress": 1, ease: "none", duration: autoplay });
+      let isHovered = false, hasFocusInside = false, prefersReducedMotion = false, inView = true;
+      function updateAuto() { if (prefersReducedMotion || !inView || canPlay || isHovered || hasFocusInside) autoplayTl.pause(); else autoplayTl.play(); }
+      function setButton() {
+				canPlay = !canPlay;
+        toggleButton?.setAttribute("aria-pressed", !canPlay ? "true" : "false");
+        toggleWrap?.classList.toggle("is-pressed", !canPlay);
+				if (!canPlay) isHovered = hasFocusInside = prefersReducedMotion = false;
+				updateAuto();
+      }
+      setButton();
+			toggleButton?.addEventListener("click", function () {
+				setButton();
+      });
+      function handleMotionChange(e) { prefersReducedMotion = e.matches; updateAuto(); canPlay = !e.matches; setButton(); }
+      handleMotionChange(window.matchMedia("(prefers-reduced-motion: reduce)"));
+      window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", handleMotionChange);
+      if (pauseOnHover) tabWrap.addEventListener("mouseenter", () => { isHovered = true; updateAuto() });
+      if (pauseOnHover) tabWrap.addEventListener("mouseleave", () => { hasFocusInside = false; isHovered = false; updateAuto() });
+      tabWrap.addEventListener("focusin", () => { hasFocusInside = true; updateAuto() });
+      tabWrap.addEventListener("focusout", e => { if (!e.relatedTarget || !tabWrap.contains(e.relatedTarget)) { hasFocusInside = false; updateAuto() } });
+      new IntersectionObserver(e => { inView = e[0].isIntersecting; updateAuto(); }, { threshold: 0 }).observe(tabWrap);
+    }
+	});
+});
+</script>
+            </div>
+          </div>
+        </div>
+        <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        {% content_for "block", type: "background", id: "background" %} {% schema %} {
+    "tag": "section",
+    "name": "Tab Horizontal",
+    "class": "u-section",
+    "blocks": [
+        {
+            "type": "tab-link"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section Settings"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "container_width",
+            "label": "Container width",
+            "default": "large",
+            "options": [
+                {
+                    "label": "Large",
+                    "value": "large"
+                },
+                {
+                    "label": "Medium",
+                    "value": "medium"
+                },
+                {
+                    "label": "Small",
+                    "value": "small"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "w-variant-857e5430-97c7-deb6-3c1a-d3063f9fe2c7"
+                },
+                {
+                    "label": "Light",
+                    "value": "w-variant-a4eabb01-8ed6-63d0-157e-0a7b56aedaa1"
+                },
+                {
+                    "label": "Brand",
+                    "value": "w-variant-25bf08d9-3196-322b-5616-019ac7f0f4f7"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Tab Horizontal",
+            "category": "Liquiflow",
+            "blocks": [
+                {
+                    "type": "heading"
+                },
+                {
+                    "type": "paragraph"
+                },
+                {
+                    "type": "tab-navigation",
+                    "static": true,
+                    "id": "tab-navigation",
+                    "blocks": [
+                        {
+                            "type": "tab-link"
+                        }
+                    ]
+                },
+                {
+                    "type": "tab-content",
+                    "static": true,
+                    "id": "tab-content",
+                    "blocks": [
+                        {
+                            "type": "tab-content"
+                        }
+                    ]
+                },
+                {
+                    "type": "background",
+                    "static": true,
+                    "id": "background",
+                    "blocks": null
+                }
+            ]
+        }
+    ]
+} {% endschema %}
