@@ -1,0 +1,31 @@
+<div li-block="Content 4" {{ block.shopify_attributes }}>
+                    
+                  
+                    <div li-cf-theme-blocks="" class="u-layout-column-2  ">
+{% content_for 'blocks' %}
+</div>
+                    
+                
+                </div> {% schema %} {
+    "name": "Content 4",
+    "blocks": [
+        {
+            "type": "image"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Content 4",
+            "blocks": [
+                {
+                    "type": "image"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}
