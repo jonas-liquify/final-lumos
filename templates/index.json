@@ -1,0 +1,32 @@
+{
+    "sections": {
+        "modal": {
+            "type": "modal",
+            "blocks": {
+                "@theme": {
+                    "type": "@theme"
+                }
+            },
+            "block_order": [
+                "@theme"
+            ]
+        },
+        "modal_2": {
+            "type": "modal_2",
+            "blocks": {
+                "@theme": {
+                    "type": "@theme"
+                }
+            },
+            "block_order": [
+                "@theme"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.page_main[li-cf-layout=]",
+    "order": [
+        "modal",
+        "modal_2"
+    ]
+}
