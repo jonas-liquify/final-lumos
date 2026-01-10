@@ -1,0 +1,49 @@
+<div li-block="Content 3" {{ block.shopify_attributes }}>
+                    
+                  
+                    <div li-cf-theme-blocks="" class="u-layout-column-1  ">
+{% content_for 'blocks' %}
+</div>
+                    
+                
+                </div> {% schema %} {
+    "name": "Content 3",
+    "blocks": [
+        {
+            "type": "heading"
+        },
+        {
+            "type": "_paragraph"
+        },
+        {
+            "type": "button-wrapper"
+        },
+        {
+            "type": "button"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Content 3",
+            "blocks": [
+                {
+                    "type": "heading"
+                },
+                {
+                    "type": "_paragraph"
+                },
+                {
+                    "type": "button-wrapper"
+                },
+                {
+                    "type": "button"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}
