@@ -1,0 +1,32 @@
+<div class="u-button-wrapper" style="" li-block="Button Group" li-block:category="CTA" {{ block.shopify_attributes }}>
+                    
+                              
+                    <div li-cf-theme-blocks="" class="u-display-contents">
+{% content_for 'blocks' %}
+</div>
+                    
+                            
+                </div> {% schema %} {
+    "name": "Button Group",
+    "blocks": [
+        {
+            "type": "button"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Button Group",
+            "category": "CTA",
+            "blocks": [
+                {
+                    "type": "button"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}
