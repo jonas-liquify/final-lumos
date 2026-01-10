@@ -1,0 +1,87 @@
+<div data-wf--button-main--variant="secondary" class="button_main_wrap {{block.settings.variant}}" data-button=" " data-trigger="hover focus" li-block="Button" li-block:category="CTA" {{ block.shopify_attributes }}>
+                    
+                          
+                    
+                    
+                          
+                    <div class="clickable_wrap u-cover-absolute">
+                            
+                            <a target="{% if block.settings.new_tab %}_blank{% endif %}" href="{{ block.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ block.settings.text_button_lable }}</span> </a>
+                          </div>
+                    
+                          
+                    <div class="button_main_element w-variant-e85564cd-af30-a478-692b-71732aefb3ab {{block.settings.variant}}">
+                            <div aria-hidden="true" class="button_main_text u-text-style-main">
+{{ block.settings.text_label }}
+</div>
+                            <div class="button_main_icon u-hide-if-empty"><svg data-wf--icon-arrow--direction="right" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg">
+                                <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
+                              </svg></div>
+                            <div class="button_main_line {{block.settings.variant}}"></div>
+                          </div>
+                    
+                        
+                </div> {% schema %} {
+    "name": "Button",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Button Settings"
+        },
+        {
+            "type": "select",
+            "id": "variant",
+            "label": "Variant",
+            "default": "",
+            "options": [
+                {
+                    "label": "Main",
+                    "value": ""
+                },
+                {
+                    "label": "Secondary",
+                    "value": "w-variant-e85564cd-af30-a478-692b-71732aefb3ab"
+                },
+                {
+                    "label": "Link",
+                    "value": "w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Link Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "new_tab",
+            "label": "Open link in new tab",
+            "default": false
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_button_lable",
+            "type": "text",
+            "label": "Button Lable",
+            "default": "Open Modal"
+        },
+        {
+            "id": "text_label",
+            "type": "text",
+            "label": "Label",
+            "default": "Open Modal"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Button",
+            "category": "CTA",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
