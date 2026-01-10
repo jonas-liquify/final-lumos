@@ -1,0 +1,25 @@
+<div li-block="Content 4" {{ block.shopify_attributes }}>
+                    
+                  
+                    <div class="u-layout-column-2">
+                    <div class="u-image-wrapper wide-16-9" style="" li-block="Image" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_image %}
+{{ block.settings.image_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'u-image wide-16-10' }}
+{% else %}
+<img src="" alt="" loading="lazy" class="u-image wide-16-10">
+{% endif %}
+                </div>
+                  </div>
+                    
+                
+                </div> {% schema %} {
+    "name": "Content 4",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Content 4",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
