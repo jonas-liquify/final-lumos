@@ -17,6 +17,11 @@
                           
                     
                     
+                          
+                    <div>
+{{ block.settings.text_test }}
+</div>
+                    
                         
                 </div> {% schema %} {
     "name": "Button",
@@ -55,6 +60,12 @@
                     "value": "w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400"
                 }
             ]
+        },
+        {
+            "id": "text_test",
+            "type": "text",
+            "label": "Test",
+            "default": "This is some text inside of a div block."
         }
     ],
     "presets": [
