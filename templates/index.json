@@ -192,14 +192,24 @@
               "type": "tab-content",
               "name": "Tab Content",
               "settings": {
-                "richtext_praragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                                </p>"
+                "richtext_praragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                                </p>"
               },
               "blocks": {
                 "column-1": {
                   "type": "column-1",
                   "static": true,
                   "settings": {},
-                  "blocks": {}
+                  "blocks": {
+                    "image_kwik3t": {
+                      "type": "image",
+                      "name": "Image",
+                      "settings": {},
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "image_kwik3t"
+                  ]
                 },
                 "column-2": {
                   "type": "column-2",
