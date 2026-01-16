@@ -76,6 +76,65 @@
       "settings": {
         "richtext_praragraph": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+        "padding_bottom": "w-variant-d422cbd0-f212-c815-68df-63414354c21d",
+        "color_theme": ""
+      }
+    },
+    "content_eYFKdg": {
+      "type": "content",
+      "blocks": {
+        "column-1": {
+          "type": "column-1",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "eyebrow_ABtdRe": {
+              "type": "eyebrow",
+              "settings": {},
+              "blocks": {}
+            },
+            "button_dghEKw": {
+              "type": "button",
+              "settings": {
+                "url_link": "",
+                "text_screen_reader": "Button Text",
+                "variant": ""
+              },
+              "blocks": {}
+            },
+            "button_Y6bLCw": {
+              "type": "button",
+              "settings": {
+                "url_link": "",
+                "text_screen_reader": "Button Text",
+                "variant": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "eyebrow_ABtdRe",
+            "button_dghEKw",
+            "button_Y6bLCw"
+          ]
+        },
+        "column-2": {
+          "type": "column-2",
+          "static": true,
+          "settings": {},
+          "blocks": {}
+        },
+        "background": {
+          "type": "background",
+          "static": true,
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "name": "Content",
+      "settings": {
+        "richtext_praragraph": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>",
+        "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
       }
@@ -84,6 +143,7 @@
   "layout": "theme",
   "wrapper": "main.page_main[li-cf-layout]",
   "order": [
-    "content"
+    "content",
+    "content_eYFKdg"
   ]
 }
