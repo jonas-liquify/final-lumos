@@ -25,6 +25,14 @@
               },
               "blocks": {}
             },
+            "paragraph_aAKHgC": {
+              "type": "paragraph",
+              "name": "Paragraph",
+              "settings": {
+                "richtext_praragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                        </p>"
+              },
+              "blocks": {}
+            },
             "button_f8QyL8": {
               "type": "button",
               "name": "Button",
@@ -38,6 +46,7 @@
           },
           "block_order": [
             "heading_QmirhA",
+            "paragraph_aAKHgC",
             "button_f8QyL8"
           ]
         },
