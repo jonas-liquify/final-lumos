@@ -80,7 +80,7 @@
         "color_theme": ""
       }
     },
-    "content_eYFKdg": {
+    "content_GVYr8L": {
       "type": "content",
       "blocks": {
         "column-1": {
@@ -88,12 +88,20 @@
           "static": true,
           "settings": {},
           "blocks": {
-            "eyebrow_ABtdRe": {
+            "eyebrow_d9LYB8": {
               "type": "eyebrow",
               "settings": {},
               "blocks": {}
             },
-            "button_dghEKw": {
+            "heading_cmrMgB": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text_style": "h2"
+              },
+              "blocks": {}
+            },
+            "button_wQYXfP": {
               "type": "button",
               "settings": {
                 "url_link": "",
@@ -102,7 +110,7 @@
               },
               "blocks": {}
             },
-            "button_Y6bLCw": {
+            "button_wXdwQm": {
               "type": "button",
               "settings": {
                 "url_link": "",
@@ -113,16 +121,27 @@
             }
           },
           "block_order": [
-            "eyebrow_ABtdRe",
-            "button_dghEKw",
-            "button_Y6bLCw"
+            "eyebrow_d9LYB8",
+            "heading_cmrMgB",
+            "button_wQYXfP",
+            "button_wXdwQm"
           ]
         },
         "column-2": {
           "type": "column-2",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "image_JeLTpx": {
+              "type": "image",
+              "name": "Image",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_JeLTpx"
+          ]
         },
         "background": {
           "type": "background",
@@ -133,7 +152,7 @@
       },
       "name": "Content",
       "settings": {
-        "richtext_praragraph": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>",
+        "richtext_praragraph": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
@@ -144,6 +163,6 @@
   "wrapper": "main.page_main[li-cf-layout]",
   "order": [
     "content",
-    "content_eYFKdg"
+    "content_GVYr8L"
   ]
 }
