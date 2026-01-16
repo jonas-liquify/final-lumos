@@ -1,0 +1,27 @@
+<div li-static-block="Column 1" li-static-block:attributes="class: section.settings.layout" class="u-display-contents {{section.settings.layout}}">
+                  <div li-cf-theme-blocks="theme" class="u-layout-column-1  ">
+{% content_for 'blocks' %}
+</div>
+                </div> {% schema %} {
+    "name": "Column 1",
+    "blocks": [
+        {
+            "type": "@theme"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Column 1",
+            "blocks": [
+                {
+                    "type": "@theme"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}
