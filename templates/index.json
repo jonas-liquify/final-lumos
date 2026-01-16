@@ -16,7 +16,30 @@
           "type": "column-1",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "heading_QmirhA": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text_style": "h2"
+              },
+              "blocks": {}
+            },
+            "button_f8QyL8": {
+              "type": "button",
+              "name": "Button",
+              "settings": {
+                "url_link": "",
+                "text_screen_reader": "Button Text",
+                "variant": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_QmirhA",
+            "button_f8QyL8"
+          ]
         },
         "column-2": {
           "type": "column-2",
@@ -32,7 +55,7 @@
         }
       },
       "settings": {
-        "richtext_praragraph": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>",
+        "richtext_praragraph": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
