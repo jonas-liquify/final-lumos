@@ -1,0 +1,49 @@
+<div li-block="Tab Content" li-block:category="Tab" li-block:tag="" class="u-display-contents" style="">
+                    
+                      
+                    <div class="u-display-contents">
+                        <div data-wf--layout--variant="columns" class="u-layout-wrapper">
+                          <div class="u-layout w-variant-558793eb-2b07-490b-9842-2d7e6f6bf325">
+                            {% content_for "block", type: "column-1", id: "column-1", class: section.settings.layout %}
+                            {% content_for "block", type: "column-2", id: "column-2", class: section.settings.layout %}
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+                </div> {% schema %} {
+    "name": "Tab Content",
+    "blocks": [
+        {
+            "type": "@theme"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "richtext_praragraph",
+            "type": "richtext",
+            "label": "Praragraph",
+            "default": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                                <\/p>"
+        },
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Tab Content",
+            "category": "Tab",
+            "blocks": [
+                {
+                    "type": "@theme"
+                }
+            ]
+        }
+    ],
+    "tag": ""
+} {% endschema %}

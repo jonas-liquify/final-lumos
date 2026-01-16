@@ -1,0 +1,39 @@
+<div li-static-block="Tab Content Wrapper" class="tab_content_wrap">
+                  <div li-cf-theme-blocks="" data-preview="true" data-slot="" class="tab_content_list">
+{% content_for 'blocks' %}
+</div>
+                </div> {% schema %} {
+    "name": "Tab Content Wrapper",
+    "blocks": [
+        {
+            "type": "tab-content"
+        },
+        {
+            "type": "eyebrow"
+        },
+        {
+            "type": "button"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Tab Content Wrapper",
+            "blocks": [
+                {
+                    "type": "tab-content"
+                },
+                {
+                    "type": "eyebrow"
+                },
+                {
+                    "type": "button"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}
