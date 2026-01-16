@@ -1,12 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "content": {
-            "type": "content"
+  "sections": {
+    "content": {
+      "type": "content",
+      "blocks": {
+        "column-1": {
+          "type": "column-1",
+          "static": true,
+          "settings": {},
+          "blocks": {}
+        },
+        "column-2": {
+          "type": "column-2",
+          "static": true,
+          "settings": {},
+          "blocks": {}
+        },
+        "background": {
+          "type": "background",
+          "static": true,
+          "settings": {},
+          "blocks": {}
         }
-    },
-    "layout": "theme",
-    "wrapper": "main.page_main[li-cf-layout]",
-    "order": [
-        "content"
-    ]
+      },
+      "settings": {
+        "richtext_praragraph": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>",
+        "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+        "padding_bottom": "",
+        "color_theme": ""
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.page_main[li-cf-layout]",
+  "order": [
+    "content"
+  ]
 }
