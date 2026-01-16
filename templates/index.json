@@ -1,15 +1,8 @@
 {
     "sections": {
         "content": {
-            "type": "content",
-            "blocks": {
-                "@theme": {
-                    "type": "@theme"
-                }
-            },
-            "block_order": [
-                "@theme"
-            ]
+            "type": "content"
+           
         }
     },
     "layout": "theme",
