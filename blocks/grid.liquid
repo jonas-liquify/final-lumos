@@ -1,0 +1,27 @@
+<div data-wf--grid--variant="default" style="" class="u-grid-wrapper u-gap-row-6" data-number="12" li-static-block="Grid">
+                      <div li-cf-theme-blocks="" data-large-columns="3" data-medium-columns="2" data-small-columns="1" data-xsmall-columns="0" role="list" class="u-grid">
+{% content_for 'blocks' %}
+</div>
+                    </div> {% schema %} {
+    "name": "Grid",
+    "blocks": [
+        {
+            "type": "slide"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Grid",
+            "blocks": [
+                {
+                    "type": "slide"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}
