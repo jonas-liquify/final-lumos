@@ -1,0 +1,30 @@
+<div li-block="Image" li-block:category="Visual" li-block:tag="" class="u-display-contents" style="">
+                    
+                      
+                    <div class="u-display-contents">
+                        <div data-wf--visual-image--variant="wide-16-9" class="u-image-wrapper w-variant-27d05669-180c-3169-9b64-0eda31f8d4d3" style="">{% if block.settings.image_image %}
+{{ block.settings.image_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'u-image' }}
+{% else %}
+<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="u-image">
+{% endif %}</div>
+                      </div>
+                    
+                    
+                </div> {% schema %} {
+    "name": "Image",
+    "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image",
+            "category": "Visual",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

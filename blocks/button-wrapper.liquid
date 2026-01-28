@@ -1,0 +1,31 @@
+<div class="u-button-wrapper" style="" li-block="Button Wrapper" {{ block.shopify_attributes }}>
+                    
+                      
+                    <div li-cf-theme-blocks="" class="u-display-contents">
+{% content_for 'blocks' %}
+</div>
+                    
+                    
+                </div> {% schema %} {
+    "name": "Button Wrapper",
+    "blocks": [
+        {
+            "type": "button"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Button Wrapper",
+            "blocks": [
+                {
+                    "type": "button"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}

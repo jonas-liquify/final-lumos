@@ -1,0 +1,268 @@
+<div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="u-container  ">
+            <div data-pause-on-hover="false" data-loop-controls="false" data-tab-component-id="" data-slide-tabs="true" data-autoplay-duration="6" data-duration="0.6" data-wf--tab--variant="base" class="tab_wrap">
+              <div class="u-embed-css w-embed">
+                <style>
+.tab_content_list[data-preview="false"] > :not(.w-dyn-list,.u-display-contents),
+.tab_content_list[data-preview="false"] > .w-dyn-list > * > * > *,
+.tab_content_list[data-preview="false"] > .u-display-contents > .w-dyn-list > * > * > *,
+.tab_content_list[data-preview="false"] > .u-display-contents > .u-display-contents > .w-dyn-list > * > * > *,
+.tab_content_list[data-preview="false"] > .u-display-contents > :not(.w-dyn-list,.u-display-contents),
+.tab_content_list[data-preview="false"] > .u-display-contents > .u-display-contents > :not(.w-dyn-list,.u-display-contents) {
+	display: none;
+}
+.tab_content_list > :first-child:not(.w-dyn-list,.u-display-contents),
+.tab_content_list > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > :not(.w-dyn-list,.u-display-contents):first-child,
+.tab_content_list > .u-display-contents > .u-display-contents > :not(.w-dyn-list,.u-display-contents):first-child {
+	display: block;
+}
+.wf-design-mode .tab_button_list > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .w-dyn-list > * > :first-child > *,
+.wf-design-mode .tab_button_list > .u-display-contents > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .u-display-contents > .u-display-contents > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.wf-design-mode .tab_button_list > .u-display-contents > .u-display-contents > .w-dyn-list > * > :first-child > * {
+	--_state---true: 0;
+  --_state---false: 1;
+}
+.tab_button_list:has([data-wf--tab-link--variant="link"]) { gap: 0rem; }
+</style>
+              </div>
+              <div class="tab_left">
+                <div class="u-hide-if-empty u-margin-trim">
+                  <div data-number="20" data-wf--typography-heading--variant="h2" class="u-text w-variant-433d40c6-c261-f13f-c899-61d2cadf150f w-richtext ">
+{{ section.settings.text_heading }}
+</div>
+                </div>
+                {% content_for "block", type: "tab-navigation", id: "tab-navigation" %}
+              </div>
+              <div class="tab_right">
+                {% content_for "block", type: "tab-content-wrapper", id: "tab-content-wrapper" %}
+                <div class="tab_control_wrap">
+                  <div class="tab_arrow_wrap">
+                    <div data-wf--button-arrow--variant="secondary-medium" data-tab="previous" class="button_arrow_wrap" data-button=" " data-trigger="hover focus">
+                      <div class="button_arrow_element w-variant-bb0688d1-65b6-14b6-81e5-21e2cd39bbda">
+                        <div aria-hidden="true" class="button_arrow_icon"><svg data-wf--icon-arrow-full--variant="left" xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 33 26" fill="none" aria-hidden="true" class="u-svg w-variant-1c3f028b-116e-d4eb-db7f-8484491bbf2e">
+                            <path d="M18 24.8437L31 12.8438L18 0.843749" class="u-path"></path>
+                            <path d="M30.5 13L0 13" class="u-path"></path>
+                          </svg></div>
+                      </div>
+                      <div class="clickable_wrap u-cover-absolute">
+                        <a li-settings-a:target="" href="{{ section.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ section.settings.text_screen_reader }}</span> </a><button li-settings-a:type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ section.settings.text_screen_reader }}
+</span></button>
+                      </div>
+                    </div>
+                    <div data-wf--button-arrow--variant="secondary-medium" data-tab="next" class="button_arrow_wrap" data-button=" " data-trigger="hover focus">
+                      <div class="button_arrow_element w-variant-bb0688d1-65b6-14b6-81e5-21e2cd39bbda">
+                        <div aria-hidden="true" class="button_arrow_icon"><svg data-wf--icon-arrow-full--variant="right" xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 33 26" fill="none" aria-hidden="true" class="u-svg">
+                            <path d="M18 24.8437L31 12.8438L18 0.843749" class="u-path"></path>
+                            <path d="M30.5 13L0 13" class="u-path"></path>
+                          </svg></div>
+                      </div>
+                      <div class="clickable_wrap u-cover-absolute">
+                        <a li-settings-a:target="" href="{{ section.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ section.settings.text_screen_reader }}</span> </a><button li-settings-a:type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ section.settings.text_screen_reader }}
+</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-wf--button-play--variant="secondary-medium" data-tab-button="toggle" class="button_toggle_wrap" data-button=" " data-trigger="hover focus" data-state="pressed">
+                    <div class="button_toggle_element w-variant-ab355ea0-b722-2f23-3507-f0290f710e57">
+                      <div aria-hidden="true" class="button_toggle_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 1393 1394" fill="none" class="button_toggle_play u-cover-absolute">
+                          <path d="M1271 696.5L280 1393L280 -4.3318e-05L1271 696.5Z" fill="currentColor"></path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 898 1277" fill="none" class="button_toggle_pause u-cover-absolute">
+                          <rect x="577" width="321" height="1277" fill="currentColor"></rect>
+                          <rect width="321" height="1277" fill="currentColor"></rect>
+                        </svg></div>
+                    </div>
+                    <div class="clickable_wrap u-cover-absolute">
+                      <a li-settings-a:target="" href="{{ section.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ section.settings.text_screen_reader }}</span> </a><button li-settings-a:type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ section.settings.text_screen_reader }}
+</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-embed-js w-embed w-script">
+                {% render 'tab_script' %}
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+          {% content_for "block", type: "background", id: "background" %}
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Tab Main",
+    "class": "u-section",
+    "blocks": [
+        {
+            "type": "tab-link"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "\n                    <h2>Tab Content 1<\/h2>\n                  "
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_screen_reader",
+            "type": "text",
+            "label": "Screen Reader",
+            "default": "Next"
+        },
+        {
+            "type": "header",
+            "content": "Section Settings"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "w-variant-857e5430-97c7-deb6-3c1a-d3063f9fe2c7"
+                },
+                {
+                    "label": "Light",
+                    "value": "w-variant-a4eabb01-8ed6-63d0-157e-0a7b56aedaa1"
+                },
+                {
+                    "label": "Brand",
+                    "value": "w-variant-25bf08d9-3196-322b-5616-019ac7f0f4f7"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Tab Main",
+            "category": "Liquiflow",
+            "blocks": [
+                {
+                    "type": "tab-navigation",
+                    "static": true,
+                    "id": "tab-navigation",
+                    "blocks": [
+                        {
+                            "type": "tab-link"
+                        }
+                    ]
+                },
+                {
+                    "type": "tab-content-wrapper",
+                    "static": true,
+                    "id": "tab-content-wrapper",
+                    "blocks": [
+                        {
+                            "type": "tab-content"
+                        }
+                    ]
+                },
+                {
+                    "type": "background",
+                    "static": true,
+                    "id": "background",
+                    "blocks": null
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}
