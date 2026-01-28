@@ -1,0 +1,65 @@
+<div data-wf--card-primary--variant="stacked" class="card_primary_wrap" style="" role="listitem" li-block="Slide" {{ block.shopify_attributes }}>
+                    
+                          
+                    <div data-trigger="hover-if-clickable focus" class="card_primary_group w-variant-da648fa9-bbba-c8cb-e549-1d22cb8af97b">
+                            <div class="card_primary_element w-variant-da648fa9-bbba-c8cb-e549-1d22cb8af97b  ">
+                              <div class="card_primary_visual w-variant-da648fa9-bbba-c8cb-e549-1d22cb8af97b">{% if block.settings.image_image %}
+{{ block.settings.image_image | image_url: width: 450 | image_tag: loading: 'lazy', class: 'card_primary_image' }}
+{% else %}
+<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="card_primary_image">
+{% endif %}</div>
+                              <div class="card_primary_content u-margin-trim">
+                                <h3 class="card_primary_title u-text-style-h4 w-variant-da648fa9-bbba-c8cb-e549-1d22cb8af97b">
+{{ block.settings.text_heading }}
+</h3>
+                                <div class="card_primary_text w-richtext"> {{ block.settings.richtext_paragraph }} </div>
+                              </div>
+                            </div>
+                            <div class="clickable_wrap u-cover-absolute">
+                              <a li-settings-a:target="" href="{{ block.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ block.settings.text_screen_reader }}</span> </a><button li-settings-a:type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ block.settings.text_screen_reader }}
+</span></button>
+                            </div>
+                          </div>
+                    
+                        
+                </div> {% schema %} {
+    "name": "Slide",
+    "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Lorem ipsum"
+        },
+        {
+            "id": "richtext_paragraph",
+            "type": "richtext",
+            "label": "Paragraph",
+            "default": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                <\/p>"
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_screen_reader",
+            "type": "text",
+            "label": "Screen Reader",
+            "default": "Lorem Ipsum"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Slide",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

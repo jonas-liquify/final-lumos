@@ -1,0 +1,34 @@
+<div li-block="Paragraph" li-block:category="Content" li-block:tag="" class="u-display-contents" style="">
+                    
+                      
+                    <div class="u-display-contents">
+                        <div data-number="block.settings.max_width" data-wf--typography-paragraph--variant="inherit" class="u-text u-rich-text w-richtext "> {{ block.settings.richtext_praragraph }} </div>
+                        
+                      </div>
+                    
+                    
+                </div> {% schema %} {
+    "name": "Paragraph",
+    "settings": [
+        {
+            "id": "richtext_praragraph",
+            "type": "richtext",
+            "label": "Praragraph",
+            "default": "<p>\n                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                        <\/p>"
+        },
+        {
+            "type": "number",
+            "id": "max_width",
+            "label": "Max width",
+            "default": 60
+        }
+    ],
+    "presets": [
+        {
+            "name": "Paragraph",
+            "category": "Content",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
