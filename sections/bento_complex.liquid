@@ -4,22 +4,14 @@
             <div data-wf--layout--variant="stack-centered" class="u-layout-wrapper">
               <div class="u-layout">
                 <div class="u-layout-column-1 w-variant-a55018ed-7206-81d4-6e8b-c7a3a2efd063  ">
-                  {% for block in section.blocks %}
-    {% if block.type == "eyebrow" %}
-                    <div class="u-eyebrow-wrapper" li-block="Eyebrow">
-                                    
-                    
-                                    <div class="u-eyebrow-layout">
+                  <div class="u-eyebrow-wrapper">
+                    <div class="u-eyebrow-layout">
                       <div class="u-eyebrow-marker"></div>
                       <div class="u-eyebrow-text u-text-style-main w-richtext">
-{{ block.settings.text_eyebrow_heading }}
+{{ section.settings.text_eyebrow_heading }}
 </div>
                     </div>
-                                    
-                  
-                            </div>
-            {% endif %}
-{% endfor %}
+                  </div>
                   <div data-number="20" data-wf--typography-heading--variant="h2" class="u-text w-variant-433d40c6-c261-f13f-c899-61d2cadf150f w-richtext ">
 {{ section.settings.text_heading }}
 </div>
@@ -62,6 +54,12 @@
         }
     ],
     "settings": [
+        {
+            "id": "text_eyebrow_heading",
+            "type": "text",
+            "label": "Eyebrow Heading",
+            "default": "\n                        <p>Eyebrow Text Here<\/p>\n                      "
+        },
         {
             "id": "text_heading",
             "type": "text",
@@ -180,9 +178,6 @@
             "name": "Bento Complex",
             "category": "Liquiflow",
             "blocks": [
-                {
-                    "type": "eyebrow"
-                },
                 {
                     "type": "button-wrapper",
                     "blocks": [
