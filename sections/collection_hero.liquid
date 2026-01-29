@@ -1,0 +1,159 @@
+<img src="{{ collection.featured_image | image_url: width: 1500 }}" loading="eager" li-object:src="collection.featured_image | image_url: width: 1500" li-object:alt="collection.featured_image.alt" alt="{{ collection.featured_image.alt }}" class="collection-hero_img u-cover-absolute">
+        <div style="opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }}" class="g_img_overlay"></div>
+        <div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="page-top" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="collection-hero_contain u-container">
+            <div class="collection-hero_layout">
+              <div class="collection-hero_eyebrow_wrap u-margin-bottom-4">
+                <p data-wf--eyebrow--variant="base" class="g_eyebrow_txt u-text-style-h6">Collection</p>
+              </div>
+              <div class="collection-hero_header_wrap u-margin-bottom-3">
+                <h1 li-object="collection.title" class="collection-hero_header_txt u-text-style-h1">{{ collection.title }}</h1>
+              </div>
+              <div class="collection-hero_description_wrap">
+                <p li-object="collection.description" class="collection-hero_description_txt">{{ collection.description }}</p>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Collection Hero",
+    "class": "collection-hero_wrap u-section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Overlay Opacity"
+        },
+        {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Overlay Opacity",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "%"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Hero",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "collection"
+        ]
+    }
+} {% endschema %}

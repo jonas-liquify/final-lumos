@@ -1,0 +1,336 @@
+<div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="none" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="{{section.settings.container}}">
+            <div class="about_layout u-alignment-center">
+              <div class="about_tag_wrap u-margin-bottom-2">
+                <div class="about_tag_txt u-text-style-h6 u-weight-regular">
+{{ section.settings.text_tag }}
+</div>
+              </div>
+              <div class="about_header_wrap">
+                <div class="about_header_txt u-text-style-h3 w-richtext"> {{ section.settings.richtext_header }} </div>
+              </div>
+              <div class="about_media_wrap u-margin-top-6">
+                <div style="aspect-ratio: {{section.settings.ar_width}} / {{section.settings.ar_height}}" class="about_media_video_wrap u-position-relative">
+                  {% if section.settings.img_1_visibility %}    <div li-if="section.settings.img_1_visibility" class="about_media_img_1_wrap">
+    {% if section.settings.image_image_1 %}
+{{ section.settings.image_image_1 | image_url: width: 400 | image_tag: loading: 'lazy', class: 'about_media_img_1_img' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'about_media_img_1_img' }} 
+{% endif %}    </div>
+{% endif %}
+                  {% if section.settings.img_2_visibility %}    <div li-if="section.settings.img_2_visibility" class="about_media_img_2_wrap">
+    {% if section.settings.image_image_2 %}
+{{ section.settings.image_image_2 | image_url: width: 450 | image_tag: loading: 'lazy', class: 'about_media_img_2_img' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'about_media_img_2_img' }} 
+{% endif %}    </div>
+{% endif %}
+                  <div li-object="section.settings.video | video_tag: width: '100%', height: '100%', controls: true, poster: section.settings.video.preview_image" class="about_media_video u-cover-absolute">{{ section.settings.video | video_tag: width: '100%', height: '100%', controls: true, poster: section.settings.video.preview_image }}</div>
+                </div>
+              </div>
+              <div class="about_body_master u-margin-top-6">
+                <div style="max-width: {{section.settings.paragraph_max_width | append: 'em'}}" class="about_body_wrap">
+                  <div class="about_body_line"></div>
+                  <div class="about_body_txt u-rich-text w-richtext"> {{ section.settings.richtext_body_text }} </div>
+                  <div class="about_body_line"></div>
+                </div>
+              </div>
+              <div class="about_outro_wrap u-margin-top-6">
+                <div style="max-width: {{section.settings.outro_max_width | append: 'em'}}" class="about_outro_txt_wrap">
+                  <div class="about_outro_txt u-text-style-h6">
+{{ section.settings.text_outro }}
+</div>
+                </div>
+              </div>
+              {% if section.settings.outro_img_visibility %}    <div li-if="section.settings.outro_img_visibility" class="about_image_master u-margin-top-4">
+    
+                <div class="about_image_wrap u-position-relative">{% if section.settings.image_outro_image %}
+{{ section.settings.image_outro_image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'about_image u-cover-absolute u-object-fit-contain' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'about_image u-cover-absolute u-object-fit-contain' }} 
+{% endif %}</div>
+                  </div>
+{% endif %}
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "About Extensive",
+    "class": "about_wrap u-section",
+    "settings": [
+        {
+            "id": "text_tag",
+            "type": "text",
+            "label": "Tag",
+            "default": "Every family has a story"
+        },
+        {
+            "id": "richtext_header",
+            "type": "richtext",
+            "label": "Header",
+            "default": "<p>\n                  Welcome to Ours\n                <\/p>"
+        },
+        {
+            "id": "image_image_1",
+            "type": "image_picker",
+            "label": "Image 1"
+        },
+        {
+            "id": "image_image_2",
+            "type": "image_picker",
+            "label": "Image 2"
+        },
+        {
+            "id": "richtext_body_text",
+            "type": "richtext",
+            "label": "Body Text",
+            "default": "<p>\n                    In the spring of 2015, the Brown family rolled up their sleeves and began building their dream\u2014a bison ranch to raise their growing family on. They tore out miles of rusty barbed wire, cleared thick brush, planted hundreds of acres of grass, and built new fences and corrals. After years of blood, sweat, and tears, the old dairy farm nestled among glacial hills near Cadott, WI was transformed into the beautiful ICON Ranch, now home to hundreds of bison.\n<\/p>"
+        },
+        {
+            "id": "text_outro",
+            "type": "text",
+            "label": "Outro",
+            "default": "Thank you for your years of support"
+        },
+        {
+            "id": "image_outro_image",
+            "type": "image_picker",
+            "label": "Outro Image"
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Container"
+        },
+        {
+            "type": "select",
+            "id": "container",
+            "label": "Container",
+            "default": "u-container",
+            "options": [
+                {
+                    "label": "Regular",
+                    "value": "u-container"
+                },
+                {
+                    "label": "Small",
+                    "value": "u-container-small"
+                },
+                {
+                    "label": "Full",
+                    "value": "u-container-full"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Header Max Width"
+        },
+        {
+            "type": "range",
+            "id": "header_max_width",
+            "label": "header-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        },
+        {
+            "type": "header",
+            "content": "Paragraph Max Width"
+        },
+        {
+            "type": "range",
+            "id": "paragraph_max_width",
+            "label": "paragraph-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        },
+        {
+            "type": "header",
+            "content": "Outro Max Width"
+        },
+        {
+            "type": "range",
+            "id": "outro_max_width",
+            "label": "outro-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        },
+        {
+            "type": "header",
+            "content": "Video Aspect Ratio"
+        },
+        {
+            "type": "text",
+            "id": "ar_width",
+            "label": "ar-width",
+            "default": "1"
+        },
+        {
+            "type": "text",
+            "id": "ar_height",
+            "label": "ar-height",
+            "default": "1"
+        },
+        {
+            "type": "header",
+            "content": "Video"
+        },
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+        },
+        {
+            "type": "header",
+            "content": "Image Visibility"
+        },
+        {
+            "type": "checkbox",
+            "id": "img_1_visibility",
+            "label": "Img 1 Visibility",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "img_2_visibility",
+            "label": "Img 2 Visibility",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "outro_img_visibility",
+            "label": "Outro Img Visibility",
+            "default": true
+        }
+    ],
+    "presets": [
+        {
+            "name": "About Extensive",
+            "category": "About",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

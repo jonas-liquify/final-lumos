@@ -1,0 +1,284 @@
+<div class="u-embed-js w-embed w-script">
+          <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const rotationWrap = document.querySelector('.text-slide_rotation_txt_wrap');
+  if (!rotationWrap) return;
+  const items = Array.from(rotationWrap.querySelectorAll('.text-slide_rotation_txt'));
+  if (items.length === 0) return;
+  items.forEach(item => {
+    item.style.paddingBottom = 'var(--_spacing---space--7)';
+  });
+  const track = document.createElement('div');
+  track.className = 'text-slide_rotation_track';
+  track.style.willChange = 'transform';
+  items.forEach(item => {
+    track.appendChild(item);
+  });
+  rotationWrap.innerHTML = '';
+  rotationWrap.appendChild(track);
+  rotationWrap.style.overflow = 'hidden';
+  rotationWrap.style.position = 'relative';
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    clone.style.paddingBottom = 'var(--_spacing---space--7)';
+    track.appendChild(clone);
+  });
+  const totalItems = items.length;
+  let tl;
+  function initAnimation() {
+    if (tl) {
+      tl.kill();
+    }
+    gsap.set(track, { y: 0, clearProps: 'all' });
+    track.style.willChange = 'transform';
+    const itemHeight = items[0].offsetHeight;
+    rotationWrap.style.height = (itemHeight * 3) + 'px';
+    tl = gsap.timeline({ repeat: -1 });
+    for (let i = 0; i < totalItems; i++) {
+      tl.to(track, {
+        y: -(itemHeight * i),
+        duration: 0.6,
+        ease: "power2.inOut",
+        force3D: true
+      })
+      .to({}, { duration: 2 });
+    }
+    tl.to(track, {
+      y: -(itemHeight * totalItems),
+      duration: 0.6,
+      ease: "power2.inOut",
+      force3D: true
+    })
+    .call(() => {
+      gsap.set(track, { y: 0 });
+    });
+  }
+  initAnimation();
+  let resizeTimer;
+  let resizeRAF;
+  let lastWidth = window.innerWidth;
+  window.addEventListener('resize', function() {
+    const currentWidth = window.innerWidth;
+    if (currentWidth !== lastWidth) {
+      cancelAnimationFrame(resizeRAF);
+      clearTimeout(resizeTimer);
+      resizeRAF = requestAnimationFrame(function() {
+        resizeTimer = setTimeout(function() {
+          initAnimation();
+          lastWidth = currentWidth;
+        }, 250);
+      });
+    }
+  }, { passive: true });
+});
+</script>
+        </div>
+        <div class="text-slide_inner u-section-inner">
+          <div data-wf--spacer--variant="none" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="u-container {{section.settings.color_theme}}">
+            <div class="text-slide_layout u-flex-vertical-nowrap u-position-relative">{% if section.settings.image_background_image %}
+{{ section.settings.image_background_image | image_url: width: 1392 | image_tag: loading: 'lazy', class: 'text-slide_bg_img u-cover-absolute' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'text-slide_bg_img u-cover-absolute' }} 
+{% endif %}
+              <div class="text-slide_rotation_master u-alignment-center u-position-relative">
+                <div class="text-slide_title_wrap">
+                  <div class="text-slide_title_txt u-text-style-h2 u-theme-dark">
+{{ section.settings.text_title }}
+</div>
+                </div>
+                <div class="text-slide_rotation_txt_wrap">
+                  {% for block in section.blocks %}
+    {% if block.type == "cycling-text" %}
+                    <div li-block="Cycling Text" class="text-slide_rotation_txt">
+                                    
+                    
+                                    <div class="text-slide_rotation_txt-inner u-text-style-display">
+{{ block.settings.text_text }}
+</div>
+                                    
+                  
+                            </div>
+            {% endif %}
+{% endfor %}
+                </div>
+              </div>{% if section.settings.image_frontal_image %}
+{{ section.settings.image_frontal_image | image_url: width: 1392 | image_tag: loading: 'lazy', class: 'text-slide_front_img u-cover-absolute' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'text-slide_front_img u-cover-absolute' }} 
+{% endif %}
+              <div class="text-slide_eyebrow_wrap">
+                <p data-wf--eyebrow--variant="base" class="g_eyebrow_txt u-text-style-h6">
+{{ section.settings.text_eyebrow }}
+</p>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Text Slide",
+    "class": "text-slide_wrap u-section",
+    "blocks": [
+        {
+            "name": "Cycling Text",
+            "type": "cycling-text",
+            "settings": [
+                {
+                    "id": "text_text",
+                    "type": "text",
+                    "label": "Text",
+                    "default": "Hormones"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "id": "image_background_image",
+            "type": "image_picker",
+            "label": "Background Image"
+        },
+        {
+            "id": "text_title",
+            "type": "text",
+            "label": "Title",
+            "default": "No Added"
+        },
+        {
+            "id": "image_frontal_image",
+            "type": "image_picker",
+            "label": "Frontal Image"
+        },
+        {
+            "id": "text_eyebrow",
+            "type": "text",
+            "label": "Eyebrow",
+            "default": "Our Promise to You"
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text Slide",
+            "category": "Information",
+            "blocks": [
+                {
+                    "type": "cycling-text"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

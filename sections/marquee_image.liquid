@@ -1,0 +1,185 @@
+<div class="marquee_img_embed w-embed">
+          <style>
+@keyframes marquee_img_timeline {
+	from { transform: translateX(0%); }
+	to { transform: translateX(-50%); }
+}
+</style>
+        </div>
+        <div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="even" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="marquee_img_layout">
+            <div class="marquee_img_track is-reversed">
+              <div class="marquee_img_cms_wrap">
+                <div class="marquee_img_cms_list">
+                  {% for block in section.blocks %}
+    {% if block.type == "image" %}
+                    <div li-block="image" class="marquee_img_cms_item">
+                                    {% if block.settings.image_image %}
+{{ block.settings.image_image | image_url: width: 1000 | image_tag: loading: 'eager', class: 'marquee_img_cms_img u-cover-absolute' }}
+{% else %}
+<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="eager" alt="" class="marquee_img_cms_img u-cover-absolute">
+{% endif %}
+                            </div>
+            {% endif %}
+{% endfor %}
+                </div>
+              </div>
+              <div aria-hidden="true" class="marquee_img_cms_wrap">
+                <div li-for:inside="block in section.blocks" class="marquee_img_cms_list">
+        {% for block in section.blocks %}                            
+                  
+                            {% if block.type == 'image' %}    <div li-if="block.type == 'image'" class="marquee_img_cms_item">
+    <img src="{{ block.settings.image_image | image_url: width: 125 }}" loading="eager" li-object:src="block.settings.image_image | image_url: width: 125" li-object:alt="block.settings.image_image.alt" alt="{{ block.settings.image_image.alt }}" class="marquee_img_cms_img u-cover-absolute">    </div>
+{% endif %}
+                            
+                
+                    {% endfor %}    </div>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="even" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Marquee Image",
+    "class": "marquee_img_wrap u-section",
+    "blocks": [
+        {
+            "name": "image",
+            "type": "image",
+            "settings": [
+                {
+                    "id": "image_image",
+                    "type": "image_picker",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Marquee Image",
+            "category": "Marquee",
+            "blocks": [
+                {
+                    "type": "image"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

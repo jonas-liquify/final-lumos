@@ -1,0 +1,405 @@
+<div class="u-embed-css w-embed">
+          <style>
+@container ( width < 26em ) {
+	.compare_table_title {
+  	font-size: calc(var(--_typography---font-size--h5)*0.8) !important;
+  }
+  .compare_table_svg {
+  	width: 0.7rem !important;
+  }
+  .compare_table_bg {
+  	width: 80% !important;
+  }
+  .compare_table_img {
+  	width: 70% !important;
+  }
+}
+</style>
+        </div>
+        <div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="compare_contain u-container">
+            <div class="compare_layout u-grid-autofit u-gap-8 u-align-items-center">
+              <div class="compare_visual_wrap u-position-relative">{% if section.settings.image_large_image %}
+{{ section.settings.image_large_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'compare_visual_img u-cover-absolute' }}
+{% else %}
+<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="compare_visual_img u-cover-absolute">
+{% endif %}</div>
+              <div class="compare_content_wrap">
+                {% if section.settings.show_header_image %}    <div li-if="section.settings.show_header_image" class="compare_top_img_wrap u-position-relative u-margin-bottom-6">
+    {% if section.settings.image_content_image %}
+{{ section.settings.image_content_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'compare_top_img u-cover-absolute' }}
+{% else %}
+<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="compare_top_img u-cover-absolute">
+{% endif %}    </div>
+{% endif %}
+                <div style="max-width: {{ section.settings.header_max_width | append: 'em' }}" class="compare_header_wrap u-alignment-center u-margin-bottom-6">
+                  <div class="compare_header_txt u-text-style-h3 u-text-transform-uppercase w-richtext"> {{ section.settings.richtext_header }} </div>
+                </div>
+                <div class="compare_table_wrap">
+                  {% for block in section.blocks %}
+    {% if block.type == "table-header" %}
+                    <div li-block="table_header" class="compare_table_row u-grid-custom">
+                                    
+                    
+                                    <div class="compare_table_cell u-flex-vertical-nowrap">
+                      <div class="compare_table_title u-text-style-h5 u-text-transform-uppercase u-weight-bold">
+{{ block.settings.text_left_label }}
+</div>
+                    </div>
+                                    
+                    
+                                    <div class="compare_table_cell is-logo">{% if block.settings.image_logo %}
+{{ block.settings.image_logo | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'compare_table_img' }}
+{% else %}
+<img src="{{ 'icon_meats_logo.svg' | asset_url }}" loading="lazy" alt="" class="compare_table_img">
+{% endif %}</div>
+                                    
+                    
+                                    <div class="compare_table_cell u-flex-vertical-nowrap u-align-items-center">
+                      <div class="compare_table_title u-text-style-h5 u-text-transform-uppercase u-weight-bold">
+{{ block.settings.text_right_label }}
+</div>
+                    </div>
+                                    
+                  
+                            </div>
+            {% endif %}
+{% endfor %}
+                  {% for block in section.blocks %}
+    {% if block.type == "comparison-row" %}
+                    <div li-block="comparison_row" class="compare_table_row u-grid-custom">
+                                    
+                    
+                                    <div class="compare_table_cell u-flex-vertical-nowrap">
+                      <div class="compare_table_title u-text-style-h5 u-text-transform-uppercase">
+{{ block.settings.text_left_label }}
+</div>
+                    </div>
+                                    
+                    
+                                    <div class="compare_table_cell u-flex-vertical-nowrap u-align-items-center u-theme-dark u-background-transparent">
+                      <div style="background-color: {{ block.settings.background_color }}" class="compare_table_bg"></div>
+                      {% if block.settings.our_value %}    <div li-if="block.settings.our_value">
+    
+                        <div class="compare_table_title u-text-style-h5 u-text-transform-uppercase">
+{{ block.settings.text_our_value_text }}
+</div>
+                          </div>
+{% endif %}
+                      {% if block.settings.our_check %}    <div li-if="block.settings.our_check" class="compare_table_svg_wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 18 15" fill="none" class="compare_table_svg is-check">
+                          <path d="M14.2306 0.00315863C14.4951 -0.0172773 14.7642 0.0623154 14.9801 0.216795C15.6518 0.828124 16.419 1.38204 17.0775 2.00279C17.5446 2.4431 17.6183 3.08885 17.2359 3.61467L8.02061 13.982C7.58736 14.3754 6.99126 14.4918 6.44197 14.2911C6.11812 14.1728 5.92517 13.9617 5.69256 13.7198C3.8471 11.8001 2.09301 9.78577 0.256033 7.85727C-0.108392 7.38334 -0.0755034 6.78411 0.301917 6.33143C0.877597 5.64105 1.58045 5.00982 2.16515 4.32145C2.61737 3.90655 3.30816 3.91704 3.75042 4.34149C4.70843 5.38264 5.61286 6.47785 6.57458 7.51497C6.58864 7.53016 6.63466 7.58421 6.65256 7.58098L13.55 0.294639C13.7408 0.127657 13.9773 0.0227879 14.2306 0.00315863Z" fill="currentColor"></path>
+                        </svg>    </div>
+{% endif %}
+                      {% if block.settings.our_cross %}    <div li-if="block.settings.our_cross" class="compare_table_svg_wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 14 14" fill="none" class="compare_table_svg is-cross">
+                          <path d="M9.48529 0.292893C9.87582 -0.0976311 10.509 -0.097631 10.8995 0.292893L13.0208 2.41421C13.4114 2.80474 13.4113 3.4379 13.0208 3.82843L3.82844 13.0208C3.43791 13.4113 2.80475 13.4113 2.41422 13.0208L0.292904 10.8995C-0.0976203 10.509 -0.0976202 9.87581 0.292904 9.48528L9.48529 0.292893Z" fill="currentColor"></path>
+                          <path d="M13.0208 9.48537C13.4113 9.87589 13.4113 10.5091 13.0208 10.8996L10.8995 13.0209C10.509 13.4114 9.8758 13.4114 9.48528 13.0209L0.292893 3.82851C-0.0976311 3.43799 -0.097631 2.80482 0.292893 2.4143L2.41421 0.29298C2.80474 -0.0975441 3.4379 -0.097544 3.82843 0.29298L13.0208 9.48537Z" fill="currentColor"></path>
+                        </svg>    </div>
+{% endif %}
+                    </div>
+                                    
+                    
+                                    <div class="compare_table_cell u-flex-vertical-nowrap u-align-items-center">
+                      {% if block.settings.their_value %}    <div li-if="block.settings.their_value">
+    
+                        <div class="compare_table_title u-text-style-h5 u-text-transform-uppercase">
+{{ block.settings.text_their_value_text }}
+</div>
+                          </div>
+{% endif %}
+                      {% if block.settings.their_check %}    <div li-if="block.settings.their_check" class="compare_table_svg_wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 18 15" fill="none" class="compare_table_svg is-check">
+                          <path d="M14.2306 0.00315863C14.4951 -0.0172773 14.7642 0.0623154 14.9801 0.216795C15.6518 0.828124 16.419 1.38204 17.0775 2.00279C17.5446 2.4431 17.6183 3.08885 17.2359 3.61467L8.02061 13.982C7.58736 14.3754 6.99126 14.4918 6.44197 14.2911C6.11812 14.1728 5.92517 13.9617 5.69256 13.7198C3.8471 11.8001 2.09301 9.78577 0.256033 7.85727C-0.108392 7.38334 -0.0755034 6.78411 0.301917 6.33143C0.877597 5.64105 1.58045 5.00982 2.16515 4.32145C2.61737 3.90655 3.30816 3.91704 3.75042 4.34149C4.70843 5.38264 5.61286 6.47785 6.57458 7.51497C6.58864 7.53016 6.63466 7.58421 6.65256 7.58098L13.55 0.294639C13.7408 0.127657 13.9773 0.0227879 14.2306 0.00315863Z" fill="currentColor"></path>
+                        </svg>    </div>
+{% endif %}
+                      {% if block.settings.their_cross %}    <div li-if="block.settings.their_cross" class="compare_table_svg_wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 14 14" fill="none" class="compare_table_svg is-cross">
+                          <path d="M9.48529 0.292893C9.87582 -0.0976311 10.509 -0.097631 10.8995 0.292893L13.0208 2.41421C13.4114 2.80474 13.4113 3.4379 13.0208 3.82843L3.82844 13.0208C3.43791 13.4113 2.80475 13.4113 2.41422 13.0208L0.292904 10.8995C-0.0976203 10.509 -0.0976202 9.87581 0.292904 9.48528L9.48529 0.292893Z" fill="currentColor"></path>
+                          <path d="M13.0208 9.48537C13.4113 9.87589 13.4113 10.5091 13.0208 10.8996L10.8995 13.0209C10.509 13.4114 9.8758 13.4114 9.48528 13.0209L0.292893 3.82851C-0.0976311 3.43799 -0.097631 2.80482 0.292893 2.4143L2.41421 0.29298C2.80474 -0.0975441 3.4379 -0.097544 3.82843 0.29298L13.0208 9.48537Z" fill="currentColor"></path>
+                        </svg>    </div>
+{% endif %}
+                    </div>
+                                    
+                    
+                                    
+                                    
+                  
+                            </div>
+            {% endif %}
+{% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Compare",
+    "class": "compare_wrap u-section",
+    "blocks": [
+        {
+            "name": "table_header",
+            "type": "table-header",
+            "settings": [
+                {
+                    "id": "text_left_label",
+                    "type": "text",
+                    "label": "Left Label",
+                    "default": "Compare Us"
+                },
+                {
+                    "id": "image_logo",
+                    "type": "image_picker",
+                    "label": "Logo"
+                },
+                {
+                    "id": "text_right_label",
+                    "type": "text",
+                    "label": "Right Label",
+                    "default": "Others"
+                }
+            ]
+        },
+        {
+            "name": "comparison_row",
+            "type": "comparison-row",
+            "settings": [
+                {
+                    "id": "text_left_label",
+                    "type": "text",
+                    "label": "Left Label",
+                    "default": "Protein"
+                },
+                {
+                    "id": "text_our_value_text",
+                    "type": "text",
+                    "label": "Our Value Text",
+                    "default": "12g"
+                },
+                {
+                    "id": "text_their_value_text",
+                    "type": "text",
+                    "label": "Their Value Text",
+                    "default": "10g"
+                },
+                {
+                    "type": "header",
+                    "content": "Blocks"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "our_check",
+                    "label": "Our Check",
+                    "default": false
+                },
+                {
+                    "type": "checkbox",
+                    "id": "their_check",
+                    "label": "Their Check",
+                    "default": false
+                },
+                {
+                    "type": "checkbox",
+                    "id": "our_cross",
+                    "label": "Our Cross",
+                    "default": false
+                },
+                {
+                    "type": "checkbox",
+                    "id": "their_cross",
+                    "label": "Their Cross",
+                    "default": false
+                },
+                {
+                    "type": "checkbox",
+                    "id": "our_value",
+                    "label": "Our Value",
+                    "default": true
+                },
+                {
+                    "type": "checkbox",
+                    "id": "their_value",
+                    "label": "Their Value",
+                    "default": true
+                },
+                {
+                    "type": "color_background",
+                    "id": "background_color",
+                    "label": "Background Color",
+                    "default": "#06a0c7"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "id": "image_large_image",
+            "type": "image_picker",
+            "label": "Large Image"
+        },
+        {
+            "id": "image_content_image",
+            "type": "image_picker",
+            "label": "Content Image"
+        },
+        {
+            "id": "richtext_header",
+            "type": "richtext",
+            "label": "Header",
+            "default": "<p>\n                    Clearly the better for you alternative\n                  <\/p>"
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Header Max Width"
+        },
+        {
+            "type": "range",
+            "id": "header_max_width",
+            "label": "header-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        },
+        {
+            "type": "header",
+            "content": "Header Image Toggle"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_header_image",
+            "label": "Show Header Image",
+            "default": true
+        }
+    ],
+    "presets": [
+        {
+            "name": "Compare",
+            "category": "Information",
+            "blocks": [
+                {
+                    "type": "table-header"
+                },
+                {
+                    "type": "comparison-row"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

@@ -1,0 +1,43 @@
+<div class="product-item_relative"><img src="{{ product.featured_image | image_url: width: 404 }}" alt="{{ product.featured_image.alt }}" li-object:src="product.featured_image | image_url: width: 404" li-object:alt="product.featured_image.alt" class="product-item_img u-cover-absolute">
+                    <div class="product-item_ratio" style="--flavor-bg: {{ product.metafields.custom.flavor_metaobject.value.background_color }};">
+                      <div class="product-item_bg">
+                        <div class="product-item_radial"></div>
+                      </div>
+                      <script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<div li-element="product-variant-container" class="product-item_component" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)">
+                        <div class="product-item_content_wrap u-background-1">
+                          <div class="product-item_content_link u-position-relative">
+                            <div class="clickable_wrap u-cover-absolute">
+                              <a li-object:href="product.url" class="clickable_link" href="{{ product.url }}"><span class="clickable_text u-sr-only"></span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only"></span></button>
+                            </div>
+                            <div class="product-item_top_wrap u-flex-horizontal-wrap u-justify-content-between u-gap-1 u-margin-bottom-2">
+                              <p data-wf--eyebrow--variant="base" li-object="product.metafields.custom.flavor_metaobject.value.flavor" class="g_eyebrow_txt u-text-style-h6" style="background-color: {{ product.metafields.custom.flavor_metaobject.value.background_color }}; color: {{ product.metafields.custom.flavor_metaobject.value.text_color }};">{{ product.metafields.custom.flavor_metaobject.value.flavor }}</p>
+                              <p data-wf--eyebrow--variant="base" class="g_eyebrow_txt u-text-style-h6">24 Packs</p>
+                            </div>
+                            <div li-object="product.title" class="product-item_header u-text-style-h4 u-text-transform-uppercase u-margin-bottom-1">{{ product.title }}</div>
+                            <div class="product-item_price_wrap u-margin-bottom-2">
+                              <div li-object="product.price | money" class="product-item_price u-text-style-large">{{ product.price | money }}</div>
+                              {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price">
+    
+                                <div li-object="product.compare_at_price | money" class="product-item_compare-price u-text-style-main">{{ product.compare_at_price | money }}</div>
+                                  </div>
+{% endif %}
+                            </div>
+                          </div>
+                          <div class="product-item_btn_wrap">
+                            <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                              <div class="clickable_wrap u-cover-absolute">
+                                <a li-element="add-to-cart" class="clickable_link" @click="addToCart($event, true)" :disabled="!addToCartButton"><span class="clickable_text u-sr-only">Add to Cart</span></a><button class="clickable_btn"><span class="clickable_text u-sr-only">Add to Cart</span></button>
+                              </div>
+                              <div class="button_main_element">
+                                <p aria-hidden="true" class="button_main_text u-text-style-h6">Add to Cart</p>
+                                <div class="button_main_icon u-hide-if-empty"></div>
+                                <div class="button_main_line"></div>
+                              </div>
+                              <div class="u-display-contents"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>

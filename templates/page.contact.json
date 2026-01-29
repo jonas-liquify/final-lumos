@@ -1,0 +1,25 @@
+{
+    "sections": {
+        "hero_small": {
+            "type": "hero_small",
+            "blocks": {
+                "button": {
+                    "name": "Button",
+                    "type": "button"
+                }
+            },
+            "block_order": [
+                "button"
+            ]
+        },
+        "product_slider": {
+            "type": "product_slider"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main#main.page_main",
+    "order": [
+        "hero_small",
+        "product_slider"
+    ]
+}
