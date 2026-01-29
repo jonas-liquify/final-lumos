@@ -1,5 +1,5 @@
 <div class="u-embed-css w-embed">
-          <style>
+        <style>
 :root {
 	--nav--menu-open-duration: 400ms;
 	--nav--menu-close-duration: 400ms;
@@ -105,546 +105,1144 @@ html:has(.nav_banner_wrap:not(.w-condition-invisible)):not(.hide-nav-banner) {
 .wf-design-mode .nav_mobile_menu_wrap {
 	width: 100%;
 }
+/* Search & Minicart Button */
+.predictive-search_product-item .button_main_element {
+	padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.predictive-search_product-item .button_main_text {
+	font-size: calc(var(--_typography---font-size--h6)*0.8);
+}
+.nav_dropdown_collection_item:hover .nav_dropdown_collection_img {
+	opacity: 0;
+}
+.nav_dropdown_collection_item:focus-within .nav_dropdown_collection_img {
+	opacity: 0;
+}
+/* Main Links Hovers and Focuses */
+.nav_dropdown_link_svg {
+  opacity: 0.1;
+}
+.nav_dropdown_item:hover .nav_dropdown_link_svg {
+  opacity: 1;
+}
+.nav_dropdown_item:focus-within .nav_dropdown_link_svg {
+  opacity: 1;
+}
+.nav_dropdown_link.w--current .nav_dropdown_link_svg {
+  opacity: 1;
+}
 </style>
+      </div>
+      <a href="#main" class="nav_skip_wrap w-inline-block">
+        <div class="nav_skip_text u-text-style-small">Skip to main content</div>
+      </a>
+      {% if section.settings.show_banner %}    <div role="region" aria-label="Announcement" li-if="section.settings.show_banner" class="nav_banner_wrap">
+    
+        <div class="clickable_wrap u-cover-absolute">
+          <a class="clickable_link" href="{{ section.settings.url_banner_link }}"> <span class="clickable_text u-sr-only">{{ section.settings.text_banner_text }}</span> </a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ section.settings.text_banner_text }}
+</span></button>
         </div>
-        <a href="#main" class="nav_skip_wrap w-inline-block">
-          <div class="nav_skip_text u-text-style-small">Skip to main content</div>
-        </a>
-        <div aria-label="Announcement" role="region" class="nav_banner_wrap">
-          <div class="nav_banner_contain">
-            <a data-state="external" href="#" class="nav_banner_link w-inline-block">
-              <div class="nav_banner_text u-line-clamp-1">Important Update Banner</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 27 24" fill="none" aria-hidden="true" class="nav_banner_svg">
-                <path d="M0 12L24 12" stroke="currentColor" stroke-width="var(--nav--icon-thickness)" vector-effect="non-scaling-stroke"></path>
-                <path d="M14 1.5L24.5 12L14 22.5" stroke="currentColor" stroke-width="var(--nav--icon-thickness)" vector-effect="non-scaling-stroke"></path>
-              </svg>
-            </a><button role="button" class="nav_banner_close_wrap"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 20 19" fill="none" aria-hidden="true" class="nav_banner_close_svg">
-                <path d="M1.51471 1.01465L18.4853 17.9852" stroke="currentColor" stroke-width="var(--nav--icon-thickness)" vector-effect="non-scaling-stroke"></path>
-                <path d="M1.51471 17.9851L18.4853 1.01454" stroke="currentColor" stroke-width="var(--nav--icon-thickness)" vector-effect="non-scaling-stroke"></path>
-              </svg><span class="nav_screen-reader-text">Close Announcement Banner</span></button>
-          </div>
-        </div>
-        <header class="nav_desktop_wrap">
-          <div class="nav_desktop_contain">
-            <div class="nav_desktop_layout">
-              <a aria-label="Home Page" href="index.html" aria-current="page" class="nav_desktop_logo w-inline-block w--current">
-                <div style="" class="u-max-width-full"><svg viewbox="0 0 490 100" fill="currentColor" class="u-svg">
-                    <path d="M95.5547 65.5471L64.9664 57.3497L73.1584 87.9379L58.0446 91.9855L49.8472 61.408L11.8313 99.4186L0.765015 88.3524L38.781 50.3364L8.19813 42.1444L12.2457 27.0252L42.8339 35.2226L34.6365 4.63435L49.7557 0.58139L57.9531 31.1696L80.8876 8.2298L91.9538 19.296L69.0194 42.2359L99.6022 50.4333L95.5547 65.5471Z"></path>
-                    <path d="M121.46 94.2892V4.68817H138.485V79.5683H180.338V94.2892H121.46Z"></path>
-                    <path d="M245.918 29.7756V94.2892H230.174V84.3048C226.589 91.345 219.296 95.3118 210.076 95.3118C195.614 95.3118 186.141 84.8161 186.141 69.7131V29.7756H201.755V66.3814C201.755 75.2139 207.261 81.3552 215.195 81.3552C224.027 81.3552 230.169 74.4442 230.169 64.9712V29.7756H245.912H245.918Z"></path>
-                    <path d="M257.102 94.2892V29.7756H272.846V39.8891C276.043 33.3603 282.448 28.7529 291.534 28.7529C301.776 28.7529 308.811 33.1073 311.631 41.041C314.576 34.3829 322.768 28.7529 333.01 28.7529C346.962 28.7529 355.923 38.8665 355.923 52.5593V94.2892H340.309V57.2959C340.309 48.205 335.572 42.1928 328.021 42.1928C319.571 42.1928 314.323 48.2103 314.323 57.2959V94.2892H298.708V57.2959C298.708 48.205 293.972 42.1928 286.42 42.1928C278.099 42.1928 272.851 48.2103 272.851 57.2959V94.2892H257.108H257.102Z"></path>
-                    <path d="M364.724 62.0324C364.724 42.8333 378.804 28.7529 398.514 28.7529C418.225 28.7529 432.176 42.8333 432.176 62.0324C432.176 81.2314 418.096 95.3118 398.514 95.3118C378.933 95.3118 364.724 81.2314 364.724 62.0324ZM416.309 62.0324C416.309 50.3848 409.139 42.322 398.514 42.322C387.89 42.322 380.596 50.3848 380.596 62.0324C380.596 73.6799 387.766 81.7428 398.514 81.7428C409.263 81.7428 416.309 73.6799 416.309 62.0324Z"></path>
-                    <path d="M437.526 72.7864H451.865C452.505 78.9331 457.242 82.7708 464.282 82.7708C470.429 82.7708 474.525 79.6975 474.525 75.8598C474.525 61.5211 439.195 75.2193 439.195 47.9574C439.195 36.692 449.05 28.7583 462.361 28.7583C477.464 28.7583 487.836 37.0795 488.471 49.6205H474.132C473.238 43.603 467.732 40.5296 462.743 40.5296C457.113 40.5296 453.399 43.0917 453.399 47.4407C453.399 61.3919 489.24 46.0305 489.24 75.2193C489.24 87.3782 479.385 95.3172 464.282 95.3172C449.179 95.3172 438.296 86.6138 437.531 72.7864H437.526Z"></path>
-                  </svg></div>
-              </a>
-              <nav aria-label="Main" data-wf--menu--variant="desktop" class="nav_links_component w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                <ul role="list" class="nav_links_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-list-unstyled">
-                  <li class="nav_links_item">
-                    <div data-delay="400" data-hover="true" class="nav_dropdown_component w-dropdown">
-                      <div data-state="expanded" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-toggle">
-                        <div class="nav_links_text">Services</div>
-                        <div class="nav_links_svg"><svg data-wf--icon-arrow--direction="bottom" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg w-variant-caa8b8e9-e8ec-6eb3-4526-30f19f7326f5">
-                            <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
-                          </svg></div>
-                      </div>
-                      <nav class="nav_dropdown_main_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-list">
-                        <div class="nav_dropdown_main_content">
-                          <div data-lenis-prevent="" class="nav_dropdown_main_scroll w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                            <ul role="list" class="nav_dropdown_list">
-                              <li class="nav_dropdown_item">
-                                <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                  <div class="nav_dropdown_text">Branding</div>
-                                </a>
-                              </li>
-                              <li class="nav_dropdown_item">
-                                <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                  <div class="nav_dropdown_text">Website Design</div>
-                                </a>
-                              </li>
-                              <li class="nav_dropdown_item">
-                                <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                  <div class="nav_dropdown_text">Development</div>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </nav>
-                    </div>
-                  </li>
-                  <li class="nav_links_item">
-                    <div data-delay="400" data-hover="true" class="nav_dropdown_component w-dropdown">
-                      <div data-state="expanded" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-toggle">
-                        <div class="nav_links_text">Work</div>
-                        <div class="nav_links_svg"><svg data-wf--icon-arrow--direction="bottom" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg w-variant-caa8b8e9-e8ec-6eb3-4526-30f19f7326f5">
-                            <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
-                          </svg></div>
-                      </div>
-                      <nav class="nav_dropdown_mega_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-list">
-                        <div class="nav_dropdown_mega_content w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                          <div data-lenis-prevent="" class="nav_dropdown_mega_scroll w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                            <div class="nav_dropdown_mega_contain w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                              <div class="nav_dropdown_mega_layout w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                                <ul role="list" class="nav_dropdown_list">
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Branding</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Website Design</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Development</div>
-                                    </a>
-                                  </li>
-                                </ul>
-                                <ul role="list" class="nav_dropdown_list">
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Branding</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Website Design</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Development</div>
-                                    </a>
-                                  </li>
-                                </ul>
-                                <ul role="list" class="nav_dropdown_list">
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Branding</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Website Design</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Development</div>
-                                    </a>
-                                  </li>
-                                </ul>
-                                <ul role="list" class="nav_dropdown_list">
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Branding</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Website Design</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                                      <div class="nav_dropdown_text">Development</div>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </nav>
-                    </div>
-                  </li>
-                  <li class="nav_links_item">
-                    <a href="#" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                      <div class="nav_links_text">About</div>
-                    </a>
-                  </li>
-                  <li class="nav_links_item">
-                    <a href="#" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
-                      <div class="nav_links_text">Contact</div>
-                    </a>
-                  </li>
-                </ul>
-                <ul role="list" class="nav_actions_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-list-unstyled">
-                  <li class="nav_links_item">
-                    <div data-delay="400" data-hover="false" class="nav_dropdown_component w-dropdown">
-                      <div data-state="expanded" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-toggle">
-                        <div class="w-locales-list">
-                          <div class="nav_links_text u-text-transform-uppercase">EN</div>
-                          <div class="nav_links_locales_hide w-locales-empty"></div>
-                        </div>
-                        <div class="nav_links_svg"><svg data-wf--icon-arrow--direction="bottom" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg w-variant-caa8b8e9-e8ec-6eb3-4526-30f19f7326f5">
-                            <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
-                          </svg></div>
-                      </div>
-                      <nav class="nav_dropdown_main_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-list">
-                        <div class="nav_dropdown_main_content">
-                          <div data-lenis-prevent="" class="nav_dropdown_main_scroll w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-locales-list">
-                            <div class="w-locales-empty">
-                              <div>No enabled locales found.</div>
-                            </div>
-                          </div>
-                        </div>
-                      </nav>
-                    </div>
-                  </li>
-                  <li class="nav_links_item">
-                    <div data-delay="400" data-hover="false" data-open-on-mobile="" class="nav_dropdown_component w-dropdown">
-                      <div data-state="expanded" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-toggle">
-                        <div class="nav_links_search_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 400 400" fill="none" aria-hidden="true" class="u-svg">
-                            <path d="M 326,171     A 155,155 0 1,1 16,171     A 155,155 0 1,1 326,171" class="u-path"></path>
-                            <path d="M280.602 280.602L388.602 388.602" class="u-path"></path>
-                          </svg></div>
-                        <div class="u-sr-only">Search</div>
-                      </div>
-                      <nav class="nav_dropdown_mega_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-list">
-                        <div class="nav_dropdown_mega_content w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                          <div data-lenis-prevent="" class="nav_dropdown_mega_scroll w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                            <div class="nav_dropdown_mega_contain w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                              <form action="/search" class="nav_search_wrap w-form"><button type="submit" tabindex="-1" class="nav_search_btn_wrap"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 400 400" fill="none" aria-hidden="true" class="nav_search_btn_icon">
-                                    <circle cx="171" cy="171" r="155" stroke="currentColor" stroke-width="var(--nav--icon-thickness)" vector-effect="non-scaling-stroke"></circle>
-                                    <path d="M280.602 280.602L388.602 388.602" stroke="currentColor" stroke-width="var(--nav--icon-thickness)" vector-effect="non-scaling-stroke"></path>
-                                  </svg>
-                                  <div class="u-sr-only">Search</div>
-                                </button><label class="nav_search_label"><span class="u-sr-only">Search</span><input class="nav_search_field w-input" maxlength="256" name="query" placeholder="Search…" type="search" id="search-2" required=""></label><input type="submit" class="u-display-none w-button" value="Search"></form>
-                            </div>
-                          </div>
-                        </div>
-                      </nav>
-                    </div>
-                  </li>
-                  <li class="nav_buttons_item is-main w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
-                    {% for block in section.blocks %}
-    {% if block.type == "button" %}
-                    <div data-wf--button-main--variant="secondary" class="button_main_wrap" data-button=" " data-trigger="hover focus" li-block="Button" li-block:category="CTA">
-                                    
-                      
-                                    <div class="clickable_wrap u-cover-absolute">
-                        <a li-settings-a:target="" href="{{ block.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ block.settings.text_screen_reader }}</span> </a><button li-settings-a:type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
-{{ block.settings.text_screen_reader }}
-</span></button>
-                      </div>
-                                    
-                      
-                                    <div class="button_main_element w-variant-e85564cd-af30-a478-692b-71732aefb3ab">
-                        <div aria-hidden="true" class="button_main_text u-text-style-main">Button Text</div>
-                        <div class="button_main_icon u-hide-if-empty"></div>
-                        <div class="button_main_line"></div>
-                      </div>
-                                    
-                      
-                                    
-                                    
-                    
-                            </div>
-            {% endif %}
-{% endfor %}
-                  </li>
-                  <li class="nav_buttons_item">
-                    {% for block in section.blocks %}
-    {% if block.type == "button" %}
-                    <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus" li-block="Button" li-block:category="CTA">
-                                    
-                      
-                                    <div class="clickable_wrap u-cover-absolute">
-                        <a li-settings-a:target="" href="{{ block.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ block.settings.text_screen_reader }}</span> </a><button li-settings-a:type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
-{{ block.settings.text_screen_reader }}
-</span></button>
-                      </div>
-                                    
-                      
-                                    <div class="button_main_element">
-                        <div aria-hidden="true" class="button_main_text u-text-style-main">Button Text</div>
-                        <div class="button_main_icon u-hide-if-empty"></div>
-                        <div class="button_main_line"></div>
-                      </div>
-                                    
-                      
-                                    
-                                    
-                    
-                            </div>
-            {% endif %}
-{% endfor %}
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </header>
-        <div data-animation="default" data-collapse="all" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav_mobile_wrap w-nav">
-          <div class="nav_mobile_contain">
-            <div class="nav_mobile_layout">
-              <a aria-label="Home Page" href="index.html" aria-current="page" class="nav_mobile_logo w-inline-block w--current">
-                <div style="" class="u-max-width-full"><svg viewbox="0 0 490 100" fill="currentColor" class="u-svg">
-                    <path d="M95.5547 65.5471L64.9664 57.3497L73.1584 87.9379L58.0446 91.9855L49.8472 61.408L11.8313 99.4186L0.765015 88.3524L38.781 50.3364L8.19813 42.1444L12.2457 27.0252L42.8339 35.2226L34.6365 4.63435L49.7557 0.58139L57.9531 31.1696L80.8876 8.2298L91.9538 19.296L69.0194 42.2359L99.6022 50.4333L95.5547 65.5471Z"></path>
-                    <path d="M121.46 94.2892V4.68817H138.485V79.5683H180.338V94.2892H121.46Z"></path>
-                    <path d="M245.918 29.7756V94.2892H230.174V84.3048C226.589 91.345 219.296 95.3118 210.076 95.3118C195.614 95.3118 186.141 84.8161 186.141 69.7131V29.7756H201.755V66.3814C201.755 75.2139 207.261 81.3552 215.195 81.3552C224.027 81.3552 230.169 74.4442 230.169 64.9712V29.7756H245.912H245.918Z"></path>
-                    <path d="M257.102 94.2892V29.7756H272.846V39.8891C276.043 33.3603 282.448 28.7529 291.534 28.7529C301.776 28.7529 308.811 33.1073 311.631 41.041C314.576 34.3829 322.768 28.7529 333.01 28.7529C346.962 28.7529 355.923 38.8665 355.923 52.5593V94.2892H340.309V57.2959C340.309 48.205 335.572 42.1928 328.021 42.1928C319.571 42.1928 314.323 48.2103 314.323 57.2959V94.2892H298.708V57.2959C298.708 48.205 293.972 42.1928 286.42 42.1928C278.099 42.1928 272.851 48.2103 272.851 57.2959V94.2892H257.108H257.102Z"></path>
-                    <path d="M364.724 62.0324C364.724 42.8333 378.804 28.7529 398.514 28.7529C418.225 28.7529 432.176 42.8333 432.176 62.0324C432.176 81.2314 418.096 95.3118 398.514 95.3118C378.933 95.3118 364.724 81.2314 364.724 62.0324ZM416.309 62.0324C416.309 50.3848 409.139 42.322 398.514 42.322C387.89 42.322 380.596 50.3848 380.596 62.0324C380.596 73.6799 387.766 81.7428 398.514 81.7428C409.263 81.7428 416.309 73.6799 416.309 62.0324Z"></path>
-                    <path d="M437.526 72.7864H451.865C452.505 78.9331 457.242 82.7708 464.282 82.7708C470.429 82.7708 474.525 79.6975 474.525 75.8598C474.525 61.5211 439.195 75.2193 439.195 47.9574C439.195 36.692 449.05 28.7583 462.361 28.7583C477.464 28.7583 487.836 37.0795 488.471 49.6205H474.132C473.238 43.603 467.732 40.5296 462.743 40.5296C457.113 40.5296 453.399 43.0917 453.399 47.4407C453.399 61.3919 489.24 46.0305 489.24 75.2193C489.24 87.3782 479.385 95.3172 464.282 95.3172C449.179 95.3172 438.296 86.6138 437.531 72.7864H437.526Z"></path>
-                  </svg></div>
-              </a>
-              <nav role="navigation" class="nav_mobile_menu_wrap w-nav-menu">
-                <div data-lenis-prevent="" class="nav_mobile_menu_scroll">
-                  <nav aria-label="Main" data-wf--menu--variant="mobile" class="nav_links_component">
-                    <ul role="list" class="nav_links_wrap w-list-unstyled">
-                      <li class="nav_links_item">
-                        <div data-delay="400" data-hover="true" class="nav_dropdown_component w-dropdown">
-                          <div data-state="expanded" class="nav_links_link w-dropdown-toggle">
-                            <div class="nav_links_text">Services</div>
-                            <div class="nav_links_svg"><svg data-wf--icon-arrow--direction="bottom" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg w-variant-caa8b8e9-e8ec-6eb3-4526-30f19f7326f5">
-                                <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
-                              </svg></div>
-                          </div>
-                          <nav class="nav_dropdown_main_wrap w-dropdown-list">
-                            <div class="nav_dropdown_main_content">
-                              <div data-lenis-prevent="" class="nav_dropdown_main_scroll">
-                                <ul role="list" class="nav_dropdown_list">
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-inline-block">
-                                      <div class="nav_dropdown_text">Branding</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-inline-block">
-                                      <div class="nav_dropdown_text">Website Design</div>
-                                    </a>
-                                  </li>
-                                  <li class="nav_dropdown_item">
-                                    <a href="#" class="nav_dropdown_link w-inline-block">
-                                      <div class="nav_dropdown_text">Development</div>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </nav>
-                        </div>
-                      </li>
-                      <li class="nav_links_item">
-                        <div data-delay="400" data-hover="true" class="nav_dropdown_component w-dropdown">
-                          <div data-state="expanded" class="nav_links_link w-dropdown-toggle">
-                            <div class="nav_links_text">Work</div>
-                            <div class="nav_links_svg"><svg data-wf--icon-arrow--direction="bottom" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg w-variant-caa8b8e9-e8ec-6eb3-4526-30f19f7326f5">
-                                <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
-                              </svg></div>
-                          </div>
-                          <nav class="nav_dropdown_mega_wrap w-dropdown-list">
-                            <div class="nav_dropdown_mega_content">
-                              <div data-lenis-prevent="" class="nav_dropdown_mega_scroll">
-                                <div class="nav_dropdown_mega_contain">
-                                  <div class="nav_dropdown_mega_layout">
-                                    <ul role="list" class="nav_dropdown_list">
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Branding</div>
-                                        </a>
-                                      </li>
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Website Design</div>
-                                        </a>
-                                      </li>
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Development</div>
-                                        </a>
-                                      </li>
-                                    </ul>
-                                    <ul role="list" class="nav_dropdown_list">
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Branding</div>
-                                        </a>
-                                      </li>
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Website Design</div>
-                                        </a>
-                                      </li>
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Development</div>
-                                        </a>
-                                      </li>
-                                    </ul>
-                                    <ul role="list" class="nav_dropdown_list">
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Branding</div>
-                                        </a>
-                                      </li>
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Website Design</div>
-                                        </a>
-                                      </li>
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Development</div>
-                                        </a>
-                                      </li>
-                                    </ul>
-                                    <ul role="list" class="nav_dropdown_list">
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Branding</div>
-                                        </a>
-                                      </li>
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Website Design</div>
-                                        </a>
-                                      </li>
-                                      <li class="nav_dropdown_item">
-                                        <a href="#" class="nav_dropdown_link w-inline-block">
-                                          <div class="nav_dropdown_text">Development</div>
-                                        </a>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </nav>
-                        </div>
-                      </li>
-                      <li class="nav_links_item">
-                        <a href="#" class="nav_links_link w-inline-block">
-                          <div class="nav_links_text">About</div>
-                        </a>
-                      </li>
-                      <li class="nav_links_item">
-                        <a href="#" class="nav_links_link w-inline-block">
-                          <div class="nav_links_text">Contact</div>
-                        </a>
-                      </li>
-                    </ul>
-                    <ul role="list" class="nav_actions_wrap w-list-unstyled">
-                      <li class="nav_links_item">
-                        <div data-delay="400" data-hover="false" class="nav_dropdown_component w-dropdown">
-                          <div data-state="expanded" class="nav_links_link w-dropdown-toggle">
-                            <div class="w-locales-list">
-                              <div class="nav_links_text u-text-transform-uppercase">EN</div>
-                              <div class="nav_links_locales_hide w-locales-empty"></div>
-                            </div>
-                            <div class="nav_links_svg"><svg data-wf--icon-arrow--direction="bottom" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg w-variant-caa8b8e9-e8ec-6eb3-4526-30f19f7326f5">
-                                <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
-                              </svg></div>
-                          </div>
-                          <nav class="nav_dropdown_main_wrap w-dropdown-list">
-                            <div class="nav_dropdown_main_content">
-                              <div data-lenis-prevent="" class="nav_dropdown_main_scroll w-locales-list">
-                                <div class="w-locales-empty">
-                                  <div>No enabled locales found.</div>
-                                </div>
-                              </div>
-                            </div>
-                          </nav>
-                        </div>
-                      </li>
-                      <li class="nav_links_item">
-                        <div data-delay="400" data-hover="false" data-open-on-mobile="" class="nav_dropdown_component w-dropdown">
-                          <div data-state="expanded" class="nav_links_link w-dropdown-toggle">
-                            <div class="nav_links_search_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 400 400" fill="none" aria-hidden="true" class="u-svg">
-                                <path d="M 326,171     A 155,155 0 1,1 16,171     A 155,155 0 1,1 326,171" class="u-path"></path>
-                                <path d="M280.602 280.602L388.602 388.602" class="u-path"></path>
-                              </svg></div>
-                            <div class="u-sr-only">Search</div>
-                          </div>
-                          <nav class="nav_dropdown_mega_wrap w-dropdown-list">
-                            <div class="nav_dropdown_mega_content">
-                              <div data-lenis-prevent="" class="nav_dropdown_mega_scroll">
-                                <div class="nav_dropdown_mega_contain">
-                                  <form action="/search" class="nav_search_wrap w-form"><button type="submit" tabindex="-1" class="nav_search_btn_wrap"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 400 400" fill="none" aria-hidden="true" class="nav_search_btn_icon">
-                                        <circle cx="171" cy="171" r="155" stroke="currentColor" stroke-width="var(--nav--icon-thickness)" vector-effect="non-scaling-stroke"></circle>
-                                        <path d="M280.602 280.602L388.602 388.602" stroke="currentColor" stroke-width="var(--nav--icon-thickness)" vector-effect="non-scaling-stroke"></path>
-                                      </svg>
-                                      <div class="u-sr-only">Search</div>
-                                    </button><label class="nav_search_label"><span class="u-sr-only">Search</span><input class="nav_search_field w-input" maxlength="256" name="query" placeholder="Search…" type="search" id="search-2" required=""></label><input type="submit" class="u-display-none w-button" value="Search"></form>
-                                </div>
-                              </div>
-                            </div>
-                          </nav>
-                        </div>
-                      </li>
-                      <li class="nav_buttons_item is-main">
-                        {% for block in section.blocks %}
-    {% if block.type == "button" %}
-                    <div data-wf--button-main--variant="secondary" class="button_main_wrap" data-button=" " data-trigger="hover focus" li-block="Button" li-block:category="CTA">
-                                    
-                          
-                                    <div class="clickable_wrap u-cover-absolute">
-                            <a li-settings-a:target="" href="{{ block.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ block.settings.text_screen_reader }}</span> </a><button li-settings-a:type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
-{{ block.settings.text_screen_reader }}
-</span></button>
-                          </div>
-                                    
-                          
-                                    <div class="button_main_element w-variant-e85564cd-af30-a478-692b-71732aefb3ab">
-                            <div aria-hidden="true" class="button_main_text u-text-style-main">Button Text</div>
-                            <div class="button_main_icon u-hide-if-empty"></div>
-                            <div class="button_main_line"></div>
-                          </div>
-                                    
-                          
-                                    
-                                    
-                        
-                            </div>
-            {% endif %}
-{% endfor %}
-                      </li>
-                      <li class="nav_buttons_item">
-                        {% for block in section.blocks %}
-    {% if block.type == "button" %}
-                    <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus" li-block="Button" li-block:category="CTA">
-                                    
-                          
-                                    <div class="clickable_wrap u-cover-absolute">
-                            <a li-settings-a:target="" href="{{ block.settings.url_link }}" class="clickable_link w-inline-block"> <span class="clickable_text u-sr-only">{{ block.settings.text_screen_reader }}</span> </a><button li-settings-a:type="button" class="clickable_btn"><span class="clickable_text u-sr-only">
-{{ block.settings.text_screen_reader }}
-</span></button>
-                          </div>
-                                    
-                          
-                                    <div class="button_main_element">
-                            <div aria-hidden="true" class="button_main_text u-text-style-main">Button Text</div>
-                            <div class="button_main_icon u-hide-if-empty"></div>
-                            <div class="button_main_line"></div>
-                          </div>
-                                    
-                          
-                                    
-                                    
-                        
-                            </div>
-            {% endif %}
-{% endfor %}
-                      </li>
-                    </ul>
-                  </nav>
+        <style> /* Add transition for smooth state changes */ .nav_banner_cms_wrap{transition: transform 0.3s ease-out;}@keyframes banner-marquee-timeline{from{transform: translateX(0%);}to{transform: translateX(-100%);}}@container ( width > 40em ){.nav_banner_cms_wrap.is-2{display: none !important;}.nav_banner_cms_wrap{animation: none !important; transform: translateX(0) !important;}.nav_banner_cms_list{min-width: 0px !important;}.nav_banner_track{justify-content: center !important; align-items: center !important;}.nav_banner_item{padding-inline: 0rem !important;}}</style>
+        <div style="color: {{ section.settings.banner_text | default: '#232323' }}; background-color: {{ section.settings.banner_bg | default: '#FFD036' }};" class="nav_banner_contain">
+          <div class="nav_banner_track">
+            <div class="nav_banner_cms_wrap">
+              <div class="nav_banner_cms_list">
+                <div class="nav_banner_item">
+                  <div aria-hidden="true" class="nav_banner_text u-text-style-main u-text-transform-uppercase u-weight-medium">
+{{ section.settings.text_banner_text }}
+</div>
                 </div>
-              </nav>
-              <div data-state="open" class="nav_button_wrap w-nav-button">
-                <div class="nav_button_layout">
-                  <div class="nav_button_line is-1"></div>
-                  <div class="nav_button_line is-2"></div>
+              </div>
+            </div>
+            <div class="nav_banner_cms_wrap is-2">
+              <div class="nav_banner_cms_list">
+                <div class="nav_banner_item">
+                  <div aria-hidden="true" li-object="section.settings.text_banner_text" class="nav_banner_text u-text-style-main u-text-transform-uppercase u-weight-medium">{{ section.settings.text_banner_text }}</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="nav_dropdown_backdrop"></div>
-        <div class="nav_menu_backdrop"></div>
-        <div class="u-embed-js w-embed w-script">
-          <script>
+          </div>
+{% endif %}
+      <div class="nav_master_menu">
+        <div class="nav_master_contain">
+          <header class="nav_desktop_wrap">
+            <div class="nav_desktop_layout">
+              <nav aria-label="Main" data-wf--menu--variant="desktop" class="nav_links_component w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                <ul role="list" class="nav_links_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-list-unstyled">
+                  {% for link in linklists[section.settings.left_menu].links %}    <li li-for="link in linklists[section.settings.left_menu].links" class="nav_links_item w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                    
+                    
+                            {% if link.links.size > 0 %}    <div data-delay="400" data-hover="true" li-if="link.links.size > 0" class="nav_dropdown_component w-dropdown">
+    
+                      <div data-state="expanded" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-toggle">
+                        <div li-object="link.title" class="nav_links_text u-text-style-h6 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">{{ link.title }}</div>
+                        <div class="nav_links_svg"><svg data-wf--icon-arrow--direction="bottom" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg w-variant-caa8b8e9-e8ec-6eb3-4526-30f19f7326f5">
+                            <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
+                          </svg></div>
+                      </div>
+                      {% if link.links.size > 0 %}    <nav li-if="link.links.size > 0" class="nav_dropdown_mega_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-dropdown-list">
+    
+                        <div class="nav_dropdown_mega_content w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                          <div data-lenis-prevent="" class="nav_dropdown_mega_scroll w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                            <div class="nav_dropdown_mega_contain w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                              <div class="nav_dropdown_mega_left_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                <div class="nav_dropdown_mega_links_top">
+                                  <div class="nav_main_links_title_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                    <div li-object="link.title" class="nav_main_links_title_txt u-text-style-main u-text-transform-uppercase u-weight-medium u-color-faded">{{ link.title }}</div>
+                                  </div>
+                                  <div class="nav_dropdown_mega_layout w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                    <ul role="list" class="nav_dropdown_list">
+                                      {% for child_link in link.links %}    <li li-for="child_link in link.links" class="nav_dropdown_item">
+                                    
+                                        
+                            <a li-object:href="child_link.url" href="{{ child_link.url }}" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
+                                          <div li-object="child_link.title" class="nav_dropdown_text u-text-style-h3">{{ child_link.title }}</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 32 24" fill="none" class="nav_dropdown_link_svg w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                            <path d="M0 9V15H13.0909V24L32 12L13.0909 0V9H0Z" fill="currentColor"></path>
+                                          </svg>
+                                        </a>
+                            
+                                      
+                        </li>
+{% endfor %}
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="nav_dropdown_mega_links_bottom">
+                                  <div class="nav_main_links_title_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                    <div class="nav_main_links_title_txt u-text-style-main u-text-transform-uppercase u-weight-medium u-color-faded">
+{{ section.settings.text_secondary_links_title }}
+</div>
+                                  </div>
+                                  <div class="nav_dropdown_mega_layout w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                    <ul role="list" class="nav_dropdown_list">
+                                      {% for block in section.blocks %}
+    {% if block.type == "nav-quick-link" %}
+                    <li li-block="Nav Quick Link" class="nav_dropdown_item">
+                                    
+                                        
+                                    <a href="{{ block.settings.url_link }}" class="nav_dropdown_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block"> <div class="nav_dropdown_text u-text-style-h4 is-underlined w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">{{ block.settings.text_text }}</div> </a>
+                                    
+                                      
+                            </li>
+            {% endif %}
+{% endfor %}
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nav_dropdown_mega_right_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                {% for collection in section.settings.collection_list %}    <div li-for="collection in section.settings.collection_list" class="nav_dropdown_collection_item w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                    
+                                  
+                            <div class="nav_dropdown_collection_img_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6"><img src="{{ collection.metafields.custom.slider_image | image_url: width: 333 }}" loading="lazy" li-object:src="collection.metafields.custom.slider_image | image_url: width: 333" alt="" class="nav_dropdown_collection_img w-variant-23049969-09ac-2789-520b-3c6ae895bbc6"><img src="{{ collection.metafields.custom.slider_image_hover | image_url: width: 333 }}" loading="lazy" li-object:src="collection.metafields.custom.slider_image_hover | image_url: width: 333" alt="" class="nav_dropdown_collection_img_hover w-variant-23049969-09ac-2789-520b-3c6ae895bbc6"></div>
+                            
+                                  
+                            <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                                    <div class="clickable_wrap u-cover-absolute">
+                                      <a li-object:href="collection.url" class="clickable_link" href="{{ collection.url }}"><span li-object="collection.title" class="clickable_text u-sr-only">{{ collection.title }}</span></a><button type="button" class="clickable_btn"><span li-object="collection.title" class="clickable_text u-sr-only">{{ collection.title }}</span></button>
+                                    </div>
+                                    <div class="button_main_element">
+                                      <p aria-hidden="true" li-object="collection.title" class="button_main_text u-text-style-h6">{{ collection.title }}</p>
+                                      <div class="button_main_icon u-hide-if-empty"></div>
+                                      <div class="button_main_line"></div>
+                                    </div>
+                                    <div class="u-display-contents"></div>
+                                  </div>
+                            
+                                
+                        </div>
+{% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                          </nav>
+{% endif %}
+                        </div>
+{% endif %}
+                            
+                    
+                            {% unless link.links.size > 0 %}    <div li-unless="link.links.size > 0">
+    
+                      <a li-object:href="link.url" href="{{ link.url }}" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
+                        <div li-object="link.title" class="nav_links_text u-text-style-h6 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">{{ link.title }}</div>
+                      </a>
+                        </div>
+{% endunless %}
+                            
+                  
+                        </li>
+{% endfor %}
+                </ul>
+                <a li-object:href="routes.root_url" aria-label="Home Page" href="{{ routes.root_url }}" class="nav_desktop_logo w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">{% if section.settings.image_logo %}
+{{ section.settings.image_logo | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'nav_desktop_logo_img w-variant-23049969-09ac-2789-520b-3c6ae895bbc6' }}
+{% else %}
+<img src="{{ 'icon_meats_logo.svg' | asset_url }}" loading="lazy" alt="" class="nav_desktop_logo_img w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+{% endif %}</a>
+                <ul role="list" class="nav_actions_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-list-unstyled">
+                  {% for link in linklists[section.settings.right_menu].links %}    <li li-for="link in linklists[section.settings.right_menu].links" class="nav_links_item w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">
+                                    
+                    
+                            <a li-object:href="link.url" href="{{ link.url }}" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-inline-block">
+                      <div li-object="link.title" class="nav_links_text u-text-style-h6 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">{{ link.title }}</div>
+                    </a>
+                            
+                  
+                        </li>
+{% endfor %}
+                </ul>
+                
+              </nav>
+            </div>
+          </header>
+          <div data-animation="default" data-collapse="all" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav_mobile_wrap w-nav">
+            <div class="nav_mobile_layout">
+              <a aria-label="Home Page" href="index.html" class="nav_mobile_logo w-inline-block">{% if section.settings.image_logo %}
+{{ section.settings.image_logo | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'nav_mobile_logo_img' }}
+{% else %}
+<img src="{{ 'icon_meats_logo.svg' | asset_url }}" loading="lazy" alt="" class="nav_mobile_logo_img">
+{% endif %}</a>
+              <nav role="navigation" class="nav_mobile_menu_wrap w-nav-menu">
+                <div data-lenis-prevent="" class="nav_mobile_menu_scroll">
+                  <nav aria-label="Main" data-wf--menu--variant="mobile" class="nav_links_component">
+                    <ul role="list" class="nav_links_wrap w-list-unstyled">
+                      {% for link in linklists[section.settings.left_menu].links %}    <li li-for="link in linklists[section.settings.left_menu].links" class="nav_links_item">
+                                    
+                        
+                            {% if link.links.size > 0 %}    <div data-delay="400" data-hover="true" li-if="link.links.size > 0" class="nav_dropdown_component w-dropdown">
+    
+                          <div data-state="expanded" class="nav_links_link w-dropdown-toggle">
+                            <div li-object="link.title" class="nav_links_text u-text-style-h6">{{ link.title }}</div>
+                            <div class="nav_links_svg"><svg data-wf--icon-arrow--direction="bottom" viewbox="0 0 66 70" fill="none" width="100%" height="100%" aria-hidden="true" class="u-svg w-variant-caa8b8e9-e8ec-6eb3-4526-30f19f7326f5">
+                                <path d="M17 2L50 34.9999L17 68" class="u-path"></path>
+                              </svg></div>
+                          </div>
+                          {% if link.links.size > 0 %}    <nav li-if="link.links.size > 0" class="nav_dropdown_mega_wrap w-dropdown-list">
+    
+                            <div class="nav_dropdown_mega_content">
+                              <div data-lenis-prevent="" class="nav_dropdown_mega_scroll">
+                                <div class="nav_dropdown_mega_contain">
+                                  <div class="nav_dropdown_mega_left_wrap">
+                                    <div class="nav_dropdown_mega_links_top">
+                                      <div class="nav_main_links_title_wrap">
+                                        <div li-object="link.title" class="nav_main_links_title_txt u-text-style-main u-text-transform-uppercase u-weight-medium u-color-faded">{{ link.title }}</div>
+                                      </div>
+                                      <div class="nav_dropdown_mega_layout">
+                                        <ul role="list" class="nav_dropdown_list">
+                                          {% for child_link in link.links %}    <li li-for="child_link in link.links" class="nav_dropdown_item">
+                                    
+                                            
+                            <a li-object:href="child_link.url" href="{{ child_link.url }}" class="nav_dropdown_link w-inline-block">
+                                              <div li-object="child_link.title" class="nav_dropdown_text u-text-style-h3">{{ child_link.title }}</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 32 24" fill="none" class="nav_dropdown_link_svg">
+                                                <path d="M0 9V15H13.0909V24L32 12L13.0909 0V9H0Z" fill="currentColor"></path>
+                                              </svg>
+                                            </a>
+                            
+                                          
+                        </li>
+{% endfor %}
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="nav_dropdown_mega_links_bottom">
+                                      <div class="nav_main_links_title_wrap">
+                                        <div class="nav_main_links_title_txt u-text-style-main u-text-transform-uppercase u-weight-medium u-color-faded">
+{{ section.settings.text_secondary_links_title }}
+</div>
+                                      </div>
+                                      <div class="nav_dropdown_mega_layout">
+                                        <ul role="list" class="nav_dropdown_list">
+                                          {% for block in section.blocks %}
+    {% if block.type == "nav-quick-link" %}
+                    <li li-block="Nav Quick Link" class="nav_dropdown_item">
+                                    
+                                            
+                                    <a href="{{ block.settings.url_link }}" class="nav_dropdown_link w-inline-block"> <div class="nav_dropdown_text u-text-style-h4 is-underlined">{{ block.settings.text_text }}</div> </a>
+                                    
+                                          
+                            </li>
+            {% endif %}
+{% endfor %}
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="nav_dropdown_mega_right_wrap">
+                                    {% for collection in section.settings.collection_list %}    <div li-for="collection in section.settings.collection_list" class="nav_dropdown_collection_item">
+                                    
+                                      
+                            <div class="nav_dropdown_collection_img_wrap"><img src="{{ collection.metafields.custom.slider_image | image_url: width: 333 }}" loading="lazy" li-object:src="collection.metafields.custom.slider_image | image_url: width: 333" alt="" class="nav_dropdown_collection_img"><img src="{{ collection.metafields.custom.slider_image_hover | image_url: width: 333 }}" loading="lazy" li-object:src="collection.metafields.custom.slider_image_hover | image_url: width: 333" alt="" class="nav_dropdown_collection_img_hover"></div>
+                            
+                                      
+                            <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                                        <div class="clickable_wrap u-cover-absolute">
+                                          <a li-object:href="collection.url" class="clickable_link" href="{{ collection.url }}"><span li-object="collection.title" class="clickable_text u-sr-only">{{ collection.title }}</span></a><button type="button" class="clickable_btn"><span li-object="collection.title" class="clickable_text u-sr-only">{{ collection.title }}</span></button>
+                                        </div>
+                                        <div class="button_main_element">
+                                          <p aria-hidden="true" li-object="collection.title" class="button_main_text u-text-style-h6">{{ collection.title }}</p>
+                                          <div class="button_main_icon u-hide-if-empty"></div>
+                                          <div class="button_main_line"></div>
+                                        </div>
+                                        <div class="u-display-contents"></div>
+                                      </div>
+                            
+                                    
+                        </div>
+{% endfor %}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                              </nav>
+{% endif %}
+                            </div>
+{% endif %}
+                            
+                        
+                            {% unless link.links.size > 0 %}    <div li-unless="link.links.size > 0">
+    
+                          <a li-object:href="link.url" href="{{ link.url }}" class="nav_links_link w-inline-block">
+                            <div li-object="link.title" class="nav_links_text u-text-style-h6">{{ link.title }}</div>
+                          </a>
+                            </div>
+{% endunless %}
+                            
+                      
+                        </li>
+{% endfor %}
+                    </ul>
+                    <a li-object:href="routes.root_url" aria-label="Home Page" href="{{ routes.root_url }}" class="nav_desktop_logo w-inline-block">{% if section.settings.image_logo %}
+{{ section.settings.image_logo | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'nav_desktop_logo_img' }}
+{% else %}
+<img src="{{ 'icon_meats_logo.svg' | asset_url }}" loading="lazy" alt="" class="nav_desktop_logo_img">
+{% endif %}</a>
+                    <ul role="list" class="nav_actions_wrap w-list-unstyled">
+                      {% for link in linklists[section.settings.right_menu].links %}    <li li-for="link in linklists[section.settings.right_menu].links" class="nav_links_item">
+                                    
+                        
+                            <a li-object:href="link.url" href="{{ link.url }}" class="nav_links_link w-inline-block">
+                          <div li-object="link.title" class="nav_links_text u-text-style-h6">{{ link.title }}</div>
+                        </a>
+                            
+                      
+                        </li>
+{% endfor %}
+                    </ul>
+                    
+                  </nav>
+                </div>
+              </nav>
+              <div class="nav_button_master">
+                <div data-state="open" class="nav_button_wrap w-nav-button">
+                  <div class="nav_button_layout">
+                    <div class="nav_button_line is-1"></div>
+                    <div class="nav_button_line is-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav_shop-icons">
+            <div x-data="" class="nav_search">
+              <div data-delay="0" data-hover="false" class="nav_dropdown w-dropdown">
+                <div class="nav_shop-icon w-dropdown-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 18 18" fill="none" class="nav_svg">
+                    <path d="M7.23705 14.4755C8.84019 14.4755 10.3217 13.9542 11.5212 13.0718L16.4494 18L18 16.4493L13.0718 11.521C13.954 10.3215 14.4752 8.84018 14.4752 7.23722C14.4749 3.24017 11.2341 0 7.23705 0C3.24024 0.000230583 0.000230581 3.24032 0 7.23722C0 11.2343 3.2401 14.4753 7.23705 14.4755ZM7.23705 2.19323C10.0228 2.19323 12.2818 4.45146 12.282 7.23722C12.282 10.0232 10.0229 12.2823 7.23705 12.2823C4.45136 12.2821 2.19318 10.023 2.19318 7.23722C2.19341 4.4516 4.4515 2.19346 7.23705 2.19323Z" fill="currentColor"></path>
+                  </svg></div>
+                <nav class="nav_predictive-search-holder w-dropdown-list">
+                  <div li-element="dropdown-toggle" class="nav_predictive-search-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div>
+                  <div class="predictive-search_component">
+                    <div class="predictive-search_header">
+                      <div class="predictive-search_header_txt u-text-style-h4">
+{{ section.settings.text_search }}
+</div><button li-element="dropdown-toggle" aria-label="Close Search" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))">
+                        <div class="nav_dropdown-close-icon w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.0208 3.33786e-06L14.1421 2.12132L2.12132 14.1421L0 12.0208L12.0208 3.33786e-06Z" fill="#232323"></path>
+                            <path d="M14.1424 12.0208L12.0211 14.1421L0.000262558 2.12132L2.12158 0L14.1424 12.0208Z" fill="#232323"></path>
+                          </svg></div>
+                      </button>
+                    </div><predictive-search>
+                      <div class="predictive-search_holder">
+                        <div class="predictive-search_form w-form">
+                          <form id="wf-form-product-search" name="wf-form-product-search" data-name="product-search" action="/search" method="get" class="predictive-search_form-component" data-wf-page-id="69663227c912d4fb6b52370a" data-wf-element-id="94abdaab-5421-32cf-a7c1-c124581cefb8">
+                            <div class="predictive-search_input-holder"><label for="search-input" class="form_hidden-label">Search</label><input type="search" id="search-input" placeholder="Search now" name="q" class="predictive-search_input u-text-style-h6">
+                              <a href="#" class="predictive-search_search-button w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 17 17" fill="none" class="nav_svg">
+                                  <path d="M11.2002 7.09961C11.2 4.83542 9.36385 3 7.09961 3C4.83555 3.00021 3.00021 4.83555 3 7.09961C3 9.36385 4.83542 11.2 7.09961 11.2002C9.36398 11.2002 11.2002 9.36398 11.2002 7.09961ZM14.2002 7.09961C14.2002 8.51728 13.7823 9.83686 13.0664 10.9453L16.5605 14.4395C17.1463 15.0252 17.1463 15.9748 16.5605 16.5605C15.9748 17.1463 15.0252 17.1463 14.4395 16.5605L10.9453 13.0664C9.83686 13.7823 8.51728 14.2002 7.09961 14.2002C3.17857 14.2 0 11.0207 0 7.09961C0.000210273 3.1787 3.1787 0.000210269 7.09961 0C11.0207 0 14.2 3.17857 14.2002 7.09961Z" fill="currentColor"></path>
+                                </svg></a><input type="submit" data-wait="Please wait..." id="submit-search" class="hide w-button" value="Submit">
+                            </div>
+                            <div id="predictive-search" class="predictive-search_overflow no-scrollbar">
+                              <div li-section="predictive_search" class="predictive-search_section">
+                                {% if predictive_search.performed %}    <div li-if="predictive_search.performed" class="predictive-search_conditional">
+    
+                                  {% assign first_column_results_size = predictive_search.resources.queries.size | plus: predictive_search.resources.collections.size | plus: predictive_search.resources.pages.size | plus: predictive_search.resources.articles.size | plus: predictive_search.resources.products.size %}
+                                  {% if first_column_results_size > 0 %}    <div li-if="first_column_results_size > 0" class="predictive-search_conditional">
+    
+                                    {% if predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %}    <div li-if="predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0" class="predictive-search_topic">
+    
+                                      <div class="predictive-search_headline">
+                                        <div class="predictive-search_headline_txt u-text-style-h6 u-color-faded">Suggestions</div>
+                                      </div>
+                                      <ul role="list" class="predictive-search_list w-list-unstyled">
+                                        {% for query in predictive_search.resources.queries %}    <li li-for="query in predictive_search.resources.queries" class="predictive-search_item">
+                                    
+                                          
+                            <a li-object:href="query.url" href="{{ query.url }}" class="predictive-search_link w-inline-block">
+                                            <div li-object="query.styled_text" class="predictive-search_tag u-text-style-h6">{{ query.styled_text }}</div>
+                                          </a>
+                            
+                                        
+                        </li>
+{% endfor %}
+                                        {% for collection in predictive_search.resources.collections %}    <li li-for="collection in predictive_search.resources.collections" class="predictive-search_item">
+                                    
+                                          
+                            <a li-object:href="collection.url" href="{{ collection.url }}" class="predictive-search_link w-inline-block">
+                                            <div li-object="collection.title" class="predictive-search_tag u-text-style-h6">{{ collection.title }}</div>
+                                          </a>
+                            
+                                        
+                        </li>
+{% endfor %}
+                                      </ul>
+                                        </div>
+{% endif %}
+                                    {% if predictive_search.resources.products.size > 0 or predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0 %}    <div li-if="predictive_search.resources.products.size > 0 or predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0" class="predictive-search_topic">
+    
+                                      <div class="predictive-search_headline">
+                                        <div class="predictive-search_headline_txt u-text-style-h6 u-color-faded">Products</div>
+                                      </div>
+                                      <div role="list" class="predictive-search_product-list">
+                                        {% for product in predictive_search.resources.products %}    <div role="listitem" li-for="product in predictive_search.resources.products" class="predictive-search_product-item">
+                                    
+                                          
+                            <script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<div li-element="product-variant-container" class="predictive-search_container" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)">
+                                            <div class="predictive-search_product-item_styles" style="--flavor-bg: {{ product.metafields.custom.flavor_metaobject.value.background_color }};">
+                                              <div class="predictive-search_line-item">
+                                                <div class="predictive-search_image-wrapper">
+                                                  <div class="product-item_radial is-mini"></div><img li-object:src="product.featured_media | image_url: width: 150" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_media | image_url: width: 150 }}" loading="lazy" class="predictive-search_image">
+                                                </div>
+                                                <div class="product-item_bg is-mini"></div>
+                                                <div class="predictive-search_product-info">
+                                                  <div class="predictive-search_product_top">
+                                                    <p data-wf--eyebrow--variant="small" li-object="product.metafields.custom.flavor_metaobject.value.flavor" class="g_eyebrow_txt u-text-style-h6 w-variant-2ea84ea1-fdee-b528-5a8e-fd7b483b99f5" style="background-color: {{ product.metafields.custom.flavor_metaobject.value.background_color }}; color: {{ product.metafields.custom.flavor_metaobject.value.text_color }};">{{ product.metafields.custom.flavor_metaobject.value.flavor }}</p>
+                                                    <p data-wf--eyebrow--variant="small" class="g_eyebrow_txt u-text-style-h6 w-variant-2ea84ea1-fdee-b528-5a8e-fd7b483b99f5">24 Packs</p>
+                                                  </div>
+                                                  <div class="predictive-search_product_center">
+                                                    <div li-object="product.title" class="predictive-search_product_title u-text-style-h6">{{ product.title }}</div>
+                                                    <div li-object="product.metafields.custom.tagline" class="predictive-search_product_byline u-text-style-h6 u-weight-medium u-color-faded">{{ product.metafields.custom.tagline }}</div>
+                                                  </div>
+                                                  <div class="clickable_wrap u-cover-absolute">
+                                                    <a li-object:href="product.url" class="clickable_link" href="{{ product.url }}"><span li-object="product.title" class="clickable_text u-sr-only">{{ product.title }}</span></a><button type="button" class="clickable_btn"><span li-object="product.title" class="clickable_text u-sr-only">{{ product.title }}</span></button>
+                                                  </div>
+                                                  <div class="predictive-search_product_bottom">
+                                                    <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                                                      <div class="clickable_wrap u-cover-absolute">
+                                                        <a li-element="add-to-cart" class="clickable_link" @click="addToCart($event, true)" :disabled="!addToCartButton"><span class="clickable_text u-sr-only">Add to Cart</span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">Add to Cart</span></button>
+                                                      </div>
+                                                      <div class="button_main_element">
+                                                        <p aria-hidden="true" class="button_main_text u-text-style-h6">Add to Cart</p>
+                                                        <div class="button_main_icon u-hide-if-empty"></div>
+                                                        <div class="button_main_line"></div>
+                                                      </div>
+                                                      <div class="u-display-contents"></div>
+                                                    </div>
+                                                    <div class="predictive-search_price_wrap">
+                                                      <div li-object="product.price | money" class="predictive-search_price u-text-style-small">{{ product.price | money }}</div>
+                                                      {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price">
+    
+                                                        <div li-object="product.compare_at_price | money" class="predictive-search_compare-price u-text-style-small u-color-faded">{{ product.compare_at_price | money }}</div>
+                                                          </div>
+{% endif %}
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                            
+                                        
+                        </div>
+{% endfor %}
+                                      </div>
+                                        </div>
+{% endif %}
+                                    {% if predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0 %}    <div li-if="predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0" class="predictive-search_topic">
+    
+                                      <div class="predictive-search_headline">
+                                        <div class="predictive-search_headline_txt u-text-style-h6 u-color-faded">Pages</div>
+                                      </div>
+                                      <ul role="list" class="predictive-search_list w-list-unstyled">
+                                        {% for page in predictive_search.resources.pages %}    <li li-for="page in predictive_search.resources.pages" class="predictive-search_item">
+                                    
+                                          
+                            <a li-object:href="page.url" href="{{ page.url }}" class="predictive-search_link w-inline-block">
+                                            <div li-object="page.title" class="predictive-search_tag u-text-style-h6">{{ page.title }}</div>
+                                          </a>
+                            
+                                        
+                        </li>
+{% endfor %}
+                                      </ul>
+                                        </div>
+{% endif %}
+                                      </div>
+{% endif %}
+                                  {% if first_column_results_size == 0 %}    <div li-if="first_column_results_size == 0" class="predictive-search_conditional">
+    
+                                    <div class="predictive-search_topic">
+                                      <div class="predictive-search_topic_txt u-text-style-main">Nothing found in "<span li-object="predictive_search.terms">{{ predictive_search.terms }}</span>"</div>
+                                    </div>
+                                      </div>
+{% endif %}
+                                    </div>
+{% endif %}
+                                {% unless predictive_search.performed %}    <div li-unless="predictive_search.performed" class="predictive-search_conditional">
+    
+                                  <div class="predictive-search_overflow">
+                                    <div class="predictive-search_topic">
+                                      <div class="predictive-search_headline">
+                                        <div class="predictive-search_headline_txt u-text-style-h6 u-color-faded">Suggestions</div>
+                                      </div>
+                                      <ul role="list" class="predictive-search_list w-list-unstyled">
+                                        {% for block in section.blocks %}
+    {% if block.type == "search-suggestion" %}
+                    <li li-block="Search - Suggestion" class="predictive-search_item">
+                                    
+                                          
+                                    <a href="{{ block.settings.url_link }}" class="predictive-search_link w-inline-block"> <div class="predictive-search_tag u-text-style-h6">{{ block.settings.text_text }}</div> </a>
+                                    
+                                        
+                            </li>
+            {% endif %}
+{% endfor %}
+                                      </ul>
+                                    </div>
+                                    <div class="predictive-search_topic">
+                                      <div class="predictive-search_headline">
+                                        <div class="predictive-search_headline_txt u-text-style-h6 u-color-faded">Bestseller</div>
+                                      </div>
+                                      <div role="list" class="predictive-search_product-list">
+                                        {% for product in section.settings.collection_search_bestseller.products limit: section.settings.collection_search_bestseller_limit %}
+<div role="listitem" class="predictive-search_product-item">
+    
+                                          
+    <script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<div li-element="product-variant-container" class="predictive-search_container" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)">
+                                            <div class="predictive-search_product-item_styles" style="--flavor-bg: {{ product.metafields.custom.flavor_metaobject.value.background_color }};">
+                                              <div class="predictive-search_line-item">
+                                                <div class="predictive-search_image-wrapper">
+                                                  <div class="product-item_radial is-mini"></div><img li-object:src="product.featured_media | image_url: width: 150" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_media | image_url: width: 150 }}" loading="lazy" class="predictive-search_image">
+                                                </div>
+                                                <div class="product-item_bg is-mini"></div>
+                                                <div class="predictive-search_product-info">
+                                                  <div class="predictive-search_product_top">
+                                                    <p data-wf--eyebrow--variant="small" li-object="product.metafields.custom.flavor_metaobject.value.flavor" class="g_eyebrow_txt u-text-style-h6 w-variant-2ea84ea1-fdee-b528-5a8e-fd7b483b99f5" style="background-color: {{ product.metafields.custom.flavor_metaobject.value.background_color }}; color: {{ product.metafields.custom.flavor_metaobject.value.text_color }};">{{ product.metafields.custom.flavor_metaobject.value.flavor }}</p>
+                                                    <p data-wf--eyebrow--variant="small" class="g_eyebrow_txt u-text-style-h6 w-variant-2ea84ea1-fdee-b528-5a8e-fd7b483b99f5">24 Packs</p>
+                                                  </div>
+                                                  <div class="predictive-search_product_center">
+                                                    <div li-object="product.title" class="predictive-search_product_title u-text-style-h6">{{ product.title }}</div>
+                                                    <div li-object="product.metafields.custom.tagline" class="predictive-search_product_byline u-text-style-h6 u-weight-medium u-color-faded">{{ product.metafields.custom.tagline }}</div>
+                                                  </div>
+                                                  <div class="clickable_wrap u-cover-absolute">
+                                                    <a li-object:href="product.url" class="clickable_link" href="{{ product.url }}"><span li-object="product.title" class="clickable_text u-sr-only">{{ product.title }}</span></a><button type="button" class="clickable_btn"><span li-object="product.title" class="clickable_text u-sr-only">{{ product.title }}</span></button>
+                                                  </div>
+                                                  <div class="predictive-search_product_bottom">
+                                                    <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                                                      <div class="clickable_wrap u-cover-absolute">
+                                                        <a li-element="add-to-cart" class="clickable_link" @click="addToCart($event, true)" :disabled="!addToCartButton"><span class="clickable_text u-sr-only">Add to Cart</span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">Add to Cart</span></button>
+                                                      </div>
+                                                      <div class="button_main_element">
+                                                        <p aria-hidden="true" class="button_main_text u-text-style-h6">Add to Cart</p>
+                                                        <div class="button_main_icon u-hide-if-empty"></div>
+                                                        <div class="button_main_line"></div>
+                                                      </div>
+                                                      <div class="u-display-contents"></div>
+                                                    </div>
+                                                    <div class="predictive-search_price_wrap">
+                                                      <div li-object="product.price | money" class="predictive-search_price u-text-style-small">{{ product.price | money }}</div>
+                                                      {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price">
+    
+                                                        <div li-object="product.compare_at_price | money" class="predictive-search_compare-price u-text-style-small u-color-faded">{{ product.compare_at_price | money }}</div>
+                                                          </div>
+{% endif %}
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+    
+                                        
+</div>
+{% endfor %}
+                                      </div>
+                                    </div>
+                                  </div>
+                                    </div>
+{% endunless %}
+                              </div>
+                            </div>
+                          </form>
+                          <div class="u-display-none w-form-done">
+                            <div>Thank you! Your submission has been received!</div>
+                          </div>
+                          <div class="u-display-none w-form-fail">
+                            <div>Oops! Something went wrong while submitting the form.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </predictive-search>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            {% if shop.customer_accounts_optional %}    <div li-if="shop.customer_accounts_optional" class="nav_account">
+    
+              <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="nav_account_link w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 18 18" fill="none" class="nav_svg">
+                  <path d="M11.8838 4.73684C11.8838 3.16719 10.5926 1.89474 8.99987 1.89474C7.40714 1.89474 6.11597 3.16719 6.11597 4.73684C6.11597 6.30649 7.40714 7.57895 8.99987 7.57895C10.5926 7.57895 11.8838 6.30649 11.8838 4.73684ZM13.8064 4.73684C13.8064 7.35293 11.6544 9.47368 8.99987 9.47368C6.34531 9.47368 4.19337 7.35293 4.19337 4.73684C4.19337 2.12076 6.34531 0 8.99987 0C11.6544 0 13.8064 2.12076 13.8064 4.73684Z" fill="currentColor"></path>
+                  <path d="M4.57182 12.3158L13.4284 12.3158C13.6938 12.3161 13.927 12.3812 14.0874 12.4712C14.165 12.5149 14.2143 12.5581 14.2432 12.5906C14.271 12.6219 14.2779 12.6414 14.2779 12.6414L15.381 16.1053H2.61917L3.72223 12.6414C3.72223 12.6414 3.72913 12.6219 3.75696 12.5906C3.78584 12.5581 3.83513 12.5149 3.9128 12.4712C4.07313 12.3812 4.30633 12.3161 4.57182 12.3158ZM18.0002 18L16.1132 12.0799C15.9359 11.5183 15.5182 11.0938 15.0383 10.8244C14.5566 10.554 13.9901 10.4218 13.4312 10.4211H4.569C4.01011 10.4218 3.44362 10.554 2.96182 10.8244C2.48198 11.0938 2.06425 11.5183 1.88693 12.0799L0 18L18.0002 18Z" fill="currentColor"></path>
+                </svg></a>
+                </div>
+{% endif %}
+            <div class="nav_mini-cart">
+              <script>
+    document.addEventListener('alpine:init', () => {
+
+    Alpine.data('handleMinicart', () => ({
+        init() {
+            console.log('handleMinicart init')
+        },
+        cart: {
+            note: null,
+            attributes: {},
+            items: [],
+            currency: window.Shopify.currency.active,
+            cart_level_discount_applications: [],
+            response: {
+                result : {},
+                show : false,
+                timeout : 5000,
+            },
+            item_count: 0,
+            total_price:0,
+            total_weight: 0,
+            total_discount: 0,
+            original_total_price: 0,
+            items_subtotal_price: 0
+        },
+        _abortController : null,
+        initAbortController() {
+            if(this._abortController) {
+                this._abortController.abort('abort previous request');
+            }
+            this._abortController = new AbortController()
+        },
+        getAbortControllerSignal() {
+            return this._abortController.signal
+        },
+        resetAbortController() {
+            this._abortController = null;
+        },
+        toggleMiniCart() {
+            console.log('(minicart.js) toggleMiniCart called');
+
+            LiquifyHelper.handleTriggerClick();
+
+            this.getCart();
+        },
+
+        /**
+         * Get the cart data.
+         */
+        async getCart() {
+            this.initAbortController()
+            await fetch(window.Shopify.routes.root + 'cart.js', {
+                method: 'GET',
+                signal: this.getAbortControllerSignal(),
+                headers: {'Content-Type': 'application/json'},
+            })
+                .then(response => response.json())
+                .then(data => {
+                    this.resetAbortController();
+
+                    this.cart.item_count = data.item_count;
+
+                    this.cart.items = data.items.map((item) => {
+                        item.title = this.htmlspecialchars_decode(item.title)
+                        return item
+                    })
+
+
+                    this.cart.total_price = data.total_price;
+                    this.cart.total_weight = data.total_weight;
+                    this.cart.total_discount = data.total_discount;
+                    this.cart.original_total_price = data.original_total_price;
+
+                    this.$dispatch('carttotalitems', data.item_count);
+                    this.$dispatch('currentcartitems', this.cart.items);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        },
+
+        /**
+         * @param key
+         * @param quantity
+         */
+        increaseCartItemQuantity(key, quantity) {
+            this.updateCartItemQuantity(key, parseInt(quantity) + 1);
+        },
+
+        /**
+         * @param key
+         * @param quantity
+         */
+        decreaseCartItemQuantity(key, quantity) {
+            this.updateCartItemQuantity(key, parseInt(quantity) - 1);
+        },
+
+        /**
+         * Update the cart item.
+         *
+         * @param key
+         * @param quantity
+         */
+        updateCartItemQuantity(key, quantity) {
+            this.initAbortController();
+            console.log('updateCartItemQuantity(): key, quantity: ', key, quantity);
+            this.cart.items.filter((product)  => {
+                if(product.key === key) {
+                    product.quantity = quantity
+                }
+            })
+            let updates = {};
+            updates[key] = quantity;
+            fetch(window.Shopify.routes.root + 'cart/update.js', {
+                method: 'POST',
+                signal: this.getAbortControllerSignal(),
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ updates }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    this.resetAbortController();
+                    console.log('updateCartItemQuantity(): ', data);
+
+                    this.$dispatch('cartupdated', this.cart.items);
+                    this.$dispatch('showcartmessage', { status: data.status, message: data.message, description: data.description });
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    this.$dispatch('showcartmessage', { status: error?.status, message: error, description: error });
+                });
+        },
+
+        /**
+         * Format monetary values.
+         */
+        moneyFormat(value, minor = true) {
+            return LiquifyHelper.moneyFormat(value, minor)
+        },
+
+        htmlspecialchars_decode(string) {
+            return LiquifyHelper.htmlspecialchars_decode(string)
+        },
+
+        /**
+         * Shows the minicart api message
+         * @param event
+         */
+        showCartMessage(event) {
+            if(event?.detail?.status) {
+                this.cart.response.result = event.detail ?? {}
+                this.cart.response.show = true
+                setTimeout(() => {
+                    this.cart.response.result = {};
+                    this.cart.response.show = false
+                }, this.cart.response.timeout ?? 5000)
+            }
+        },
+
+        async returnCartItems() {
+            await this.getCart();
+
+            this.$dispatch('currentcartitems', this.cart.items);
+        },
+
+        /**
+         * @deprecated
+         */
+        set open(open) { // deprecated use  LiquifyHelper instead
+            //console.warn('Deprecated "set open" in mini_cart')
+        },
+        /**
+         * @deprecated
+         */
+        get open() { // deprecated use  LiquifyHelper instead
+            //console.warn('Deprecated "get open" in mini_cart')
+            return false;
+        },
+        /**
+         * @deprecated
+         */
+        set note(note) { // deprecated
+            //console.warn('Deprecated "set note" in mini_cart')
+            this.cart.note = note;
+        },
+        /**
+         * @deprecated
+         */
+        get note() { // deprecated
+            //console.warn('Deprecated "get note" in mini_cart')
+            return this.cart.note;
+        },
+        /**
+         * @deprecated
+         */
+        set attributes(attributes) { // deprecated
+            //console.warn('Deprecated "set attributes" in mini_cart')
+            this.cart.attributes = attributes;
+        },
+        /**
+         * @deprecated
+         */
+        get attributes() { // deprecated
+            //console.warn('Deprecated "get attributes" in mini_cart')
+            return this.cart.attributes;
+        },
+        /**
+         * @deprecated
+         */
+        set original_total_price(original_total_price) { //deprecated
+            //console.warn('Deprecated "set original_total_price" in mini_cart')
+            this.cart.original_total_price = original_total_price;
+        },
+        /**
+         * @deprecated
+         */
+        get original_total_price() { //deprecated
+            //console.warn('Deprecated "get original_total_price" in mini_cart')
+            return this.cart.original_total_price;
+        },
+        /**
+         * @deprecated
+         */
+        set total_price(total_price) { //deprecated
+            //console.warn('Deprecated "set total_price" in mini_cart')
+            this.cart.total_price = total_price;
+        },
+        /**
+         * @deprecated
+         */
+        get total_price() { //deprecated
+            //console.warn('Deprecated "get total_price" in mini_cart')
+            return this.cart.total_price;
+        },
+        /**
+         * @deprecated
+         */
+        set total_discount(total_discount) { //deprecated
+            //console.warn('Deprecated "set total_discount" in mini_cart')
+            this.cart.total_discount = total_discount;
+        },
+        /**
+         * @deprecated
+         */
+        get total_discount() { //deprecated
+            //console.warn('Deprecated "get total_discount" in mini_cart')
+            return this.cart.total_discount;
+        },
+        /**
+         * @deprecated
+         */
+        set total_weight(total_weight) { //deprecated
+            //console.warn('Deprecated "set total_weight" in mini_cart')
+            this.cart.total_discount = total_weight;
+        },
+        /**
+         * @deprecated
+         */
+        get total_weight() { //deprecated
+            //console.warn('Deprecated "get total_weight" in mini_cart')
+            return this.cart.total_weight;
+        },
+        /**
+         * @deprecated
+         */
+        set item_count(item_count) { //deprecated
+            //console.warn('Deprecated "set item_count" in mini_cart')
+            this.cart.total_discount = item_count;
+        },
+        /**
+         * @deprecated
+         */
+        get item_count() { //deprecated
+            //console.warn('Deprecated "get item_count" in mini_cart')
+            return this.cart.item_count;
+        },
+        /**
+         * @deprecated
+         */
+        set items_subtotal_price(items_subtotal_price) { //deprecated
+            //console.warn('Deprecated "set items_subtotal_price" in mini_cart')
+            this.cart.items_subtotal_price = items_subtotal_price;
+        },
+        /**
+         * @deprecated
+         */
+        get items_subtotal_price() { //deprecated
+            //console.warn('Deprecated "get items_subtotal_price" in mini_cart')
+            return this.cart.items_subtotal_price;
+        },
+        /**
+         * @deprecated
+         */
+        set products(products) {
+            //console.warn('Deprecated "set products" in mini_cart')
+            this.cart.items = products;
+        },
+        /**
+         * @deprecated
+         */
+        get products() {
+            //console.warn('Deprecated "get products" in mini_cart')
+            return this.cart.items;
+        },
+        /**
+         * @deprecated
+         */
+        set requires_shipping(requires_shipping) {
+            //console.warn('Deprecated "set requires_shipping" in mini_cart')
+        },
+        /**
+         * @deprecated
+         */
+        get requires_shipping() {
+            //console.warn('Deprecated "get requires_shipping" in mini_cart')
+            return false;
+        },
+        /**
+         * @deprecated
+         */
+        set currency(currency) { //deprecated
+            //console.warn('Deprecated "set currency" in mini_cart')
+            this.cart.currency = currency;
+        },
+        /**
+         * @deprecated
+         */
+        get currency() { //deprecated
+            //console.warn('Deprecated "get currency" in mini_cart')
+            return this.cart.currency;
+        },
+        /**
+         * @deprecated
+         */
+        set cart_level_discount_applications(cart_level_discount_applications) { //deprecated
+            //console.warn('Deprecated "set cart_level_discount_applications" in mini_cart')
+            this.cart.cart_level_discount_applications = cart_level_discount_applications;
+        },
+        /**
+         * @deprecated
+         */
+        get cart_level_discount_applications() { //deprecated
+            //console.warn('Deprecated "get cart_level_discount_applications" in mini_cart')
+            return this.cart.cart_level_discount_applications;
+        },
+        /**
+         * @deprecated
+         */
+        set cartApiResponse(cartApiResponse) { //deprecated
+            //console.warn('Deprecated "set cartApiResponse" in mini_cart')
+            this.cart.cartApiResponse = cartApiResponse;
+        },
+        /**
+         * @deprecated
+         */
+        get cartApiResponse() { //deprecated
+            //console.warn('Deprecated "get cartApiResponse" in mini_cart')
+            return this.cart.response;
+        },
+        /**
+         * @deprecated
+         */
+        set total(total) { //deprecated
+            //console.warn('Deprecated "set total" in mini_cart')
+            this.cart.item_count = total.items;
+            this.cart.total_price = total.price;
+            this.cart.total_weight = total.weight;
+            this.cart.total_discount = total.discount;
+        },
+        /**
+         * @deprecated
+         */
+        get total() { //deprecated
+            //console.warn('Deprecated "get total" in mini_cart')
+            return {
+                items: this.cart.item_count,
+                price: this.cart.total_price,
+                weight: this.cart.total_weight,
+                discount: this.cart.total_discount,
+            };
+        }
+    }))
+
+
+});
+
+</script>
+<div data-delay="0" data-hover="false" li-element="mini-cart" class="nav_dropdown w-dropdown" x-data="handleMinicart()" x-init="getCart()" @cartupdated.window="getCart()" @setcartitem.window="updateCartItemQuantity($event.detail.product, $event.detail.quantity)" @increasecartitem.window="increaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @decreasecartitem.window="decreaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @toggleminicart.window="toggleMiniCart()" @showcartmessage.window="showCartMessage" @getcartitems.window="returnCartItems">
+                <div li-element="mini-cart-toggle" class="nav_shop-icon w-dropdown-toggle" @click="$dispatch('cartupdated.window')"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 18 18" fill="none" class="nav_svg">
+                    <path d="M3.53071 0L4.47911 3.92871H18L16.2274 11.0117L16.2265 11.0107C16.0772 11.6114 15.71 12.1199 15.2203 12.4697C14.732 12.8185 14.1411 12.9991 13.5459 13H6.88427V12.998C6.28256 13.0061 5.68262 12.8326 5.18583 12.4844C4.68212 12.1313 4.3044 11.6115 4.15559 10.9961L1.98344 2H0V0H3.53071ZM6.07067 10.5205C6.0948 10.6197 6.16501 10.739 6.30753 10.8389C6.45209 10.9401 6.64939 11.0043 6.86501 11H13.543C13.754 10.9997 13.9455 10.9347 14.0851 10.835C14.2228 10.7366 14.2909 10.6198 14.3152 10.5225L14.3162 10.5195L15.4649 5.92871H4.96245L6.07067 10.5205Z" fill="currentColor"></path>
+                    <path d="M8.87348 16C8.87348 17.1046 7.99064 18 6.9016 18C5.81256 18 4.92971 17.1046 4.92971 16C4.92971 14.8954 5.81256 14 6.9016 14C7.99064 14 8.87348 14.8954 8.87348 16Z" fill="currentColor"></path>
+                    <path d="M15.747 16C15.747 17.1046 14.8642 18 13.7751 18C12.6861 18 11.8032 17.1046 11.8032 16C11.8032 14.8954 12.6861 14 13.7751 14C14.8642 14 15.747 14.8954 15.747 16Z" fill="currentColor"></path>
+                  </svg>
+                  <div li-element="mini-cart-item-count" class="nav_shop-quantity" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">0</div>
+                </div>
+                <nav li-element="mini-cart-container" class="nav_mini-cart-holder w-dropdown-list" :class="open || 'mini-cart-closed'">
+                  <div li-element="dropdown-toggle" class="nav_mini-cart-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div>
+                  <div class="mini-cart_component">
+                    <div li-element="mini-cart-full" class="mini-cart_full" :style="total.items < 1 && { display: 'none' }">
+                      <div class="mini-cart_header">
+                        <div class="mini-cart_header_txt u-text-style-h4">Cart</div><button li-element="dropdown-toggle" aria-label="Close Cart" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))">
+                          <div class="nav_dropdown-close-icon w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0208 3.33786e-06L14.1421 2.12132L2.12132 14.1421L0 12.0208L12.0208 3.33786e-06Z" fill="#232323"></path>
+                              <path d="M14.1424 12.0208L12.0211 14.1421L0.000262558 2.12132L2.12158 0L14.1424 12.0208Z" fill="#232323"></path>
+                            </svg></div>
+                        </button>
+                      </div>
+                      <div x-data="{ shippingFree: {{ section.settings.free_shipping_threshold | times: 100 }} }" class="mini-cart_progress_wrap">
+                        <div x-show="((shippingFree - cart.total_price) / 100) > 0" class="mini-cart_progress_component">
+                          <div class="mini-cart_progress_bar">
+                            <div x-bind:style="'width: ' + (total.price/shippingFree) *100 + '%'" class="mini-cart_progress_inner"></div>
+                          </div>
+                          <div class="mini-cart_progress_txt u-text-style-small"><span li-object="'cart.free_shipping_start' | t | append: ' '">{{ 'cart.free_shipping_start' | t | append: ' ' }}</span> <span li-js-price="shippingFree - total.price" class="mini-cart_progress_txt_span" x-text="LiquifyHelper.moneyFormat(shippingFree - total.price, true, '{{ shop.money_with_currency_format }}')">$29.50</span> <span li-object="'cart.free_shipping_end' | t | prepend: ' '">{{ 'cart.free_shipping_end' | t | prepend: ' ' }}</span></div>
+                        </div>
+                        <div x-show="((shippingFree - cart.total_price) / 100) <= 0" class="mini-cart_progress_success">
+                          <div li-object="'cart.qualifed_for_free_shipping' | t" class="mini-cart_progress_success_txt u-text-style-small">{{ 'cart.qualifed_for_free_shipping' | t }}</div>
+                        </div>
+                      </div>
+                      <div class="mini-cart_line-item no-scrollbar">
+                        <div role="list" class="mini-cart_line-item_list">
+                          <template x-for="product in products" :key="product.key">
+    <div role="listitem" li-element="mini-cart-item" class="mini-cart_line-item_item">
+                            <div class="product-item_bg is-mini"></div>
+                            <div class="mini-cart_line-item_img_wrap"><img loading="lazy" alt="" src="images/placeholder.svg" class="mini-cart_line-item_img" x-bind:src="product.image">
+                              <div class="product-item_radial is-mini"></div>
+                            </div>
+                            <div class="mini-cart_line-item_product-info">
+                              <div class="mini-cart_line-item_top_master">
+                                <div class="mini-cart_line-item_top">
+                                  <p data-wf--eyebrow--variant="small" li-object="product.metafields.custom.flavor_metaobject.value.flavor" class="g_eyebrow_txt u-text-style-h6 w-variant-2ea84ea1-fdee-b528-5a8e-fd7b483b99f5" style="background-color: {{ product.metafields.custom.flavor_metaobject.value.background_color }}; color: {{ product.metafields.custom.flavor_metaobject.value.text_color }};">{{ product.metafields.custom.flavor_metaobject.value.flavor }}</p>
+                                  <p data-wf--eyebrow--variant="small" class="g_eyebrow_txt u-text-style-h6 w-variant-2ea84ea1-fdee-b528-5a8e-fd7b483b99f5">24 Packs</p>
+                                </div><button type="button" li-element="mini-cart-item-remove" class="mini-cart_line-item_delete_wrap" :productprop="product" @click="$dispatch('setcartitem', { product: product.key, quantity: 0 })"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 16 17" fill="none" class="mini-cart_line-item_delete_svg">
+                                    <path d="M14 5V15.5C14 15.8978 13.8194 16.2794 13.4979 16.5607C13.1764 16.842 12.7404 17 12.2857 17H3.71429C3.25963 17 2.82359 16.842 2.5021 16.5607C2.18061 16.2794 2 15.8978 2 15.5V5" fill="currentColor"></path>
+                                    <path d="M16 4V6H0V4H16Z" fill="currentColor"></path>
+                                    <path d="M11 5V3C11 2.73478 10.8946 2.48051 10.707 2.29297C10.5429 2.12883 10.3276 2.02757 10.0986 2.00488L10 2H6C5.73478 2 5.48051 2.10543 5.29297 2.29297C5.10543 2.48051 5 2.73478 5 3V5C5 5.55228 4.55228 6 4 6C3.44772 6 3 5.55228 3 5V3C3 2.20435 3.3163 1.44152 3.87891 0.878906C4.44152 0.316297 5.20435 0 6 0H10C10.7956 0 11.5585 0.316297 12.1211 0.878906C12.6837 1.44152 13 2.20435 13 3V5C13 5.55228 12.5523 6 12 6C11.4477 6 11 5.55228 11 5Z" fill="currentColor"></path>
+                                    <path d="M6.49999 13.5H5.49999L5.49999 7.5H6.49999L6.49999 13.5Z" fill="currentColor"></path>
+                                    <path d="M10.5 13.5H9.49999V7.5H10.5V13.5Z" fill="currentColor"></path>
+                                  </svg></button>
+                              </div>
+                              <div class="mini-cart_line-item_center">
+                                <div li-js-object="product.title" class="mini-cart_line-item_product-title u-text-style-h6" x-text="product.title">Product Title</div>
+                                <div li-object="product.metafields.custom.tagline" class="mini-cart_line-item_product-byline u-text-style-h6 u-weight-medium u-color-faded">{{ product.metafields.custom.tagline }}</div>
+                              </div>
+                              <div class="mini-cart_line-item_bottom">
+                                <div class="mini-cart_line-item_quantity">
+                                  <a li-element="mini-cart-item-decrease" href="#" class="mini-cart_line-item_quantity-adjust is-minus" :productprop="product" @click="$dispatch('decreasecartitem', { product: product.key, quantity: product.quantity, action: 'decrease' })">-</a><input li-element="mini-cart-item-quantity" class="mini-cart_line-item_quantity-adjust" value="1" :productprop="product" @input="$dispatch('setcartitem', { product: product.key, quantity: product.quantity })" x-model="product.quantity">
+                                  <a li-element="mini-cart-item-increase" href="#" class="mini-cart_line-item_quantity-adjust is-plus" :productprop="product" @click="$dispatch('increasecartitem', { product: product.key, quantity: product.quantity, action: 'increase' })">+</a>
+                                </div>
+                                <div class="mini-cart_line-item_price">
+                                  <div li-js-price="product.price" class="mini-cart_line-item_price_txt u-text-style-small" x-text="LiquifyHelper.moneyFormat(product.price, true, '{{ shop.money_with_currency_format }}')">$14.99</div>
+                                  <template x-if="product.price < product.original_price">
+            <div li-js-if="product.price < product.original_price">
+        
+                                    <div li-js-price="product.original_price" class="mini-cart_line-item_compare-price_txt u-text-style-small u-color-faded" x-text="LiquifyHelper.moneyFormat(product.original_price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div>
+                                          </div>
+    </template>
+                                </div>
+                              </div>
+                            </div>
+                          </div></template>
+                        </div>
+                      </div>
+                      <div class="mini-cart_footer">
+                        <div class="mini-cart_footer-total">
+                          <div class="mini-cart_footer-total_txt u-text-style-h6">Subtotal</div>
+                          <div class="mini-cart_footer-price">
+                            <div li-js-price="total.price" class="mini-cart_total-price_txt u-text-style-small" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div>
+                            <template x-if="total.price < original_total_price">
+            <div li-js-if="total.price < original_total_price" class="mini-cart_conditional">
+        
+                              <div li-js-price="original_total_price" class="mini-cart_original-price_txt u-text-style-small u-color-faded" x-text="LiquifyHelper.moneyFormat(original_total_price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div>
+                                    </div>
+    </template>
+                          </div>
+                        </div>
+                        <div li-element="mini-cart-api-response" class="mini-cart_footer-message hide">
+                          <div class="mini-cart_footer-message-item">
+                            <div class="mini-cart_footer-message-item_txt u-text-style-small u-text-transform-uppercase">Message</div>
+                            <div li-js-object="cartApiResponse?.result?.message" class="mini-cart_footer-message-item_price u-text-style-small" x-text="cartApiResponse?.result?.message">14,99 $</div>
+                          </div>
+                        </div>
+                        <div class="mini-cart_btn_wrap">
+                          <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                            <div class="clickable_wrap u-cover-absolute">
+                              <a x-bind:href="'/checkout'" class="clickable_link"><span class="clickable_text u-sr-only">Checkout</span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">Checkout</span></button>
+                            </div>
+                            <div class="button_main_element">
+                              <p aria-hidden="true" class="button_main_text u-text-style-h6">Checkout</p>
+                              <div class="button_main_icon u-hide-if-empty"></div>
+                              <div class="button_main_line"></div>
+                            </div>
+                            <div class="u-display-contents"></div>
+                          </div>
+                          <div data-wf--button-main--variant="secondary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                            <div class="clickable_wrap u-cover-absolute">
+                              <a li-object:href="routes.cart_url" class="clickable_link" href="{{ routes.cart_url }}"><span class="clickable_text u-sr-only">Cart</span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">Cart</span></button>
+                            </div>
+                            <div class="button_main_element w-variant-e85564cd-af30-a478-692b-71732aefb3ab">
+                              <p aria-hidden="true" class="button_main_text u-text-style-h6">Cart</p>
+                              <div class="button_main_icon u-hide-if-empty"></div>
+                              <div class="button_main_line"></div>
+                            </div>
+                            <div class="u-display-contents"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div li-cloak="hide" li-element="mini-cart-empty" class="mini-cart_empty" :style="total.items && { display: 'none' }">
+                      <div class="mini-cart_header">
+                        <div class="mini-cart_header_txt u-text-style-h4">Cart</div><button li-element="dropdown-toggle" aria-label="Close Cart" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))">
+                          <div class="nav_dropdown-close-icon w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0208 3.33786e-06L14.1421 2.12132L2.12132 14.1421L0 12.0208L12.0208 3.33786e-06Z" fill="#232323"></path>
+                              <path d="M14.1424 12.0208L12.0211 14.1421L0.000262558 2.12132L2.12158 0L14.1424 12.0208Z" fill="#232323"></path>
+                            </svg></div>
+                        </button>
+                      </div>
+                      <div class="mini-cart_empty-content">
+                        <div class="text-size-regular">No Products selected</div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav_dropdown_backdrop"></div>
+      <div class="nav_menu_backdrop"></div>
+      <div class="u-embed-js w-embed w-script">
+        <script>
 if (sessionStorage.getItem("hide-nav-banner") === "true") {
   document.documentElement.classList.add("hide-nav-banner");
 }
@@ -665,14 +1263,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-        </div> {% schema %} {
+      </div> {% schema %} {
     "tag": "div",
     "name": "Header",
-    "class": "nav_component w-variant-dd866659-1d7d-6447-6461-66ca86ca367f",
+    "class": "nav_component",
     "blocks": [
         {
-            "name": "Button",
-            "type": "button",
+            "name": "Nav Quick Link",
+            "type": "nav-quick-link",
             "settings": [
                 {
                     "id": "url_link",
@@ -680,36 +1278,148 @@ document.addEventListener("DOMContentLoaded", function () {
                     "label": "Link"
                 },
                 {
-                    "id": "text_screen_reader",
+                    "id": "text_text",
                     "type": "text",
-                    "label": "Screen Reader",
-                    "default": "Button Text"
-                },
-                {
-                    "type": "header",
-                    "content": "Button Settings"
-                },
-                {
-                    "type": "select",
-                    "id": "variant",
-                    "label": "Variant",
-                    "default": "",
-                    "options": [
-                        {
-                            "label": "Main",
-                            "value": ""
-                        },
-                        {
-                            "label": "Secondary",
-                            "value": "w-variant-e85564cd-af30-a478-692b-71732aefb3ab"
-                        },
-                        {
-                            "label": "Link",
-                            "value": "w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400"
-                        }
-                    ]
+                    "label": "Text",
+                    "default": "Shop All"
                 }
             ]
+        },
+        {
+            "name": "Search - Suggestion",
+            "type": "search-suggestion",
+            "settings": [
+                {
+                    "id": "url_link",
+                    "type": "url",
+                    "label": "Link"
+                },
+                {
+                    "id": "text_text",
+                    "type": "text",
+                    "label": "Text",
+                    "default": "Tag"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "id": "url_banner_link",
+            "type": "url",
+            "label": "Banner Link"
+        },
+        {
+            "id": "text_banner_text",
+            "type": "text",
+            "label": "Banner Text",
+            "default": "Lorem Ipsum"
+        },
+        {
+            "id": "text_secondary_links_title",
+            "type": "text",
+            "label": "Secondary Links Title",
+            "default": "Menu"
+        },
+        {
+            "id": "image_logo",
+            "type": "image_picker",
+            "label": "Logo"
+        },
+        {
+            "type": "header",
+            "content": "Navigation"
+        },
+        {
+            "type": "link_list",
+            "id": "left_menu",
+            "label": "Left Menu",
+            "default": "main-menu"
+        },
+        {
+            "type": "link_list",
+            "id": "right_menu",
+            "label": "Right Menu"
+        },
+        {
+            "type": "collection_list",
+            "id": "collection_list",
+            "label": "Featured Collections",
+            "limit": 4
+        },
+        {
+            "type": "header",
+            "content": "Navigation"
+        },
+        {
+            "id": "text_search",
+            "type": "text",
+            "label": "Search",
+            "default": "Search"
+        },
+        {
+            "id": "collection_search_bestseller",
+            "type": "collection",
+            "label": "Search - Bestseller"
+        },
+        {
+            "type": "range",
+            "id": "collection_search_bestseller_limit",
+            "min": 1,
+            "max": 99,
+            "step": 1,
+            "label": "Limit: Search - Bestseller",
+            "default": 6
+        },
+        {
+            "type": "header",
+            "content": "Free Shipping"
+        },
+        {
+            "type": "number",
+            "id": "free_shipping_threshold",
+            "label": "Free Shipping Threshold ($)",
+            "default": 100
+        },
+        {
+            "type": "header",
+            "content": "Show Banner"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_banner",
+            "label": "Show Banner",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Banner Colors"
+        },
+        {
+            "type": "color",
+            "id": "banner_text",
+            "label": "Banner Text",
+            "default": "#232323"
+        },
+        {
+            "type": "color_background",
+            "id": "banner_bg",
+            "label": "Banner BG",
+            "default": "#FFD036"
+        },
+        {
+            "type": "header",
+            "content": "Breakpoint"
+        },
+        {
+            "type": "range",
+            "id": "nav_breakpoint",
+            "label": "Navigation Breakpoint",
+            "default": 64,
+            "min": 40,
+            "max": 200,
+            "step": 2,
+            "unit": "em"
         }
     ],
     "presets": [
@@ -718,16 +1428,13 @@ document.addEventListener("DOMContentLoaded", function () {
             "category": "Liquify",
             "blocks": [
                 {
-                    "type": "button"
+                    "type": "nav-quick-link"
                 },
                 {
-                    "type": "button"
+                    "type": "nav-quick-link"
                 },
                 {
-                    "type": "button"
-                },
-                {
-                    "type": "button"
+                    "type": "search-suggestion"
                 }
             ]
         }

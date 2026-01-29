@@ -1,0 +1,168 @@
+<div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="none" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="locations_contain u-container">
+            <div class="locations_layout u-alignment-center">
+              <div class="locations_header_wrap">
+                <div class="locations_header_txt u-text-style-h6 w-richtext" style="max-width: {{ section.settings.header_max_width | append: 'em' }};"> {{ section.settings.richtext_header }} </div>
+              </div>
+              <div li-for:inside="logos in shop.metaobjects.location_logos.values" class="locations_grid_wrap u-grid-autofill u-margin-top-6">
+        {% for logos in shop.metaobjects.location_logos.values %}                            
+                
+                            <div class="locations_grid_item u-position-relative">
+                  <div class="clickable_wrap u-cover-absolute">
+                    <a li-object:href="logos.link" target="_blank" class="clickable_link" href="{{ logos.link }}"><span li-object="logos.name" class="clickable_text u-sr-only">{{ logos.name }}</span></a><button type="button" class="clickable_btn"><span li-object="logos.name" class="clickable_text u-sr-only">{{ logos.name }}</span></button>
+                  </div><img src="{{ logos.image | image_url: width: 200 }}" loading="lazy" li-object:src="logos.image | image_url: width: 200" li-object:alt="logos.name" alt="{{ logos.name }}" class="locations_grid_img">
+                </div>
+                            
+              
+                    {% endfor %}    </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Location Logos",
+    "class": "locations_wrap u-section",
+    "settings": [
+        {
+            "id": "richtext_header",
+            "type": "richtext",
+            "label": "Header",
+            "default": "<p>\n                  Find ICON\u00a0Meats At These Locations\n                <\/p>"
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Header Max Width"
+        },
+        {
+            "type": "range",
+            "id": "header_max_width",
+            "label": "header-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Location Logos",
+            "category": "Locations",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

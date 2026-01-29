@@ -1,0 +1,376 @@
+<div class="u-embed-css w-embed">
+          <style>
+.faq_left_img {
+	object-fit: inherit;
+}
+@container ( width < 50em ) {
+	.faq_layout {
+  	flex-flow: column !important;
+  }
+  .faq_left_wrap {
+  	width: 100% !important;
+  }
+  .faq_toggle_icon {
+  	width: 1.5rem !important;
+  }
+}
+</style>
+        </div>
+        <div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="faq_contain u-container">
+            <div class="faq_layout">
+              <div class="faq_left_wrap u-position-relative u-theme-dark">
+                <div style="transform: scale({{ section.settings.scale | divided_by: 100.0 }}); object-fit: {{ section.settings.image_fit }};" class="faq_left_img_wrap u-cover-absolute">{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'faq_left_img' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'faq_left_img' }} 
+{% endif %}</div>
+                <div class="faq_left_title_wrap u-position-relative">
+                  <div class="faq_left_title_txt u-text-style-h3 w-richtext">
+                    <h2>
+{{ section.settings.text_card_title }}
+</h2>
+                  </div>
+                </div>
+                <div class="faq_left_cta_wrap u-flex-vertical-nowrap u-align-items-start u-position-relative u-gap-1">
+                  <div class="faq_left_cta_title u-text-style-h6 u-text-transform-uppercase">
+{{ section.settings.text_cta_tagline }}
+</div>
+                  <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                    <div class="clickable_wrap u-cover-absolute">
+                      <a class="clickable_link" href="{{ section.settings.url_link }}" target="{% if section.settings.open_in_new_tab %}_blank{% endif %}"> <span class="clickable_text u-sr-only">{{ section.settings.text_button_text }}</span> </a><button type="{{section.settings.button_type}}" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ section.settings.text_button_text }}
+</span></button>
+                    </div>
+                    <div class="button_main_element {{section.settings.variant}}">
+                      <p aria-hidden="true" class="button_main_text u-text-style-h6">
+{{ section.settings.text_button_text }}
+</p>
+                      <div class="button_main_icon u-hide-if-empty"></div>
+                      <div class="button_main_line {{section.settings.variant}}"></div>
+                    </div>
+                    <div class="u-display-contents">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-open-by-default="false" data-close-previous="true" data-close-on-second-click="true" data-open-on-hover="false" class="faq_cms_wrap">
+                <div class="faq_css w-embed">
+                  <style>
+.wf-design-mode .faq_content_wrap {
+	display: block;
+}
+</style>
+                </div>
+                <div li-for:inside="faq in shop.metaobjects.faq.values" role="list" class="faq_cms_list">
+        {% for faq in shop.metaobjects.faq.values %}                            
+                  
+                            <div role="listitem" class="faq_cms_item">
+                    <div class="faq_component">
+                      <h3 class="faq_toggle_heading"><button aria-expanded="false" class="faq_toggle_button"><span li-object="faq.title" class="faq_toggle_text u-text-style-h5 u-text-transform-uppercase">{{ faq.title }}</span><span class="faq_toggle_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 32 32" fill="none" class="faq_toggle_svg">
+                              <path d="M16 1.60903C19.1069 1.60568 22.1339 2.44335 24.64 4L26 2.84995C23.1226 1.00084 19.6108 0 16 0C12.3892 0 8.87736 1.00084 6 2.84995L7.3536 3.99864C9.86162 2.44138 12.8911 1.60413 16 1.60903Z" fill="currentColor"></path>
+                              <path d="M4.99323 24.8106C2.75795 22.0296 1.61924 18.4729 1.80601 14.8556C1.99278 11.2383 3.49118 7.82844 6 5.31162L4.73702 4C2.01387 6.74234 0.346899 10.4217 0.0483773 14.3488C-0.250144 18.2758 0.840266 22.1812 3.11534 25.3333L4.99323 24.8106Z" fill="currentColor"></path>
+                              <path d="M4.66699 27.2293C6.15072 28.7409 7.91613 29.9407 9.86132 30.7596C11.8065 31.5784 13.893 32 16.0003 32C18.1077 32 20.1941 31.5784 22.1393 30.7596C24.0845 29.9407 25.8499 28.7409 27.3337 27.2293L25.2554 26.6666C22.6855 28.9165 19.3988 30.1551 15.998 30.1551C12.5973 30.1551 9.3105 28.9165 6.74064 26.6666L4.66699 27.2293Z" fill="currentColor"></path>
+                              <path d="M26 5.31162C28.5088 7.82844 30.0072 11.2383 30.194 14.8556C30.3808 18.4729 29.242 22.0296 27.0068 24.8106L28.8847 25.3333C31.1597 22.1812 32.2501 18.2758 31.9516 14.3488C31.6531 10.4217 29.9861 6.74234 27.263 4L26 5.31162Z" fill="currentColor"></path>
+                              <path d="M15 7H17L17 25H15V7Z" fill="currentColor"></path>
+                              <path d="M25 15V17L7 17V15L25 15Z" fill="currentColor"></path>
+                            </svg></span></button></h3>
+                      <div class="faq_content_wrap">
+                        <div class="faq_content_padding">
+                          <div li-object="faq.description | metafield_text" class="faq_content_text u-text-style-large w-richtext">{{ faq.description | metafield_text }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                            
+                
+                    {% endfor %}    </div>
+                <div class="faq_js w-embed w-script">
+                  <script>
+document.addEventListener("DOMContentLoaded", function() {
+ document.querySelectorAll(".faq_cms_wrap").forEach((cmsWrap, listIndex) => {
+ if (cmsWrap.dataset.scriptInitialized) return;
+ cmsWrap.dataset.scriptInitialized = "true";
+ const closePrevious = cmsWrap.getAttribute("data-close-previous") !== "false";
+ const closeOnSecondClick = cmsWrap.getAttribute("data-close-on-second-click") !== "false";
+ const openOnHover = cmsWrap.getAttribute("data-open-on-hover") === "true";
+ const openByDefault = cmsWrap.getAttribute("data-open-by-default") !== null && !isNaN(+cmsWrap.getAttribute("data-open-by-default")) ? +cmsWrap.getAttribute("data-open-by-default") : false;
+ let previousIndex = null, closeFunctions = [];
+ cmsWrap.querySelectorAll(".faq_component").forEach((thisCard, cardIndex) => {
+ const button = thisCard.querySelector(".faq_toggle_button");
+ const content = thisCard.querySelector(".faq_content_wrap");
+ const icon = thisCard.querySelector(".faq_toggle_icon");
+ if (!button || !content || !icon) return console.warn("Missing elements:", thisCard);
+ button.setAttribute("aria-expanded", "false");
+ button.setAttribute("id", "faq_button_" + listIndex + "_" + cardIndex);
+ content.setAttribute("id", "faq_content_" + listIndex + "_" + cardIndex);
+ button.setAttribute("aria-controls", content.id);
+ content.setAttribute("aria-labelledby", button.id);
+ content.style.display = "none";
+ const refresh = () => { tl.invalidate(); if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh(); };
+ const tl = gsap.timeline({ paused: true, defaults: { duration: 0.3, ease: "power1.inOut" }, onComplete: refresh, onReverseComplete: refresh });
+ tl.set(content, { display: "block" });
+ tl.fromTo(content, { height: 0 }, { height: "auto" });
+ tl.fromTo(icon, { rotate: 0 }, { rotate: -45 }, "<");
+ const closeAccordion = () => thisCard.classList.contains("is-opened") && (thisCard.classList.remove("is-opened"), tl.reverse(), button.setAttribute("aria-expanded", "false"));
+ closeFunctions[cardIndex] = closeAccordion;
+ const openAccordion = (instant = false) => {
+ if (closePrevious && previousIndex !== null && previousIndex !== cardIndex) closeFunctions[previousIndex]?.();
+ previousIndex = cardIndex;
+				button.setAttribute("aria-expanded", "true")
+ thisCard.classList.add("is-opened");
+ instant ? tl.progress(1) : tl.play();
+ };
+ if (openByDefault === cardIndex) openAccordion(true);
+ button.addEventListener("click", () => thisCard.classList.contains("is-opened") && closeOnSecondClick ? (closeAccordion(), previousIndex = null) : openAccordion());
+ if (openOnHover) button.addEventListener("mouseenter", () => openAccordion());
+ });
+ });
+});
+</script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "FAQ",
+    "class": "faq_wrap u-section",
+    "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "text_card_title",
+            "type": "text",
+            "label": "Card Title",
+            "default": "FAQ<sub\/>"
+        },
+        {
+            "id": "text_cta_tagline",
+            "type": "text",
+            "label": "CTA Tagline",
+            "default": "Don't see your question?"
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Button Text"
+        },
+        {
+            "type": "header",
+            "content": "Button Settings"
+        },
+        {
+            "type": "select",
+            "id": "variant",
+            "label": "Variant",
+            "default": "",
+            "options": [
+                {
+                    "label": "Main",
+                    "value": ""
+                },
+                {
+                    "label": "Secondary",
+                    "value": "w-variant-e85564cd-af30-a478-692b-71732aefb3ab"
+                },
+                {
+                    "label": "Link",
+                    "value": "w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400"
+                }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "id": "open_in_new_tab",
+            "label": "Open in new tab",
+            "default": false
+        },
+        {
+            "type": "select",
+            "id": "button_type",
+            "label": "Button Type",
+            "default": "button",
+            "options": [
+                {
+                    "label": "Button",
+                    "value": "button"
+                },
+                {
+                    "label": "Submit",
+                    "value": "submit"
+                },
+                {
+                    "label": "Reset",
+                    "value": "reset"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Image Scale"
+        },
+        {
+            "type": "range",
+            "id": "scale",
+            "label": "Scale",
+            "default": 100,
+            "min": 0,
+            "max": 200,
+            "step": 5,
+            "unit": "%"
+        },
+        {
+            "type": "header",
+            "content": "Image Fit"
+        },
+        {
+            "type": "select",
+            "id": "image_fit",
+            "label": "Image Fit",
+            "default": "cover",
+            "options": [
+                {
+                    "label": "Cover (fill area)",
+                    "value": "cover"
+                },
+                {
+                    "label": "Contain (fit within area)",
+                    "value": "contain"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "FAQ",
+            "category": "Information",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

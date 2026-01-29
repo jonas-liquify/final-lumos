@@ -1,0 +1,360 @@
+<div class="u-embed-css w-embed">
+          <style>
+.home_hero_styles {
+	padding-left: var(--site--margin) !important;
+  padding-right: var(--site--margin) !important;
+}
+@container ( width < 68em ) {
+	.home_hero_styles {
+  	flex-flow: column !important;
+  }
+  .home_hero_content_wrap {
+  	order: -1 !important;
+  }
+  .home_hero_content_wrap {
+  	padding-bottom: 0rem !important;
+  }
+}
+</style>
+        </div>
+        <div class="u-embed-js w-embed w-script">
+          <script>
+document.addEventListener('DOMContentLoaded', function() {
+  $(".home_hero_slider_component").each(function (index) {
+    let loopMode = false;
+    if ($(this).attr("loop-mode") === "true") {
+      loopMode = true;
+    }
+    let sliderDuration = 300;
+    if ($(this).attr("slider-duration") !== undefined) {
+      sliderDuration = +$(this).attr("slider-duration");
+    }
+    const swiper = new Swiper($(this).find(".swiper")[0], {
+      speed: sliderDuration,
+      loop: loopMode,
+      autoHeight: false,
+      centeredSlides: loopMode,
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: false,
+      slidesPerView: 1,
+      spaceBetween: "4%",
+      rewind: false,
+      mousewheel: {
+        forceToAxis: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      breakpoints: {
+        // mobile landscape
+        480: {
+          slidesPerView: 1,
+          spaceBetween: "0%"
+        },
+        // tablet
+        768: {
+          slidesPerView: 1,
+          spaceBetween: "0%"
+        },
+        // desktop
+        992: {
+          slidesPerView: 1,
+          spaceBetween: "0%"
+        }
+      },
+      pagination: {
+        el: $(this).find(".swiper-bullet-wrapper")[0],
+        bulletActiveClass: "is-active",
+        bulletClass: "swiper-bullet",
+        bulletElement: "button",
+        clickable: true
+      },
+      navigation: {
+        nextEl: $(this).find(".swiper-next")[0],
+        prevEl: $(this).find(".swiper-prev")[0],
+        disabledClass: "is-disabled"
+      },
+      scrollbar: {
+        el: $(this).find(".swiper-drag-wrapper")[0],
+        draggable: true,
+        dragClass: "swiper-drag",
+        snapOnRelease: true
+      },
+      slideActiveClass: "is-active",
+      slideDuplicateActiveClass: "is-active"
+    });
+  });
+});
+</script>
+        </div>
+        <div class="home_hero_inner u-section-inner">
+          <div class="home_hero_contain">
+            <div class="home_hero_layout">
+              <div loop-mode="true" class="home_hero_slider_component">
+                <div class="swiper is-hero">
+                  <div role="list" class="swiper-wrapper is-hero">
+                    {% for block in section.blocks %}
+    {% if block.type == "slide" %}
+                    <div li-block="Slide" class="swiper-slide is-hero">
+                                    
+                      
+                                    <div style="flex-direction: {{ block.settings.flex_direction }}" class="home_hero_styles u-container {{block.settings.color_theme}}">{% if block.settings.image_background_image %}
+{{ block.settings.image_background_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'home_hero_bg_img u-cover-absolute', image_tag: loading }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'home_hero_bg_img u-cover-absolute' }} 
+{% endif %}
+                        <div class="home_hero_img_wrap u-position-relative u-ratio-1-1 u-zindex-3">{% if block.settings.image_foreground_image %}
+{{ block.settings.image_foreground_image | image_url: width: 675 | image_tag: loading: 'lazy', class: 'home_hero_img u-cover-absolute', image_tag: loading }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'home_hero_img u-cover-absolute' }} 
+{% endif %}</div>
+                        <div class="home_hero_content_wrap u-position-relative u-zindex-3">
+                          <div class="home_hero_eyebrow_wrap u-flex-horizontal-wrap u-gap-2">
+                            <div data-wf--eyebrow--variant="base" class="g_eyebrow_txt u-text-style-h6 u-margin-bottom-5 u-radius-small"> {{ block.settings.richtext_eyebrow }} </div>
+                          </div>
+                          <div style="max-width: {{ block.settings.header_max_width | append: 'em' }};" class="home_hero_header_wrap">
+                            <div class="home_hero_header_txt u-text-style-h1 u-text-transform-uppercase w-richtext"> {{ block.settings.richtext_header }} </div>
+                          </div>
+                          <div style="max-width: {{ block.settings.paragraph_max_width | append: 'em' }};" class="home_hero_paragraph_wrap u-margin-top-6">
+                            <p class="home_hero_paragraph_txt u-text-style-large"> {{ block.settings.textarea_paragraph }} </p>
+                          </div>
+                          <div class="home_hero_button_wrap u-button-wrapper">
+                            <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                              <div class="clickable_wrap u-cover-absolute">
+                                <a class="clickable_link" href="{{ block.settings.url_link }}" target="{% if block.settings.open_in_new_tab %}_blank{% endif %}"> <span class="clickable_text u-sr-only">{{ block.settings.text_button_text }}</span> </a><button type="{{block.settings.button_type}}" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ block.settings.text_button_text }}
+</span></button>
+                              </div>
+                              <div class="button_main_element {{block.settings.variant}}">
+                                <p aria-hidden="true" class="button_main_text u-text-style-h6">
+{{ block.settings.text_button_text }}
+</p>
+                                <div class="button_main_icon u-hide-if-empty"></div>
+                                <div class="button_main_line {{block.settings.variant}}"></div>
+                              </div>
+                              <div class="u-display-contents">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                                    
+                      
+                                    
+                                    
+                      
+                                    
+                                    
+                      
+                                    
+                                    
+                      
+                                    
+                                    
+                    
+                            </div>
+            {% endif %}
+{% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="g_texture_wrap"><img src="{{ 'rip_texture.png' | asset_url }}" loading="lazy" sizes="(max-width: 1529px) 100vw, 1529px, 100vw" srcset="{{ 'rip_texture-p-500.png' | asset_url }} 500w, {{ 'rip_texture-p-800.png' | asset_url }} 800w, {{ 'rip_texture-p-1080.png' | asset_url }} 1080w, {{ 'rip_texture.png' | asset_url }} 1529w" alt="" class="g_texture_img"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Home Hero",
+    "class": "home_hero_wrap u-section u-background-transparent",
+    "blocks": [
+        {
+            "name": "Slide",
+            "type": "slide",
+            "settings": [
+                {
+                    "id": "image_background_image",
+                    "type": "image_picker",
+                    "label": "Background Image"
+                },
+                {
+                    "id": "image_foreground_image",
+                    "type": "image_picker",
+                    "label": "Foreground Image"
+                },
+                {
+                    "id": "richtext_eyebrow",
+                    "type": "richtext",
+                    "label": "Eyebrow",
+                    "default": "<p>Eyebrow<\/p>"
+                },
+                {
+                    "id": "richtext_header",
+                    "type": "richtext",
+                    "label": "Header",
+                    "default": "<p>\n                              Release the Beast Stick\n                            <\/p>"
+                },
+                {
+                    "id": "textarea_paragraph",
+                    "type": "textarea",
+                    "label": "Paragraph",
+                    "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
+                },
+                {
+                    "id": "url_link",
+                    "type": "url",
+                    "label": "Link"
+                },
+                {
+                    "id": "text_button_text",
+                    "type": "text",
+                    "label": "Button Text",
+                    "default": "Button Text"
+                },
+                {
+                    "type": "header",
+                    "content": "Button Settings"
+                },
+                {
+                    "type": "select",
+                    "id": "variant",
+                    "label": "Variant",
+                    "default": "",
+                    "options": [
+                        {
+                            "label": "Main",
+                            "value": ""
+                        },
+                        {
+                            "label": "Secondary",
+                            "value": "w-variant-e85564cd-af30-a478-692b-71732aefb3ab"
+                        },
+                        {
+                            "label": "Link",
+                            "value": "w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400"
+                        }
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "id": "open_in_new_tab",
+                    "label": "Open in new tab",
+                    "default": false
+                },
+                {
+                    "type": "select",
+                    "id": "button_type",
+                    "label": "Button Type",
+                    "default": "button",
+                    "options": [
+                        {
+                            "label": "Button",
+                            "value": "button"
+                        },
+                        {
+                            "label": "Submit",
+                            "value": "submit"
+                        },
+                        {
+                            "label": "Reset",
+                            "value": "reset"
+                        }
+                    ]
+                },
+                {
+                    "type": "header",
+                    "content": "Flex Direction"
+                },
+                {
+                    "type": "select",
+                    "id": "flex_direction",
+                    "label": "Flex Direction",
+                    "default": "row",
+                    "options": [
+                        {
+                            "label": "Row (Image Right)",
+                            "value": "row"
+                        },
+                        {
+                            "label": "Row Reverse (Image Left)",
+                            "value": "row-reverse"
+                        }
+                    ]
+                },
+                {
+                    "type": "header",
+                    "content": "Header Max Width"
+                },
+                {
+                    "type": "range",
+                    "id": "header_max_width",
+                    "label": "header-max-width",
+                    "default": 50,
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "em"
+                },
+                {
+                    "type": "header",
+                    "content": "Paragraph Max Width"
+                },
+                {
+                    "type": "range",
+                    "id": "paragraph_max_width",
+                    "label": "paragraph-max-width",
+                    "default": 50,
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "em"
+                },
+                {
+                    "type": "header",
+                    "content": "Theme"
+                },
+                {
+                    "type": "select",
+                    "id": "color_theme",
+                    "label": "Color Theme",
+                    "default": "",
+                    "options": [
+                        {
+                            "label": "Inherit",
+                            "value": ""
+                        },
+                        {
+                            "label": "Dark",
+                            "value": "u-theme-dark"
+                        },
+                        {
+                            "label": "Light",
+                            "value": "u-theme-light"
+                        },
+                        {
+                            "label": "Brand",
+                            "value": "u-theme-brand"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Home Hero",
+            "category": "Heroes",
+            "blocks": [
+                {
+                    "type": "slide"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

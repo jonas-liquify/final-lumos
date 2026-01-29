@@ -1,0 +1,315 @@
+<div class="u-embed-css w-embed">
+          <style>
+.cta_1_bg_img {
+	object-position: inherit;
+}
+</style>
+        </div>
+        <div class="cta_1_inner u-section-inner">
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="u-container {{section.settings.color_theme}}">
+            <div class="cta_1_layout u-position-relative">
+              <div style="object-position: {{ section.settings.object_position_x }}% {{ section.settings.object_position_y }}%" class="cta_1_bg_img_wrap u-cover-absolute">{% if section.settings.image_background_image %}
+{{ section.settings.image_background_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'cta_1_bg_img u-cover-absolute' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'cta_1_bg_img u-cover-absolute' }} 
+{% endif %}</div>
+              <div class="cta_1_top_wrap u-position-relative">
+                <div style="max-width: {{ section.settings.header_max_width | append: 'em'}};" class="cta_1_header_wrap">
+                  <div class="cta_1_header_txt u-text-style-h2 w-richtext"> {{ section.settings.richtext_header }} </div>
+                </div>
+                <div style="max-width: {{ section.settings.paragraph_max_width | append: 'em' }};" class="cta_1_paragraph_wrap u-margin-top-3">
+                  <div class="cta_1_paragraph_txt u-text-style-large w-richtext"> {{ section.settings.richtext_paragraph }} </div>
+                </div>
+                <div class="cta_1_btn_wrap u-button-wrapper u-margin-top-4">
+                  <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                    <div class="clickable_wrap u-cover-absolute">
+                      <a class="clickable_link" href="{{ section.settings.url_link }}" target="{% if section.settings.open_in_new_tab %}_blank{% endif %}"> <span class="clickable_text u-sr-only">{{ section.settings.text_button_text }}</span> </a><button type="{{section.settings.button_type}}" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ section.settings.text_button_text }}
+</span></button>
+                    </div>
+                    <div class="button_main_element {{section.settings.variant}}">
+                      <p aria-hidden="true" class="button_main_text u-text-style-h6">
+{{ section.settings.text_button_text }}
+</p>
+                      <div class="button_main_icon u-hide-if-empty"></div>
+                      <div class="button_main_line {{section.settings.variant}}"></div>
+                    </div>
+                    <div class="u-display-contents">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cta_1_bottom_wrap u-position-relative">
+                <div class="cta_1_img_wrap u-position-relative">{% if section.settings.image_image_small %}
+{{ section.settings.image_image_small | image_url: width: 356 | image_tag: loading: 'lazy', class: 'cta_1_img u-cover-absolute' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'cta_1_img u-cover-absolute' }} 
+{% endif %}</div>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "CTA 1",
+    "class": "cta_1_wrap u-section",
+    "settings": [
+        {
+            "id": "image_background_image",
+            "type": "image_picker",
+            "label": "Background Image"
+        },
+        {
+            "id": "richtext_header",
+            "type": "richtext",
+            "label": "Header",
+            "default": "<p>\n                    Raised with pride. Crafted with passion.\n                  <\/p>"
+        },
+        {
+            "id": "richtext_paragraph",
+            "type": "richtext",
+            "label": "Paragraph",
+            "default": "<p>\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non condimentum turpis, ac laoreet massa. Aliquam elementum tempus eros, sed congue lectus gravida eget. Phasellus congue rhoncus neque, at egestas mauris rhoncus id. Quisque imperdiet scelerisque nulla, sed finibus neque tristique ac. In at elit semper, interdum dolor facilisis, fermentum sapien.\n                  <\/p>"
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Button Text"
+        },
+        {
+            "type": "header",
+            "content": "Button Settings"
+        },
+        {
+            "type": "select",
+            "id": "variant",
+            "label": "Variant",
+            "default": "",
+            "options": [
+                {
+                    "label": "Main",
+                    "value": ""
+                },
+                {
+                    "label": "Secondary",
+                    "value": "w-variant-e85564cd-af30-a478-692b-71732aefb3ab"
+                },
+                {
+                    "label": "Link",
+                    "value": "w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400"
+                }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "id": "open_in_new_tab",
+            "label": "Open in new tab",
+            "default": false
+        },
+        {
+            "type": "select",
+            "id": "button_type",
+            "label": "Button Type",
+            "default": "button",
+            "options": [
+                {
+                    "label": "Button",
+                    "value": "button"
+                },
+                {
+                    "label": "Submit",
+                    "value": "submit"
+                },
+                {
+                    "label": "Reset",
+                    "value": "reset"
+                }
+            ]
+        },
+        {
+            "id": "image_image_small",
+            "type": "image_picker",
+            "label": "Image Small"
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Header Max Width"
+        },
+        {
+            "type": "range",
+            "id": "header_max_width",
+            "label": "header-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        },
+        {
+            "type": "header",
+            "content": "Paragraph Max Width"
+        },
+        {
+            "type": "range",
+            "id": "paragraph_max_width",
+            "label": "paragraph-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        },
+        {
+            "type": "header",
+            "content": "Object Position"
+        },
+        {
+            "type": "range",
+            "id": "object_position_x",
+            "label": "Image Horizontal Position",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "%"
+        },
+        {
+            "type": "range",
+            "id": "object_position_y",
+            "label": "Image Vertical Position",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "%"
+        }
+    ],
+    "presets": [
+        {
+            "name": "CTA 1",
+            "category": "CTA",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

@@ -1,0 +1,244 @@
+<div class="u-embed-css w-embed">
+          <style>
+.collections-item_wrap:hover .collections-item_img_front {
+	opacity: 0;
+}
+.collections-item_wrap:focus-within .collections-item_img_front {
+	opacity: 0;
+}
+@container ( width < 60em ) {
+	.swiper-slide.is-collections {
+  	width: 40% !important;
+  }
+}
+@container ( width < 35em ) {
+	.swiper-slide.is-collections {
+  	width: 80% !important;
+  }
+}
+</style>
+        </div>
+        <div class="u-embed-js w-embed w-script">
+          <script>
+document.addEventListener('DOMContentLoaded', function() {
+  $(".collections_wrap").each(function (index) {
+    let loopMode = false;
+    if ($(this).attr("loop-mode") === "true") {
+      loopMode = true;
+    }
+    let sliderDuration = 300;
+    if ($(this).attr("slider-duration") !== undefined) {
+      sliderDuration = +$(this).attr("slider-duration");
+    }
+    const swiper = new Swiper($(this).find(".swiper")[0], {
+      speed: sliderDuration,
+      loop: loopMode,
+      autoHeight: false,
+      centeredSlides: loopMode,
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: false,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      rewind: false,
+      mousewheel: {
+        forceToAxis: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      pagination: {
+        el: $(this).find(".swiper-bullet-wrapper")[0],
+        bulletActiveClass: "is-active",
+        bulletClass: "swiper-bullet",
+        bulletElement: "button",
+        clickable: true
+      },
+      navigation: {
+        nextEl: $(this).find(".swiper-next")[0],
+        prevEl: $(this).find(".swiper-prev")[0],
+        disabledClass: "is-disabled"
+      },
+      scrollbar: {
+        el: $(this).find(".swiper-drag-wrapper")[0],
+        draggable: true,
+        dragClass: "swiper-drag",
+        snapOnRelease: true
+      },
+      slideActiveClass: "is-active",
+      slideDuplicateActiveClass: "is-active"
+    });
+  });
+});
+</script>
+        </div>
+        <div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="collections_contain u-container">
+            <div class="collections_layout">
+              <div class="collections_top_wrap">
+                <div class="g_slider_btn_wrap"><button id="" class="g_slider_btn swiper-prev"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 22 16" fill="none" class="g_slider_btn_svg">
+                      <path d="M0 6V10H9V16L22 8L9 0V6H0Z" fill="currentColor"></path>
+                    </svg></button><button id="" class="g_slider_btn swiper-next"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 22 16" fill="none" class="g_slider_btn_svg">
+                      <path d="M0 6V10H9V16L22 8L9 0V6H0Z" fill="currentColor"></path>
+                    </svg></button></div>
+              </div>
+              <div class="collections_slider_component u-margin-top-8">
+                <div class="swiper is-collections">
+                  <div li-for:inside="collection in section.settings.collection_list" class="swiper-wrapper is-collections">
+        {% for collection in section.settings.collection_list %}                            
+                    
+                            <div class="swiper-slide is-collections">
+                      <div class="collections-item_wrap u-flex-vertical-nowrap u-gap-2 u-position-relative">
+                        <div class="clickable_wrap u-cover-absolute">
+                          <a li-object:href="collection.url" class="clickable_link" href="{{ collection.url }}"><span class="clickable_text u-sr-only"></span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only"></span></button>
+                        </div>
+                        <div class="collections-item_img_wrap"><img src="{{ collection.metafields.custom.slider_image_hover | image_url: width: 333 }}" loading="lazy" li-object:src="collection.metafields.custom.slider_image_hover | image_url: width: 333" alt="" class="collections-item_img_back u-cover-absolute"><img src="{{ collection.metafields.custom.slider_image | image_url: width: 333 }}" loading="lazy" li-object:src="collection.metafields.custom.slider_image | image_url: width: 333" alt="" class="collections-item_img_front u-cover-absolute"></div>
+                        <div li-object="collection.title" class="collections-item_title u-text-style-h3 u-text-transform-uppercase">{{ collection.title }}</div>
+                      </div>
+                    </div>
+                            
+                  
+                    {% endfor %}    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Collections List",
+    "class": "collections_wrap u-section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Collections"
+        },
+        {
+            "type": "collection_list",
+            "id": "collection_list",
+            "label": "Collections"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collections List",
+            "category": "Collection",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

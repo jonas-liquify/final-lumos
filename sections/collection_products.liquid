@@ -1,0 +1,277 @@
+<div class="u-embed-css w-embed">
+          <style>
+.filter_form_checkbox {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.filter_form_checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.filter_form_value-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--_spacing---space--3) var(--_spacing---space--4);
+  border-left: var(--border-width--main) solid var(--_theme---text);
+  text-transform: uppercase;
+  transition: background-color 0.2s, color 0.2s;
+}
+.filter_item:last-child .filter_form_value-label {
+	border-right: var(--border-width--main) solid var(--_theme---text);
+}
+/* Checked state */
+.filter_form_checkbox-input:checked + .filter_form_value-label {
+  background-color: var(--_theme---text);
+  color: var(--_theme---background);
+  border-color: transparent;
+}
+</style>
+        </div>
+        <div li-render-filter="wrapper" class="u-section-inner {{section.settings.color_theme}}">
+          {% paginate collection.products by 20 %}
+    <div li-paginate:by="20" li-paginate="collection.products" class="filter_layout" by="20">
+            <div class="filter_filters_wrap">
+              <form action="{{ routes.search_url }}" method="get" role="search" class="filter_form_component">
+                <div class="filter_form">
+                  <div class="filter_scroll_wrap">
+                    <div class="filter_filter-group-list">
+                      {% for filter in collection.filters %}    <div li-for="filter in collection.filters" class="filter_filter-group">
+                                    
+                        
+                            {% if filter.values.size > 1 and filter.type != 'price_range' %}    <div li-if="filter.values.size > 1 and filter.type != 'price_range'" class="filter_group-item">
+    
+                          <div class="filter_group-heading_wrap">
+                            <div class="filter_group-heading_txt u-text-style-main u-color-faded u-text-transform-uppercase">Collections</div>
+                          </div>
+                          <div class="filter_filter-options">
+                            <div class="filter_list-wrap">
+                              <div class="filter_list">
+                                {% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="filter_item">
+                                    <label class="filter_form_checkbox"><input type="checkbox" li-render-filter="filter" li-render-filter-value="{{ filter_value.value }}" li-render-filter-name="{{ filter_value.param_name }}" class="filter_form_checkbox-input"><span li-object="filter_value.label | append: ' '" class="filter_form_value-label">{{ filter_value.label | append: ' ' }}</span></label>
+                        </div>
+{% endfor %}
+                              </div>
+                            </div>
+                          </div>
+                            </div>
+{% endif %}
+                            
+                      
+                        </div>
+{% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="filter_contain u-container">
+              <div data-wf--spacer--variant="even" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+              <div li-for:inside="product in collection.products" class="filter_product_layout u-grid-autofill">
+        {% for product in collection.products %}                            
+                
+                            {% render 'product_item', product: product %}
+                            
+              
+                    {% endfor %}    </div>
+              {% if paginate.pages > 1 %}    <nav li-if="paginate.pages > 1" class="pagination_component">
+    
+                <ul role="list" class="pagination_list">
+                  {% if paginate.previous %}    <li li-if="paginate.previous" class="pagination_item">
+    
+                    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="pagination_button w-inline-block">
+                      <div class="pagination_arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                          <path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path>
+                        </svg></div>
+                      <div class="pagination_txt u-text-style-small">Back</div>
+                    </a>
+                      </li>
+{% endif %}
+                  {% if paginate.previous == false %}    <li li-if="paginate.previous == false" class="pagination_item">
+    
+                    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="pagination_button is-disabled w-inline-block">
+                      <div class="pagination_arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                          <path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path>
+                        </svg></div>
+                      <div class="pagination_txt u-text-style-small">Back</div>
+                    </a>
+                      </li>
+{% endif %}
+                  {% for part in paginate.parts %}    <li li-for="part in paginate.parts" class="pagination_item">
+                                    
+                    
+                            {% if part.is_link %}    <div li-if="part.is_link">
+    
+                      <a li-object:href="part.url" href="{{ part.url }}" class="pagination_count w-inline-block">
+                        <div li-object="part.title" class="pagination_part-title">{{ part.title }}</div>
+                      </a>
+                        </div>
+{% endif %}
+                            
+                    
+                            {% if part.is_link == false %}    <div li-if="part.is_link == false">
+    
+                      <div li-object="part.title" class="{% if part.title == paginate.current_page %}u-weight-bold{% endif %}">{{ part.title }}</div>
+                        </div>
+{% endif %}
+                            
+                  
+                        </li>
+{% endfor %}
+                  {% if paginate.next == false %}    <li li-if="paginate.next == false" class="pagination_item">
+    
+                    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="pagination_button is-reversed is-disabled w-inline-block">
+                      <div class="pagination_arrow is-reversed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                          <path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path>
+                        </svg></div>
+                      <div class="pagination_txt u-text-style-small">Next</div>
+                    </a>
+                      </li>
+{% endif %}
+                  {% if paginate.next %}    <li li-if="paginate.next" class="pagination_item">
+    
+                    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="pagination_button is-reversed w-inline-block">
+                      <div class="pagination_arrow is-reversed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                          <path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path>
+                        </svg></div>
+                      <div class="pagination_txt u-text-style-small">Next</div>
+                    </a>
+                      </li>
+{% endif %}
+                </ul>
+                  </nav>
+{% endif %}
+              <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+            </div>
+          </div>{% endpaginate %}
+        </div> {% schema %} {
+    "tag": "div",
+    "name": "Collection Products",
+    "class": "filter_wrap u-section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Products",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "collection"
+        ]
+    }
+} {% endschema %}

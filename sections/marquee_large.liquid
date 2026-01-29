@@ -1,0 +1,190 @@
+<div class="marquee_large_embed w-embed">
+          <style>
+@keyframes marquee_large_timeline {
+	from { transform: translateX(0%); }
+	to { transform: translateX(-100%); }
+}
+</style>
+        </div>
+        <div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="even" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="marquee_large_layout">
+            <div class="marquee_large_track">
+              <div class="marquee_large_cms_wrap">
+                <div class="marquee_large_cms_list">
+                  {% for block in section.blocks %}
+    {% if block.type == "text" %}
+                    <div li-block="text" class="marquee_large_cms_item">
+                                    
+                    
+                                    <div class="marquee_large_cms_text u-text-style-h1 u-text-transform-uppercase">
+{{ block.settings.text_text }}
+</div>
+                                    
+                  
+                            </div>
+            {% endif %}
+{% endfor %}
+                </div>
+              </div>
+              <div aria-hidden="true" class="marquee_large_cms_wrap">
+                <div li-for:inside="block in section.blocks" class="marquee_large_cms_list">
+        {% for block in section.blocks %}                            
+                  
+                            {% if block.type == 'text' %}    <div li-if="block.type == 'text'" class="marquee_large_cms_item">
+    
+                    <div li-object="block.settings.text_text" class="marquee_large_cms_text u-text-style-h1 u-text-transform-uppercase">{{ block.settings.text_text }}</div>
+                      </div>
+{% endif %}
+                            
+                
+                    {% endfor %}    </div>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="even" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Marquee Large",
+    "class": "marquee_large_wrap u-section",
+    "blocks": [
+        {
+            "name": "text",
+            "type": "text",
+            "settings": [
+                {
+                    "id": "text_text",
+                    "type": "text",
+                    "label": "Text",
+                    "default": "ITEM ONE"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Marquee Large",
+            "category": "Marquee",
+            "blocks": [
+                {
+                    "type": "text"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

@@ -1,0 +1,324 @@
+<div class="u-embed-css w-embed">
+          <style>
+.hero_alignment_wrap.u-alignment-center .hero_header_wrap {
+  	margin-inline: auto;
+  }
+.hero_alignment_wrap.u-alignment-end .hero_header_wrap {
+	margin-left: auto;
+}
+</style>
+        </div>
+        <div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="page-top" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="hero_small_contain u-container">
+            <div class="hero_small_layout">
+              <div class="hero_alignment_wrap {{section.settings.alignment}}">
+                <div class="hero_content_master">
+                  <div>
+                    <div class="hero_eyebrow_wrap u-margin-bottom-3">
+                      <p data-wf--eyebrow--variant="base" class="g_eyebrow_txt u-text-style-h6 u-display-inline-block">
+{{ section.settings.text_eyebrow_text }}
+</p>
+                    </div>
+                  </div>
+                  <div style="max-width: {{section.settings.header_max_width | append: 'em'}}" class="hero_header_wrap">
+                    <h1 class="hero_header_txt u-text-style-h2">
+{{ section.settings.text_header_text }}
+</h1>
+                  </div>
+                  <div class="hero_button_wrap u-margin-top-4">
+                    {% for block in section.blocks %}
+    {% if block.type == "button" %}
+                    <div data-wf--button-main--variant="primary" li-block="Button" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                                    
+                      
+                                    <div class="clickable_wrap u-cover-absolute">
+                        <a class="clickable_link" href="{{ block.settings.url_link }}" target="{% if section.settings.open_in_new_tab %}_blank{% endif %}"> <span class="clickable_text u-sr-only">{{ block.settings.text_button_text }}</span> </a><button type="{{section.settings.button_type}}" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ block.settings.text_button_text }}
+</span></button>
+                      </div>
+                                    
+                      
+                                    <div class="button_main_element {{section.settings.variant}}">
+                        <p aria-hidden="true" class="button_main_text u-text-style-h6">
+{{ block.settings.text_button_text }}
+</p>
+                        <div class="button_main_icon u-hide-if-empty"></div>
+                        <div class="button_main_line {{section.settings.variant}}"></div>
+                      </div>
+                                    
+                      
+                                    <div class="u-display-contents">
+                        
+                      </div>
+                                    
+                    
+                            </div>
+            {% endif %}
+{% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Hero Small",
+    "class": "hero_small_wrap u-section",
+    "blocks": [
+        {
+            "name": "Button",
+            "type": "button",
+            "settings": [
+                {
+                    "id": "url_link",
+                    "type": "url",
+                    "label": "Link"
+                },
+                {
+                    "id": "text_button_text",
+                    "type": "text",
+                    "label": "Button Text",
+                    "default": "Button Text"
+                },
+                {
+                    "type": "header",
+                    "content": "Button Settings"
+                },
+                {
+                    "type": "select",
+                    "id": "variant",
+                    "label": "Variant",
+                    "default": "",
+                    "options": [
+                        {
+                            "label": "Main",
+                            "value": ""
+                        },
+                        {
+                            "label": "Secondary",
+                            "value": "w-variant-e85564cd-af30-a478-692b-71732aefb3ab"
+                        },
+                        {
+                            "label": "Link",
+                            "value": "w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400"
+                        }
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "id": "open_in_new_tab",
+                    "label": "Open in new tab",
+                    "default": false
+                },
+                {
+                    "type": "select",
+                    "id": "button_type",
+                    "label": "Button Type",
+                    "default": "button",
+                    "options": [
+                        {
+                            "label": "Button",
+                            "value": "button"
+                        },
+                        {
+                            "label": "Submit",
+                            "value": "submit"
+                        },
+                        {
+                            "label": "Reset",
+                            "value": "reset"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_eyebrow_text",
+            "type": "text",
+            "label": "Eyebrow Text",
+            "default": "Eyebrow"
+        },
+        {
+            "id": "text_header_text",
+            "type": "text",
+            "label": "Header Text",
+            "default": "We're happy to answer all questions"
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Header Max Width"
+        },
+        {
+            "type": "range",
+            "id": "header_max_width",
+            "label": "header-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        },
+        {
+            "type": "header",
+            "content": "Alignment"
+        },
+        {
+            "type": "select",
+            "id": "alignment",
+            "label": "Alignment",
+            "default": "u-alignment-start",
+            "options": [
+                {
+                    "label": "Start",
+                    "value": "u-alignment-start"
+                },
+                {
+                    "label": "Center",
+                    "value": "u-alignment-center"
+                },
+                {
+                    "label": "End",
+                    "value": "u-alignment-end"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Eyebrow Visibility"
+        },
+        {
+            "type": "checkbox",
+            "id": "eyebrow_visibility",
+            "label": "Eyebrow Visibility",
+            "default": true
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Small",
+            "category": "Heroes",
+            "blocks": [
+                {
+                    "type": "button"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}

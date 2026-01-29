@@ -1,0 +1,333 @@
+<div class="u-embed-css w-embed">
+          <style>
+@container ( width < 60em ) {
+	.swiper-slide.is-snippet {
+  	width: 50% !important;
+  }
+}
+@container ( width < 35em ) {
+	.swiper-slide.is-snippet {
+  	width: 100% !important;
+  }
+}
+</style>
+        </div>
+        <div class="u-embed-js w-embed w-script">
+          <script>
+document.addEventListener('DOMContentLoaded', function() {
+  $(".snippet_slider_wrap").each(function (index) {
+    let loopMode = false;
+    if ($(this).attr("loop-mode") === "true") {
+      loopMode = true;
+    }
+    let sliderDuration = 300;
+    if ($(this).attr("slider-duration") !== undefined) {
+      sliderDuration = +$(this).attr("slider-duration");
+    }
+    const swiper = new Swiper($(this).find(".swiper")[0], {
+      speed: sliderDuration,
+      loop: loopMode,
+      autoHeight: false,
+      centeredSlides: loopMode,
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: false,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      rewind: false,
+      mousewheel: {
+        forceToAxis: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      pagination: {
+        el: $(this).find(".swiper-bullet-wrapper")[0],
+        bulletActiveClass: "is-active",
+        bulletClass: "swiper-bullet",
+        bulletElement: "button",
+        clickable: true
+      },
+      navigation: {
+        nextEl: $(this).find(".swiper-next")[0],
+        prevEl: $(this).find(".swiper-prev")[0],
+        disabledClass: "is-disabled"
+      },
+      scrollbar: {
+        el: $(this).find(".swiper-drag-wrapper")[0],
+        draggable: true,
+        dragClass: "swiper-drag",
+        snapOnRelease: true
+      },
+      slideActiveClass: "is-active",
+      slideDuplicateActiveClass: "is-active"
+    });
+  });
+});
+</script>
+        </div>
+        <div class="u-section-inner {{section.settings.color_theme}}">
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_top}}"></div>
+          <div class="snippet_slider_contain u-container">
+            <div class="snippet_slider_layout">
+              <div class="snippet_slider_top_wrap u-flex-horizontal-wrap u-justify-content-between u-gap-4 u-align-items-end">
+                <div class="snippet_slider_header_master u-flex-horizontal-wrap u-gap-4">
+                  <div class="snippet_slider_header_wrap">
+                    <div class="snippet_slider_header_txt u-text-style-h2 u-text-transform-uppercase w-richtext"> {{ section.settings.richtext_header }} </div>
+                  </div>
+                  <div class="snippet_slider_btn_wrap">
+                    <div data-wf--button-main--variant="primary" class="button_main_wrap" data-button=" " data-trigger="hover focus">
+                      <div class="clickable_wrap u-cover-absolute">
+                        <a class="clickable_link" href="{{ section.settings.url_link }}" target="{% if section.settings.open_in_new_tab %}_blank{% endif %}"> <span class="clickable_text u-sr-only">{{ section.settings.text_button_text }}</span> </a><button type="{{section.settings.button_type}}" class="clickable_btn"><span class="clickable_text u-sr-only">
+{{ section.settings.text_button_text }}
+</span></button>
+                      </div>
+                      <div class="button_main_element {{section.settings.variant}}">
+                        <p aria-hidden="true" class="button_main_text u-text-style-h6">
+{{ section.settings.text_button_text }}
+</p>
+                        <div class="button_main_icon u-hide-if-empty"></div>
+                        <div class="button_main_line {{section.settings.variant}}"></div>
+                      </div>
+                      <div class="u-display-contents">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="g_slider_btn_wrap"><button id="" class="g_slider_btn swiper-prev"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 22 16" fill="none" class="g_slider_btn_svg">
+                      <path d="M0 6V10H9V16L22 8L9 0V6H0Z" fill="currentColor"></path>
+                    </svg></button><button id="" class="g_slider_btn swiper-next"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 22 16" fill="none" class="g_slider_btn_svg">
+                      <path d="M0 6V10H9V16L22 8L9 0V6H0Z" fill="currentColor"></path>
+                    </svg></button></div>
+              </div>
+              <div class="snippet_slider_component u-margin-top-6">
+                <div class="swiper is-snippet">
+                  <div li-for:inside="product in section.settings.product_list" class="swiper-wrapper is-snippet">
+        {% for product in section.settings.product_list %}                            
+                    
+                            <div class="swiper-slide is-snippet">
+                      {% render 'product_item', product: product %}
+                    </div>
+                            
+                  
+                    {% endfor %}    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-wf--spacer--variant="main" class="u-section-spacer u-ignore-trim {{section.settings.padding_bottom}}"></div>
+        </div>
+        
+        
+        
+        
+        <div class="u-display-contents"></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Slider",
+    "class": "snippet_slider_wrap u-section",
+    "settings": [
+        {
+            "id": "richtext_header",
+            "type": "richtext",
+            "label": "Header",
+            "default": "<p>\n                      ICONIC\u00a0Meats\n                    <\/p>"
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Button Text"
+        },
+        {
+            "type": "header",
+            "content": "Button Settings"
+        },
+        {
+            "type": "select",
+            "id": "variant",
+            "label": "Variant",
+            "default": "",
+            "options": [
+                {
+                    "label": "Main",
+                    "value": ""
+                },
+                {
+                    "label": "Secondary",
+                    "value": "w-variant-e85564cd-af30-a478-692b-71732aefb3ab"
+                },
+                {
+                    "label": "Link",
+                    "value": "w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400"
+                }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "id": "open_in_new_tab",
+            "label": "Open in new tab",
+            "default": false
+        },
+        {
+            "type": "select",
+            "id": "button_type",
+            "label": "Button Type",
+            "default": "button",
+            "options": [
+                {
+                    "label": "Button",
+                    "value": "button"
+                },
+                {
+                    "label": "Submit",
+                    "value": "submit"
+                },
+                {
+                    "label": "Reset",
+                    "value": "reset"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "select",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "default": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "None",
+                    "value": "u-section-spacer"
+                },
+                {
+                    "label": "Small",
+                    "value": "w-variant-d422cbd0-f212-c815-68df-63414354c21d"
+                },
+                {
+                    "label": "Even",
+                    "value": "w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342"
+                },
+                {
+                    "label": "Main",
+                    "value": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490"
+                },
+                {
+                    "label": "Large",
+                    "value": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3"
+                },
+                {
+                    "label": "Page Top",
+                    "value": "w-variant-e359d2da-de19-6775-b122-3e06f925f39e"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Theme"
+        },
+        {
+            "type": "select",
+            "id": "color_theme",
+            "label": "Color Theme",
+            "default": "",
+            "options": [
+                {
+                    "label": "Inherit",
+                    "value": ""
+                },
+                {
+                    "label": "Dark",
+                    "value": "u-theme-dark"
+                },
+                {
+                    "label": "Light",
+                    "value": "u-theme-light"
+                },
+                {
+                    "label": "Brand",
+                    "value": "u-theme-brand"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Header Max Width"
+        },
+        {
+            "type": "range",
+            "id": "header_max_width",
+            "label": "header-max-width",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "em"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Slider",
+            "category": "Product",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "*"
+        ]
+    }
+} {% endschema %}
