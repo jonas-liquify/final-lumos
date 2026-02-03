@@ -940,7 +940,7 @@
               "name": "Slide",
               "settings": {
                 "text_heading": "Lorem ipsum",
-                "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+                "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
                 "url_link": "",
                 "text_screen_reader": "Lorem Ipsum"
               },
