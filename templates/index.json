@@ -139,43 +139,85 @@
     "tab_main": {
       "type": "tab_main",
       "blocks": {
-        "tab-link": {
-          "type": "tab-link",
-          "name": "Tab Link",
-          "settings": {},
-          "blocks": {}
-        },
-        "tab-content": {
-          "type": "tab-content",
-          "name": "Tab Content",
-          "settings": {},
-          "blocks": {
-            "column-1": {
-              "type": "column-1",
-              "static": true,
-              "settings": {},
-              "blocks": {}
-            },
-            "column-2": {
-              "type": "column-2",
-              "static": true,
-              "settings": {},
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        },
         "tab-navigation": {
           "type": "tab-navigation",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "tab_link_LXjfhB": {
+              "type": "tab-link",
+              "name": "Tab Link",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "tab_link_LXjfhB"
+          ]
         },
         "tab-content-wrapper": {
           "type": "tab-content-wrapper",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "tab_content_b8Hk4U": {
+              "type": "tab-content",
+              "name": "Tab Content",
+              "settings": {},
+              "blocks": {
+                "column-1": {
+                  "type": "column-1",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {
+                    "heading_TmK7Mx": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text_heading": "Lorem ipsum dolor sit amet elit",
+                        "text_style": "h2",
+                        "max_width": 60
+                      },
+                      "blocks": {}
+                    },
+                    "paragraph_VmqcLD": {
+                      "type": "paragraph",
+                      "name": "Paragraph",
+                      "settings": {
+                        "richtext_praragraph": "<p><br/>                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                        </p>",
+                        "max_width": 60
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_TmK7Mx",
+                    "paragraph_VmqcLD"
+                  ]
+                },
+                "column-2": {
+                  "type": "column-2",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {
+                    "image_xUz99D": {
+                      "type": "image",
+                      "name": "Image",
+                      "settings": {},
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "image_xUz99D"
+                  ]
+                }
+              },
+              "block_order": []
+            }
+          },
+          "block_order": [
+            "tab_content_b8Hk4U"
+          ]
         },
         "background": {
           "type": "background",
@@ -184,12 +226,8 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "tab-link",
-        "tab-content"
-      ],
       "settings": {
-        "text_heading": "<h2>Tab Content 1</h2>",
+        "text_heading": "Tab Content 1",
         "url_link": "",
         "text_screen_reader": "Next",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
@@ -267,6 +305,28 @@
     "slider_columns": {
       "type": "slider_columns",
       "blocks": {
+        "slide_8TpFmT": {
+          "type": "slide",
+          "name": "Slide",
+          "settings": {
+            "text_heading": "Lorem ipsum",
+            "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+            "url_link": "",
+            "text_screen_reader": "Lorem Ipsum"
+          },
+          "blocks": {}
+        },
+        "slide_x8aziB": {
+          "type": "slide",
+          "name": "Slide",
+          "settings": {
+            "text_heading": "Lorem ipsum",
+            "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+            "url_link": "",
+            "text_screen_reader": "Lorem Ipsum"
+          },
+          "blocks": {}
+        },
         "slide": {
           "type": "slide",
           "name": "Slide",
@@ -286,12 +346,14 @@
         }
       },
       "block_order": [
+        "slide_8TpFmT",
+        "slide_x8aziB",
         "slide"
       ],
       "settings": {
-        "text_eyebrow_heading": "<p>Eyebrow Text Here</p>",
-        "text_heading": "<h2>Lorem ipsum dolor sit amet elit</h2>",
-        "richtext_praragraph": "<p>\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                  </p>",
+        "text_eyebrow_heading": "Eyebrow Text Here",
+        "text_heading": "Lorem ipsum dolor sit amet elit",
+        "richtext_praragraph": "<p><br/>                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                  </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
