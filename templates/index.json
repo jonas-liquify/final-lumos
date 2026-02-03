@@ -714,13 +714,13 @@
               "name": "Accordion List",
               "settings": {},
               "blocks": {
-                "accordion_item_NjXNyj": {
+                "accordion_item_wCQD9Q": {
                   "type": "accordion-item",
                   "name": "Accordion Item",
                   "settings": {},
                   "blocks": {}
                 },
-                "accordion_item_wCQD9Q": {
+                "accordion_item_eTkPxm": {
                   "type": "accordion-item",
                   "name": "Accordion Item",
                   "settings": {},
@@ -728,8 +728,8 @@
                 }
               },
               "block_order": [
-                "accordion_item_NjXNyj",
-                "accordion_item_wCQD9Q"
+                "accordion_item_wCQD9Q",
+                "accordion_item_eTkPxm"
               ]
             }
           },
