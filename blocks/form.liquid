@@ -8,15 +8,6 @@
 <div li-cf-theme-blocks="" class="u-display-contents">
 {% content_for 'blocks' %}
 </div>
-                              <div class="u-button-wrapper u-margin-top-0" style="" li-block="Button Wrapper" {{ block.shopify_attributes }}>
-                    
-                                
-                    <div li-cf-theme-blocks="" class="u-display-contents">
-{% content_for 'blocks' %}
-</div>
-                    
-                              
-                </div>
                             {% endform %}
                             <div class="form_success_wrap w-form-done">
                               <div class="form_success_text">Thank you! Your submission has been received!</div>
@@ -39,9 +30,6 @@
             "type": "text-input"
         },
         {
-            "type": "button"
-        },
-        {
             "type": "@app"
         }
     ],
@@ -50,17 +38,14 @@
         {
             "name": "Form",
             "category": "CTA",
-            "blocks": {
-                "0": {
+            "blocks": [
+                {
                     "type": "fieldset"
                 },
-                "1": {
+                {
                     "type": "text-input"
-                },
-                "12": {
-                    "type": "button"
                 }
-            }
+            ]
         }
     ],
     "tag": null
