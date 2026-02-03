@@ -1,0 +1,256 @@
+{
+    "sections": {
+        "content": {
+            "type": "content",
+            "blocks": {
+                "eyebrow": {
+                    "type": "eyebrow",
+                    "name": "Eyebrow"
+                },
+                "heading": {
+                    "type": "heading",
+                    "name": "Heading"
+                },
+                "paragraph": {
+                    "type": "paragraph",
+                    "name": "Paragraph"
+                },
+                "button-wrapper": {
+                    "type": "button-wrapper",
+                    "name": "Button Wrapper"
+                },
+                "image": {
+                    "type": "image",
+                    "name": "Image"
+                }
+            },
+            "block_order": [
+                "eyebrow",
+                "heading",
+                "paragraph",
+                "button-wrapper",
+                "image"
+            ]
+        },
+        "tab_main": {
+            "type": "tab_main",
+            "blocks": {
+                "tab-link": {
+                    "type": "tab-link",
+                    "name": "Tab Link"
+                },
+                "tab-content": {
+                    "type": "tab-content",
+                    "name": "Tab Content"
+                }
+            },
+            "block_order": [
+                "tab-link",
+                "tab-content"
+            ]
+        },
+        "tab_horizontal": {
+            "type": "tab_horizontal",
+            "blocks": {
+                "heading": {
+                    "type": "heading",
+                    "name": "Heading"
+                },
+                "paragraph": {
+                    "type": "paragraph",
+                    "name": "Paragraph"
+                },
+                "button-wrapper": {
+                    "type": "button-wrapper",
+                    "name": "Button Wrapper"
+                },
+                "image": {
+                    "type": "image",
+                    "name": "Image"
+                }
+            },
+            "block_order": [
+                "heading",
+                "paragraph",
+                "button-wrapper",
+                "image"
+            ]
+        },
+        "slider_columns": {
+            "type": "slider_columns",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "slider_full": {
+            "type": "slider_full",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "form": {
+            "type": "form",
+            "blocks": {
+                "heading": {
+                    "type": "heading",
+                    "name": "Heading"
+                },
+                "paragraph": {
+                    "type": "paragraph",
+                    "name": "Paragraph"
+                },
+                "form": {
+                    "type": "form",
+                    "name": "Form"
+                }
+            },
+            "block_order": [
+                "heading",
+                "paragraph",
+                "form"
+            ]
+        },
+        "accordion": {
+            "type": "accordion",
+            "blocks": {
+                "heading": {
+                    "type": "heading",
+                    "name": "Heading"
+                },
+                "paragraph": {
+                    "type": "paragraph",
+                    "name": "Paragraph"
+                },
+                "accordion-list": {
+                    "type": "accordion-list",
+                    "name": "Accordion List"
+                }
+            },
+            "block_order": [
+                "heading",
+                "paragraph",
+                "accordion-list"
+            ]
+        },
+        "hero": {
+            "type": "hero",
+            "blocks": {
+                "button-wrapper": {
+                    "type": "button-wrapper",
+                    "name": "Button Wrapper"
+                }
+            },
+            "block_order": [
+                "button-wrapper"
+            ]
+        },
+        "hero_bottom": {
+            "type": "hero_bottom",
+            "blocks": {
+                "eyebrow": {
+                    "type": "eyebrow",
+                    "name": "Eyebrow"
+                },
+                "heading": {
+                    "type": "heading",
+                    "name": "Heading"
+                },
+                "paragraph": {
+                    "type": "paragraph",
+                    "name": "Paragraph"
+                },
+                "button-wrapper": {
+                    "type": "button-wrapper",
+                    "name": "Button Wrapper"
+                }
+            },
+            "block_order": [
+                "eyebrow",
+                "heading",
+                "paragraph",
+                "button-wrapper"
+            ]
+        },
+        "hero_split": {
+            "type": "hero_split"
+        },
+        "grid_list": {
+            "type": "grid_list",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "bento_simple": {
+            "type": "bento_simple",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "bento_complex": {
+            "type": "bento_complex",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "layouts": {
+            "type": "layouts",
+            "blocks": {
+                "button-wrapper": {
+                    "type": "button-wrapper",
+                    "name": "Button Wrapper"
+                }
+            },
+            "block_order": [
+                "button-wrapper"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.page_main",
+    "order": [
+        "content",
+        "tab_main",
+        "tab_horizontal",
+        "slider_columns",
+        "slider_full",
+        "form",
+        "accordion",
+        "hero",
+        "hero_bottom",
+        "hero_split",
+        "grid_list",
+        "bento_simple",
+        "bento_complex",
+        "layouts"
+    ]
+}
