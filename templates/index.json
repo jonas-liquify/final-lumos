@@ -788,9 +788,9 @@
         "button-wrapper"
       ],
       "settings": {
-        "text_eyebrow_heading": "<p>Eyebrow Text Here</p>",
-        "text_heading": "<h2>Lorem ipsum dolor sit amet elit</h2>",
-        "richtext_praragraph": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>",
+        "text_eyebrow_heading": "Eyebrow Text Here",
+        "text_heading": "Lorem ipsum dolor sit amet elit",
+        "richtext_praragraph": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
@@ -930,22 +930,26 @@
     "bento_simple": {
       "type": "bento_simple",
       "blocks": {
-        "slide": {
-          "type": "slide",
-          "name": "Slide",
-          "settings": {
-            "text_heading": "Lorem ipsum",
-            "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
-            "url_link": "",
-            "text_screen_reader": "Lorem Ipsum"
-          },
-          "blocks": {}
-        },
         "grid": {
           "type": "grid",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "slide_a3YFkd": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "slide_a3YFkd"
+          ]
         },
         "background": {
           "type": "background",
@@ -954,13 +958,10 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "slide"
-      ],
       "settings": {
-        "text_eyebrow_heading": "<p>Eyebrow Text Here</p>",
-        "text_heading": "<h2>Lorem ipsum dolor sit amet elit</h2>",
-        "richtext_praragraph": "<p>\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                  </p>",
+        "text_eyebrow_heading": "Eyebrow Text Here",
+        "text_heading": "Lorem ipsum dolor sit amet elit",
+        "richtext_praragraph": "<p><br/>                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                  </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
@@ -984,7 +985,46 @@
           "type": "grid",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "slide_depTrG": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            },
+            "slide_kn8Hi7": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            },
+            "slide_9HaxQn": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "slide_depTrG",
+            "slide_kn8Hi7",
+            "slide_9HaxQn"
+          ]
         },
         "background": {
           "type": "background",
@@ -997,11 +1037,11 @@
         "slide"
       ],
       "settings": {
-        "text_eyebrow_heading": "<p>Eyebrow Text Here</p>",
-        "text_heading": "<h2>Lorem ipsum dolor sit amet elit</h2>",
-        "richtext_praragraph": "<p>\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                  </p>",
+        "text_eyebrow_heading": "Eyebrow Text Here",
+        "text_heading": "Lorem ipsum dolor sit amet elit",
+        "richtext_praragraph": "<p><br/>                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                  </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
-        "padding_bottom": "",
+        "padding_bottom": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "color_theme": ""
       }
     },
