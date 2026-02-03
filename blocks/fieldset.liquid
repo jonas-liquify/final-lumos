@@ -1,0 +1,61 @@
+<fieldset data-wf--form-fieldset--variant="grid-2-column" class="form_fieldset_wrap" li-block="Fieldset" {{ block.shopify_attributes }}>
+                    
+                                  
+                    <legend data-wf--form-label-text--variant="bold" class="form_label_text w-variant-e8e97384-daa0-7ce7-bc12-14efcd69bcd4">
+{{ block.settings.text_fieldset_name }}
+</legend>
+                    
+                                  
+                    <div li-cf-theme-blocks="" role="none" class="form_fieldset_list w-variant-14c165fa-7397-02ef-8dc0-6e307b6c980f">
+{% content_for 'blocks' %}
+</div>
+                    
+                                  
+                    <div class="u-embed-css w-embed">
+                                    <style>
+@container (width < 40em) {
+	.form_fieldset_list:has(.form_fieldset_list) { display: flex; }
+}
+@container (width < 18em) {
+	.form_fieldset_list { display: flex; }
+}
+</style>
+                                  </div>
+                    
+                                
+                </fieldset> {% schema %} {
+    "name": "Fieldset",
+    "blocks": [
+        {
+            "type": "text-input"
+        },
+        {
+            "type": "fieldset"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_fieldset_name",
+            "type": "text",
+            "label": "Fieldset Name",
+            "default": "Name"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Fieldset",
+            "blocks": {
+                "0": {
+                    "type": "text-input"
+                },
+                "3": {
+                    "type": "fieldset"
+                }
+            }
+        }
+    ],
+    "tag": null
+} {% endschema %}

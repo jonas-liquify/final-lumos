@@ -1,0 +1,67 @@
+<div li-block="Form" li-block:category="CTA" li-block:tag="" class="u-display-contents" style="">
+                    
+                      
+                    <div class="u-display-contents">
+                        <div class="form_component">
+                          <div class="form_wrap w-form">
+                            {% form 'contact', redirect, class: 'form_element' %}
+<div li-cf-theme-blocks="" class="u-display-contents">
+{% content_for 'blocks' %}
+</div>
+                              <div class="u-button-wrapper u-margin-top-0" style="" li-block="Button Wrapper" {{ block.shopify_attributes }}>
+                    
+                                
+                    <div li-cf-theme-blocks="" class="u-display-contents">
+{% content_for 'blocks' %}
+</div>
+                    
+                              
+                </div>
+                            {% endform %}
+                            <div class="form_success_wrap w-form-done">
+                              <div class="form_success_text">Thank you! Your submission has been received!</div>
+                            </div>
+                            <div class="form_error_wrap w-form-fail">
+                              <div class="form_error_text">Oops! Something went wrong while submitting the form.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+                </div> {% schema %} {
+    "name": "Form",
+    "blocks": [
+        {
+            "type": "fieldset"
+        },
+        {
+            "type": "text-input"
+        },
+        {
+            "type": "button"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Form",
+            "category": "CTA",
+            "blocks": {
+                "0": {
+                    "type": "fieldset"
+                },
+                "1": {
+                    "type": "text-input"
+                },
+                "12": {
+                    "type": "button"
+                }
+            }
+        }
+    ],
+    "tag": null
+} {% endschema %}
