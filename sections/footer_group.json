@@ -1,1 +1,57 @@
-{"type":"footer","name":"Footer Group","sections":{"footer":{"type":"footer","settings":{}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "grid": {
+          "type": "grid",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "slide_4pTHPC": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            },
+            "slide_EXGHtB": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "slide_4pTHPC",
+            "slide_EXGHtB"
+          ]
+        }
+      },
+      "settings": {}
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
