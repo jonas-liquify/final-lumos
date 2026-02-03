@@ -273,13 +273,88 @@
           "type": "tab-navigation",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "tab_link_imVzAE": {
+              "type": "tab-link",
+              "name": "Tab Link",
+              "settings": {},
+              "blocks": {}
+            },
+            "tab_link_EDCJpB": {
+              "type": "tab-link",
+              "name": "Tab Link",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "tab_link_imVzAE",
+            "tab_link_EDCJpB"
+          ]
         },
         "tab-content-wrapper": {
           "type": "tab-content-wrapper",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "tab_content_MW3xyB": {
+              "type": "tab-content",
+              "name": "Tab Content",
+              "settings": {},
+              "blocks": {
+                "column-1": {
+                  "type": "column-1",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {
+                    "heading_JReriE": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text_heading": "Lorem ipsum dolor sit amet elit",
+                        "text_style": "h2",
+                        "max_width": 60
+                      },
+                      "blocks": {}
+                    },
+                    "paragraph_iLxCyN": {
+                      "type": "paragraph",
+                      "name": "Paragraph",
+                      "settings": {
+                        "richtext_praragraph": "<p><br/>                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                        </p>",
+                        "max_width": 60
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_JReriE",
+                    "paragraph_iLxCyN"
+                  ]
+                },
+                "column-2": {
+                  "type": "column-2",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {
+                    "image_VbMqDX": {
+                      "type": "image",
+                      "name": "Image",
+                      "settings": {},
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "image_VbMqDX"
+                  ]
+                }
+              },
+              "block_order": []
+            }
+          },
+          "block_order": [
+            "tab_content_MW3xyB"
+          ]
         },
         "background": {
           "type": "background",
@@ -295,8 +370,8 @@
         "image"
       ],
       "settings": {
-        "text_heading": "<h2>Services</h2>",
-        "richtext_praragraph": "<p>\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit\n                  </p>",
+        "text_heading": "Services",
+        "richtext_praragraph": "<p><br/>                    Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/>                  </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
@@ -310,7 +385,7 @@
           "name": "Slide",
           "settings": {
             "text_heading": "Lorem ipsum",
-            "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+            "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
             "url_link": "",
             "text_screen_reader": "Lorem Ipsum"
           },
