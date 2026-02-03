@@ -86,6 +86,15 @@
                       },
                       "blocks": {}
                     },
+                    "text_input_gehpUc": {
+                      "type": "text-input",
+                      "name": "Text Input",
+                      "settings": {
+                        "text_fieldset_name": "Name",
+                        "placeholder_placeholder": "First name"
+                      },
+                      "blocks": {}
+                    },
                     "text_input_igyU4A": {
                       "type": "text-input",
                       "name": "Text Input",
@@ -99,6 +108,7 @@
                   "block_order": [
                     "text_input_MUeJ46",
                     "text_input_48KATk",
+                    "text_input_gehpUc",
                     "text_input_igyU4A"
                   ]
                 }
