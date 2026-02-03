@@ -1,0 +1,29 @@
+<label data-trigger="focus" li-block="Text Input" class="form_label_wrap" {{ block.shopify_attributes }}>
+                    <span data-wf--form-label-text--variant="visible" class="form_label_text">
+{{ block.settings.text_fieldset_name }}
+</span>
+                    <input name="First Name" type="text" inputmode="text" autocomplete="given-name" class="form_field" value="" placeholder="{{ block.settings.placeholder_placeholder }}">
+                </label> {% schema %} {
+    "name": "Text Input",
+    "settings": [
+        {
+            "id": "text_fieldset_name",
+            "type": "text",
+            "label": "Fieldset Name",
+            "default": "Name"
+        },
+        {
+            "id": "placeholder_placeholder",
+            "type": "text",
+            "label": "Placeholder",
+            "default": "First name"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text Input",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
