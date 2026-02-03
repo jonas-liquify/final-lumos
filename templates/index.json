@@ -501,13 +501,102 @@
           "type": "column-1",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "heading_cj7zmC": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text_heading": "Lorem ipsum dolor sit amet elit",
+                "text_style": "h2",
+                "max_width": 60
+              },
+              "blocks": {}
+            },
+            "paragraph_3wtyz7": {
+              "type": "paragraph",
+              "name": "Paragraph",
+              "settings": {
+                "richtext_praragraph": "<p><br/>                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                        </p>",
+                "max_width": 60
+              },
+              "blocks": {}
+            },
+            "button_wrapper_cqJYxt": {
+              "type": "button-wrapper",
+              "name": "Button Wrapper",
+              "settings": {},
+              "blocks": {
+                "button_Vpq7GP": {
+                  "type": "button",
+                  "settings": {
+                    "url_link": "",
+                    "text_screen_reader": "Button Text",
+                    "variant": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_Vpq7GP"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_cj7zmC",
+            "paragraph_3wtyz7",
+            "button_wrapper_cqJYxt"
+          ]
         },
         "column-2": {
           "type": "column-2",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "form_WCrbN3": {
+              "type": "form",
+              "name": "Form",
+              "settings": {},
+              "blocks": {
+                "fieldset_CCPLtP": {
+                  "type": "fieldset",
+                  "name": "Fieldset",
+                  "settings": {
+                    "text_fieldset_name": "Name"
+                  },
+                  "blocks": {
+                    "text_input_UQAxdd": {
+                      "type": "text-input",
+                      "name": "Text Input",
+                      "settings": {
+                        "text_fieldset_name": "Name",
+                        "placeholder_placeholder": "First name"
+                      },
+                      "blocks": {}
+                    },
+                    "text_input_MGEFzc": {
+                      "type": "text-input",
+                      "name": "Text Input",
+                      "settings": {
+                        "text_fieldset_name": "Name",
+                        "placeholder_placeholder": "First name"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_input_UQAxdd",
+                    "text_input_MGEFzc"
+                  ]
+                }
+              },
+              "block_order": [
+                "fieldset_CCPLtP"
+              ]
+            }
+          },
+          "block_order": [
+            "form_WCrbN3"
+          ]
         },
         "background": {
           "type": "background",
@@ -523,7 +612,7 @@
       ],
       "settings": {
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
-        "padding_bottom": "",
+        "padding_bottom": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "color_theme": ""
       }
     },
