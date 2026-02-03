@@ -648,13 +648,95 @@
           "type": "column-1",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "heading_WbRFhz": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text_heading": "Lorem ipsum dolor sit amet elit",
+                "text_style": "h2",
+                "max_width": 60
+              },
+              "blocks": {}
+            },
+            "paragraph_JKJrhM": {
+              "type": "paragraph",
+              "name": "Paragraph",
+              "settings": {
+                "richtext_praragraph": "<p><br/>                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                        </p>",
+                "max_width": 60
+              },
+              "blocks": {}
+            },
+            "button_wrapper_bMfVdL": {
+              "type": "button-wrapper",
+              "name": "Button Wrapper",
+              "settings": {},
+              "blocks": {
+                "button_TtQxEi": {
+                  "type": "button",
+                  "settings": {
+                    "url_link": "",
+                    "text_screen_reader": "Button Text",
+                    "variant": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_TtQxEi"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_WbRFhz",
+            "paragraph_JKJrhM",
+            "button_wrapper_bMfVdL"
+          ]
         },
         "column-2": {
           "type": "column-2",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "heading_W7Fdk6": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text_heading": "Lorem ipsum dolor sit amet elit",
+                "text_style": "h2",
+                "max_width": 60
+              },
+              "blocks": {}
+            },
+            "accordion_list_AHDkDQ": {
+              "type": "accordion-list",
+              "name": "Accordion List",
+              "settings": {},
+              "blocks": {
+                "accordion_item_NjXNyj": {
+                  "type": "accordion-item",
+                  "name": "Accordion Item",
+                  "settings": {},
+                  "blocks": {}
+                },
+                "accordion_item_wCQD9Q": {
+                  "type": "accordion-item",
+                  "name": "Accordion Item",
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "accordion_item_NjXNyj",
+                "accordion_item_wCQD9Q"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_W7Fdk6",
+            "accordion_list_AHDkDQ"
+          ]
         },
         "background": {
           "type": "background",
