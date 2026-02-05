@@ -7,7 +7,7 @@
                     "type": "column-1",
                     "static": true,
                     "id": "column-1",
-                    "blocks": [
+                    "blocks": {
                         {
                             "type": "eyebrow"
                         },
@@ -25,13 +25,13 @@
                                 }
                             ]
                         }
-                    ]
+                        }
                 },
                 "column-2": {
                     "type": "column-2",
                     "static": true,
                     "id": "column-2",
-                    "blocks": [
+                    "blocks": {
                         {
                             "type": "image"
                         }
