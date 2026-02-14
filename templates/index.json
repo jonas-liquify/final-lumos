@@ -1,12 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "content": {
-            "type": "content",
+  "sections": {
+    "content": {
+      "type": "content",
+      "blocks": {
+        "column-1": {
+          "type": "column-1",
+          "name": "Column 1",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "eyebrow": {
+              "type": "eyebrow",
+              "name": "Eyebrow",
+              "settings": {}
+            },
+            "heading": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {}
+            },
+            "paragraph": {
+              "type": "paragraph",
+              "name": "Paragraph",
+              "settings": {}
+            },
+            "button-wrapper": {
+              "type": "button-wrapper",
+              "name": "Button Wrapper",
+              "settings": {},
+              "blocks": {
+                "button": {
+                  "type": "button",
+                  "name": "Button",
+                  "settings": {}
+                }
+              }
+            }
+          }
+        },
+        "column-2": {
+          "type": "column-2",
+          "name": "Column 2",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "image": {
+              "type": "image",
+              "name": "Image",
+              "settings": {}
+            }
+          }
+        },
+        "background": {
+          "type": "background",
+          "name": "Background",
+          "static": true,
+          "settings": {}
         }
-    },
-    "layout": "theme",
-    "wrapper": "main.page_main",
-    "order": [
-        "content"
-    ]
+      },
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.page_main",
+  "order": [
+    "content"
+  ]
 }
