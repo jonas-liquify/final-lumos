@@ -7,19 +7,6 @@
     "layout": "theme",
     "wrapper": "main.page_main",
     "order": [
-        "content",
-        "tab_main",
-        "tab_horizontal",
-        "slider_columns",
-        "slider_full",
-        "form",
-        "accordion",
-        "hero",
-        "hero_bottom",
-        "hero_split",
-        "grid_list",
-        "bento_simple",
-        "bento_complex",
-        "layouts"
+        "content"
     ]
 }
