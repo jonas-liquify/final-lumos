@@ -40,100 +40,11 @@
         "padding_bottom": "",
         "color_theme": ""
       }
-    },
-    "content_WBWHrN": {
-      "type": "content",
-      "blocks": {
-        "column-1": {
-          "type": "column-1",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "eyebrow_6geeYJ": {
-              "type": "eyebrow",
-              "settings": {
-                "text_eyebrow_heading": "<p>Eyebrow Text Here</p>"
-              },
-              "blocks": {}
-            },
-            "heading_ineTCH": {
-              "type": "heading",
-              "settings": {
-                "text_heading": "<h2>Lorem ipsum dolor sit amet elit</h2>",
-                "text_style": "h2",
-                "max_width": 60
-              },
-              "blocks": {}
-            },
-            "paragraph_CBcEUz": {
-              "type": "paragraph",
-              "settings": {
-                "richtext_praragraph": "<p>\n                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                        </p>",
-                "max_width": 60
-              },
-              "blocks": {}
-            },
-            "button_wrapper_FBXCaR": {
-              "type": "button-wrapper",
-              "settings": {},
-              "blocks": {
-                "button_6KNyAR": {
-                  "type": "button",
-                  "settings": {
-                    "url_link": "",
-                    "text_screen_reader": "Button Text",
-                    "variant": ""
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "button_6KNyAR"
-              ]
-            }
-          },
-          "block_order": [
-            "eyebrow_6geeYJ",
-            "heading_ineTCH",
-            "paragraph_CBcEUz",
-            "button_wrapper_FBXCaR"
-          ]
-        },
-        "column-2": {
-          "type": "column-2",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "image_4aAMAb": {
-              "type": "image",
-              "settings": {},
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_4aAMAb"
-          ]
-        },
-        "background": {
-          "type": "background",
-          "static": true,
-          "settings": {},
-          "blocks": {}
-        }
-      },
-      "name": "Content",
-      "settings": {
-        "layout": "",
-        "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
-        "padding_bottom": "",
-        "color_theme": ""
-      }
     }
   },
   "layout": "theme",
   "wrapper": "main.page_main",
   "order": [
-    "content",
-    "content_WBWHrN"
+    "content"
   ]
 }
