@@ -17,7 +17,41 @@
           "name": "Column 1",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "eyebrow": {
+              "type": "eyebrow",
+              "name": "Eyebrow",
+              "settings": {}
+            },
+            "heading": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {}
+            },
+            "paragraph": {
+              "type": "paragraph",
+              "name": "Paragraph",
+              "settings": {}
+            },
+            "button-wrapper": {
+              "type": "button-wrapper",
+              "name": "Button Wrapper",
+              "settings": {},
+              "blocks": {
+                "button": {
+                  "type": "button",
+                  "name": "Button",
+                  "settings": {}
+                }
+              }
+            }
+          },
+          "block_order": [
+            "eyebrow",
+            "heading",
+            "paragraph",
+            "button-wrapper"
+          ]
         },
         "column-2": {
           "type": "column-2",
