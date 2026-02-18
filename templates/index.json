@@ -1,0 +1,479 @@
+{
+    "sections": {
+        "content": {
+            "type": "content",
+            "blocks": {
+                "column-1": {
+                    "name": "Column 1",
+                    "type": "column-1",
+                    "static": true,
+                    "blocks": {
+                        "eyebrow": {
+                            "type": "eyebrow",
+                            "name": "Eyebrow"
+                        },
+                        "heading": {
+                            "type": "heading",
+                            "name": "Heading"
+                        },
+                        "paragraph": {
+                            "type": "paragraph",
+                            "name": "Paragraph"
+                        },
+                        "button-wrapper": {
+                            "type": "button-wrapper",
+                            "name": "Button Wrapper",
+                            "blocks": {
+                                "button": {
+                                    "type": "button",
+                                    "name": "Button"
+                                }
+                            }
+                        }
+                    },
+                    "block_order": [
+                        "eyebrow",
+                        "heading",
+                        "paragraph",
+                        "button-wrapper"
+                    ]
+                },
+                "column-2": {
+                    "name": "Column 2",
+                    "type": "column-2",
+                    "static": true,
+                    "blocks": {
+                        "image": {
+                            "type": "image",
+                            "name": "Image"
+                        }
+                    },
+                    "block_order": [
+                        "image"
+                    ]
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "tab_main": {
+            "type": "tab_main",
+            "blocks": {
+                "tab-navigation": {
+                    "name": "Tab Navigation",
+                    "type": "tab-navigation",
+                    "static": true,
+                    "blocks": {
+                        "tab-link": {
+                            "type": "tab-link",
+                            "name": "Tab Link"
+                        }
+                    },
+                    "block_order": [
+                        "tab-link"
+                    ]
+                },
+                "tab-content-wrapper": {
+                    "name": "Tab Content Wrapper",
+                    "type": "tab-content-wrapper",
+                    "static": true,
+                    "blocks": {
+                        "tab-content": {
+                            "type": "tab-content",
+                            "name": "Tab Content"
+                        }
+                    },
+                    "block_order": [
+                        "tab-content"
+                    ]
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "tab_horizontal": {
+            "type": "tab_horizontal",
+            "blocks": {
+                "tab-navigation": {
+                    "name": "Tab Navigation",
+                    "type": "tab-navigation",
+                    "static": true
+                },
+                "tab-content-wrapper": {
+                    "name": "Tab Content Wrapper",
+                    "type": "tab-content-wrapper",
+                    "static": true
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "slider_columns": {
+            "type": "slider_columns",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "slider_full": {
+            "type": "slider_full",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "form": {
+            "type": "form",
+            "blocks": {
+                "column-1": {
+                    "name": "Column 1",
+                    "type": "column-1",
+                    "static": true,
+                    "blocks": {
+                        "heading": {
+                            "type": "heading",
+                            "name": "Heading"
+                        },
+                        "paragraph": {
+                            "type": "paragraph",
+                            "name": "Paragraph"
+                        }
+                    },
+                    "block_order": [
+                        "heading",
+                        "paragraph"
+                    ]
+                },
+                "column-2": {
+                    "name": "Column 2",
+                    "type": "column-2",
+                    "static": true,
+                    "blocks": {
+                        "form": {
+                            "type": "form",
+                            "name": "Form",
+                            "blocks": {
+                                "fieldset": {
+                                    "type": "fieldset",
+                                    "name": "Fieldset",
+                                    "blocks": {
+                                        "fieldset": {
+                                            "type": "fieldset",
+                                            "name": "Fieldset"
+                                        },
+                                        "text-input": {
+                                            "type": "text-input",
+                                            "name": "Text Input"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "block_order": [
+                        "form"
+                    ]
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "accordion": {
+            "type": "accordion",
+            "blocks": {
+                "column-1": {
+                    "name": "Column 1",
+                    "type": "column-1",
+                    "static": true,
+                    "blocks": {
+                        "heading": {
+                            "type": "heading",
+                            "name": "Heading"
+                        },
+                        "paragraph": {
+                            "type": "paragraph",
+                            "name": "Paragraph"
+                        }
+                    },
+                    "block_order": [
+                        "heading",
+                        "paragraph"
+                    ]
+                },
+                "column-2": {
+                    "name": "Column 2",
+                    "type": "column-2",
+                    "static": true,
+                    "blocks": {
+                        "accordion-list": {
+                            "type": "accordion-list",
+                            "name": "Accordion List",
+                            "blocks": {
+                                "accordion-item": {
+                                    "type": "accordion-item",
+                                    "name": "Accordion Item"
+                                }
+                            }
+                        }
+                    },
+                    "block_order": [
+                        "accordion-list"
+                    ]
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "hero": {
+            "type": "hero",
+            "blocks": {
+                "column-1": {
+                    "name": "Column 1",
+                    "type": "column-1",
+                    "static": true,
+                    "blocks": {
+                        "button-wrapper": {
+                            "type": "button-wrapper",
+                            "name": "Button Wrapper",
+                            "blocks": {
+                                "button": {
+                                    "type": "button",
+                                    "name": "Button"
+                                }
+                            }
+                        }
+                    },
+                    "block_order": [
+                        "button-wrapper"
+                    ]
+                },
+                "column-2": {
+                    "name": "Column 2",
+                    "type": "column-2",
+                    "static": true
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "hero_bottom": {
+            "type": "hero_bottom",
+            "blocks": {
+                "column-1": {
+                    "name": "Column 1",
+                    "type": "column-1",
+                    "static": true,
+                    "blocks": {
+                        "eyebrow": {
+                            "type": "eyebrow",
+                            "name": "Eyebrow"
+                        },
+                        "heading": {
+                            "type": "heading",
+                            "name": "Heading"
+                        },
+                        "paragraph": {
+                            "type": "paragraph",
+                            "name": "Paragraph"
+                        },
+                        "button-wrapper": {
+                            "type": "button-wrapper",
+                            "name": "Button Wrapper",
+                            "blocks": {
+                                "button": {
+                                    "type": "button",
+                                    "name": "Button"
+                                }
+                            }
+                        }
+                    },
+                    "block_order": [
+                        "eyebrow",
+                        "heading",
+                        "paragraph",
+                        "button-wrapper"
+                    ]
+                },
+                "column-2": {
+                    "name": "Column 2",
+                    "type": "column-2",
+                    "static": true
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "hero_split": {
+            "type": "hero_split",
+            "blocks": {
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "grid_list": {
+            "type": "grid_list",
+            "blocks": {
+                "column-1": {
+                    "name": "Column 1",
+                    "type": "column-1",
+                    "static": true
+                },
+                "column-2": {
+                    "name": "Column 2",
+                    "type": "column-2",
+                    "static": true
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "bento_simple": {
+            "type": "bento_simple",
+            "blocks": {
+                "grid": {
+                    "name": "Grid",
+                    "type": "grid",
+                    "static": true,
+                    "blocks": {
+                        "slide": {
+                            "type": "slide",
+                            "name": "Slide"
+                        }
+                    },
+                    "block_order": [
+                        "slide"
+                    ]
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "bento_complex": {
+            "type": "bento_complex",
+            "blocks": {
+                "grid": {
+                    "name": "Grid",
+                    "type": "grid",
+                    "static": true,
+                    "blocks": {
+                        "slide": {
+                            "type": "slide",
+                            "name": "Slide"
+                        }
+                    },
+                    "block_order": [
+                        "slide"
+                    ]
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        },
+        "layouts": {
+            "type": "layouts",
+            "blocks": {
+                "column-1": {
+                    "name": "Column 1",
+                    "type": "column-1",
+                    "static": true,
+                    "blocks": {
+                        "button-wrapper": {
+                            "type": "button-wrapper",
+                            "name": "Button Wrapper",
+                            "blocks": {
+                                "button": {
+                                    "type": "button",
+                                    "name": "Button"
+                                }
+                            }
+                        }
+                    },
+                    "block_order": [
+                        "button-wrapper"
+                    ]
+                },
+                "column-2": {
+                    "name": "Column 2",
+                    "type": "column-2",
+                    "static": true
+                },
+                "background": {
+                    "name": "Background",
+                    "type": "background",
+                    "static": true
+                }
+            }
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.page_main",
+    "order": [
+        "content",
+        "tab_main",
+        "tab_horizontal",
+        "slider_columns",
+        "slider_full",
+        "form",
+        "accordion",
+        "hero",
+        "hero_bottom",
+        "hero_split",
+        "grid_list",
+        "bento_simple",
+        "bento_complex",
+        "layouts"
+    ]
+}
