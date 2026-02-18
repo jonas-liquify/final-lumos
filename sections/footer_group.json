@@ -19,6 +19,17 @@
           "static": true,
           "settings": {},
           "blocks": {
+            "slide_qV8QRN": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            },
             "slide_4pTHPC": {
               "type": "slide",
               "name": "Slide",
@@ -43,6 +54,7 @@
             }
           },
           "block_order": [
+            "slide_qV8QRN",
             "slide_4pTHPC",
             "slide_EXGHtB"
           ]
