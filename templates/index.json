@@ -307,7 +307,7 @@
           "name": "Slide",
           "settings": {
             "text_heading": "Lorem ipsum",
-            "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+            "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
             "url_link": "",
             "text_screen_reader": "Lorem Ipsum"
           },
@@ -571,9 +571,9 @@
         }
       },
       "settings": {
-        "text_eyebrow_heading": "<p>Eyebrow Text Here</p>",
-        "text_heading": "<h2>Lorem ipsum dolor sit amet elit</h2>",
-        "richtext_praragraph": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>",
+        "text_eyebrow_heading": "Eyebrow Text Here",
+        "text_heading": "Lorem ipsum dolor sit amet elit",
+        "richtext_praragraph": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
@@ -696,9 +696,9 @@
         }
       },
       "settings": {
-        "text_eyebrow_heading": "<p>Eyebrow Text Here</p>",
-        "text_heading": "<h2>Lorem ipsum dolor sit amet elit</h2>",
-        "richtext_praragraph": "<p>\n                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                    </p>",
+        "text_eyebrow_heading": "Eyebrow Text Here",
+        "text_heading": "Lorem ipsum dolor sit amet elit",
+        "richtext_praragraph": "<p><br/>                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                    </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
@@ -713,6 +713,28 @@
           "static": true,
           "settings": {},
           "blocks": {
+            "slide_3j3bU3": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            },
+            "slide_BTpA4y": {
+              "type": "slide",
+              "name": "Slide",
+              "settings": {
+                "text_heading": "Lorem ipsum",
+                "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                "url_link": "",
+                "text_screen_reader": "Lorem Ipsum"
+              },
+              "blocks": {}
+            },
             "slide": {
               "type": "slide",
               "name": "Slide",
@@ -726,6 +748,8 @@
             }
           },
           "block_order": [
+            "slide_3j3bU3",
+            "slide_BTpA4y",
             "slide"
           ]
         },
@@ -738,9 +762,9 @@
         }
       },
       "settings": {
-        "text_eyebrow_heading": "<p>Eyebrow Text Here</p>",
-        "text_heading": "<h2>Lorem ipsum dolor sit amet elit</h2>",
-        "richtext_praragraph": "<p>\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                  </p>",
+        "text_eyebrow_heading": "Eyebrow Text Here",
+        "text_heading": "Lorem ipsum dolor sit amet elit",
+        "richtext_praragraph": "<p><br/>                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/>                  </p>",
         "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
         "padding_bottom": "",
         "color_theme": ""
