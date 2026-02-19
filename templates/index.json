@@ -65,15 +65,84 @@
           "static": true,
           "settings": {},
           "blocks": {
-            "image": {
-              "type": "image",
-              "name": "Image",
+            "form_DdtYzJ": {
+              "type": "form",
+              "name": "Form",
               "settings": {},
-              "blocks": {}
+              "blocks": {
+                "fieldset_khCkGJ": {
+                  "type": "fieldset",
+                  "settings": {
+                    "text_fieldset_name": "Name"
+                  },
+                  "blocks": {
+                    "text_input_WYeHHe": {
+                      "type": "text-input",
+                      "name": "Text Input",
+                      "settings": {
+                        "text_fieldset_name": "Name",
+                        "placeholder_placeholder": "First name"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_input_WYeHHe"
+                  ]
+                }
+              },
+              "block_order": [
+                "fieldset_khCkGJ"
+              ]
+            },
+            "grid_KMMrYG": {
+              "type": "grid",
+              "name": "Grid",
+              "settings": {},
+              "blocks": {
+                "slide_A4FKRD": {
+                  "type": "slide",
+                  "name": "Slide",
+                  "settings": {
+                    "text_heading": "Lorem ipsum",
+                    "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                    "url_link": "",
+                    "text_screen_reader": "Lorem Ipsum"
+                  },
+                  "blocks": {}
+                },
+                "slide_8VtxGY": {
+                  "type": "slide",
+                  "name": "Slide",
+                  "settings": {
+                    "text_heading": "Lorem ipsum",
+                    "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                    "url_link": "",
+                    "text_screen_reader": "Lorem Ipsum"
+                  },
+                  "blocks": {}
+                },
+                "slide_38EdB3": {
+                  "type": "slide",
+                  "settings": {
+                    "text_heading": "Lorem ipsum",
+                    "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+                    "url_link": "",
+                    "text_screen_reader": "Lorem Ipsum"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "slide_A4FKRD",
+                "slide_8VtxGY",
+                "slide_38EdB3"
+              ]
             }
           },
           "block_order": [
-            "image"
+            "form_DdtYzJ",
+            "grid_KMMrYG"
           ]
         },
         "background": {
@@ -86,8 +155,8 @@
       },
       "settings": {
         "layout": "",
-        "padding_top": "w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490",
-        "padding_bottom": "",
+        "padding_top": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3",
+        "padding_bottom": "w-variant-d422cbd0-f212-c815-68df-63414354c21d",
         "color_theme": ""
       }
     },
@@ -718,7 +787,7 @@
               "name": "Slide",
               "settings": {
                 "text_heading": "Lorem ipsum",
-                "richtext_paragraph": "<p>\n                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.\n                                </p>",
+                "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
                 "url_link": "",
                 "text_screen_reader": "Lorem Ipsum"
               },
