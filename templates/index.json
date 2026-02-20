@@ -65,23 +65,62 @@
           "static": true,
           "settings": {},
           "blocks": {
-            "accordion_item_icDBaC": {
-              "type": "accordion-item",
-              "name": "Accordion Item",
+            "accordion_list_YbK4tD": {
+              "type": "accordion-list",
+              "name": "Accordion List",
               "settings": {},
-              "blocks": {}
-            },
-            "accordion_item_X9HwHa": {
-              "type": "accordion-item",
-              "name": "Accordion Item",
-              "settings": {},
-              "blocks": {}
+              "blocks": {
+                "accordion_item_TwdmTE": {
+                  "type": "accordion-item",
+                  "name": "Accordion Item",
+                  "settings": {},
+                  "blocks": {}
+                },
+                "accordion_item_pGJUGw": {
+                  "type": "accordion-item",
+                  "name": "Accordion Item",
+                  "settings": {},
+                  "blocks": {}
+                },
+                "accordion_item_rFyJGQ": {
+                  "type": "accordion-item",
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "accordion_item_TwdmTE",
+                "accordion_item_pGJUGw",
+                "accordion_item_rFyJGQ"
+              ]
             },
             "grid_KMMrYG": {
               "type": "grid",
               "name": "Grid",
               "settings": {},
               "blocks": {
+                "slide_wNDCaD": {
+                  "type": "slide",
+                  "name": "Slide",
+                  "settings": {
+                    "text_heading": "{{ metaobjects.team.jonas.name.value }}",
+                    "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                    "url_link": "",
+                    "text_screen_reader": "Lorem Ipsum"
+                  },
+                  "blocks": {}
+                },
+                "slide_bB7fiG": {
+                  "type": "slide",
+                  "name": "Slide",
+                  "settings": {
+                    "text_heading": "Lorem ipsum",
+                    "richtext_paragraph": "<p><br/>                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.<br/>                                </p>",
+                    "url_link": "",
+                    "text_screen_reader": "Lorem Ipsum"
+                  },
+                  "blocks": {}
+                },
                 "slide_A4FKRD": {
                   "type": "slide",
                   "name": "Slide",
@@ -116,6 +155,8 @@
                 }
               },
               "block_order": [
+                "slide_wNDCaD",
+                "slide_bB7fiG",
                 "slide_A4FKRD",
                 "slide_8VtxGY",
                 "slide_38EdB3"
@@ -123,8 +164,7 @@
             }
           },
           "block_order": [
-            "accordion_item_icDBaC",
-            "accordion_item_X9HwHa",
+            "accordion_list_YbK4tD",
             "grid_KMMrYG"
           ]
         },
@@ -139,8 +179,8 @@
       "settings": {
         "layout": "",
         "padding_top": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3",
-        "padding_bottom": "w-variant-d422cbd0-f212-c815-68df-63414354c21d",
-        "color_theme": ""
+        "padding_bottom": "w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3",
+        "color_theme": "w-variant-25bf08d9-3196-322b-5616-019ac7f0f4f7"
       }
     },
     "tab_main": {
