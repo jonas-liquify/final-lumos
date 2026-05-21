@@ -1,0 +1,19 @@
+<div class="kp-inner"><h1 class="kp-section__title">Anmelden</h1><form class="kp-form" action="/account/login" method="post" accept-charset="UTF-8"><input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓"><div><label class="kp-label" for="email">E-Mail</label><input class="kp-input" id="email" type="email" name="customer[email]" autocomplete="email" required=""></div><div><label class="kp-label" for="password">Passwort</label><input class="kp-input" id="password" type="password" name="customer[password]" autocomplete="current-password" required=""></div><button class="kp-btn kp-btn--primary" type="submit">Anmelden</button><p class="kp-muted" style="margin: 0"><a href="register.html">Konto erstellen</a>
+                 · 
+                <a href="{{ routes.account_recover_url }}" li-object:href="routes.account_recover_url">Passwort vergessen</a></p></form></div> {% schema %} {
+    "tag": "section",
+    "name": "Customer Login",
+    "class": "kp-section",
+    "presets": [
+        {
+            "name": "Customer Login",
+            "category": "Konto",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "login"
+        ]
+    }
+} {% endschema %}

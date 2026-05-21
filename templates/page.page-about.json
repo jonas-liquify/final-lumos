@@ -1,0 +1,20 @@
+{
+    "sections": {
+        "header_nav": {
+            "type": "header_nav"
+        },
+        "page_content": {
+            "type": "page_content"
+        },
+        "footer_main": {
+            "type": "footer_main"
+        }
+    },
+    "layout": "page.page-about",
+    "wrapper": "main.kp-main",
+    "order": [
+        "header_nav",
+        "page_content",
+        "footer_main"
+    ]
+}

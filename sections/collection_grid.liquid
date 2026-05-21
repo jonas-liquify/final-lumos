@@ -1,0 +1,20 @@
+<div class="kp-inner"><div class="kp-grid">{% for product in collection.products %}    <article class="kp-card" li-for="product in collection.products">
+                                    <a class="kp-card__media" href="{{ product.url }}" li-object:href="product.url"><img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.featured_image.alt }}" width="600" height="750" loading="lazy" li-object:src="product.featured_image | image_url: width: 800" li-object:alt="product.featured_image.alt"></a>
+                            <div class="kp-card__body"><h2 class="kp-card__title"><a href="{{ product.url }}" li-object:href="product.url" li-object:text="product.title">
+{{ product.title }}
+</a></h2><p class="kp-card__meta"><span class="kp-price" li-object="product.price | money">{{ product.price | money }}</span></p></div>
+                        </article>
+{% endfor %}</div><nav class="kp-muted" style="margin-top: 2rem" aria-label="Seiten"><span li-object:text="'Seite 1'">
+{{ 'Seite 1' }}
+</span></nav></div> {% schema %} {
+    "tag": "section",
+    "name": "Collection Grid",
+    "class": "kp-section kp-section--tight",
+    "presets": [
+        {
+            "name": "Collection Grid",
+            "category": "Kollektion",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

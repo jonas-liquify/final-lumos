@@ -1,0 +1,64 @@
+<div class="kp-hero__media">{% if section.settings.image_hero_bild %}
+{{ section.settings.image_hero_bild | image_url: width: 2000 | image_tag: class: 'kp-hero__img', width: '1600', height: '900', loading: 'eager' }}
+{% else %}
+<img class="kp-hero__img" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1600&q=80" alt="" width="1600" height="900" loading="eager">
+{% endif %}</div><div class="kp-hero__overlay" aria-hidden="true"></div><div class="kp-hero__content kp-inner"><h1 class="kp-hero__title">
+{{ section.settings.text_headline }}
+</h1><p class="kp-hero__text"> {{ section.settings.textarea_teaser_text }} </p><div class="kp-product__row"><a class="kp-btn kp-btn--primary" href="{{ section.settings.url_cta_link_ziel }}"> <span>{{ section.settings.text_cta_button_text }}</span> </a>{% if section.settings.hero_show_secondary_cta %}    <span li-if="section.settings.hero_show_secondary_cta">
+    <a class="kp-btn kp-btn--ghost" href="{{ section.settings.url_zweiter_button_link }}"> Über die Marke </a>    </span>
+{% endif %}</div></div> {% schema %} {
+    "tag": "section",
+    "name": "Hero Home",
+    "class": "kp-hero",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Hero \u2014 Layout & Optionen"
+        },
+        {
+            "id": "image_hero_bild",
+            "type": "image_picker",
+            "label": "Hero-Bild"
+        },
+        {
+            "id": "text_headline",
+            "type": "text",
+            "label": "Headline",
+            "default": "Trainiere h\u00e4rter. Recover smarter."
+        },
+        {
+            "id": "textarea_teaser_text",
+            "type": "textarea",
+            "label": "Teaser-Text",
+            "default": "Technische Layer, atmungsaktive Stoffe und Schnitte f\u00fcr echte Performance \u2014 gebaut f\u00fcr Athleten, die mehr wollen."
+        },
+        {
+            "id": "url_cta_link_ziel",
+            "type": "url",
+            "label": "CTA Link (Ziel)"
+        },
+        {
+            "id": "text_cta_button_text",
+            "type": "text",
+            "label": "CTA Button-Text",
+            "default": "Jetzt shoppen"
+        },
+        {
+            "id": "url_zweiter_button_link",
+            "type": "url",
+            "label": "Zweiter Button (Link)"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Home",
+            "category": "Hero",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "index"
+        ]
+    }
+} {% endschema %}

@@ -1,0 +1,46 @@
+(function () {
+  "use strict";
+
+  var navToggle = document.querySelector("[data-nav-toggle]");
+  var mobileNav = document.querySelector("[data-mobile-nav]");
+  var closeBtn = document.querySelector("[data-nav-close]");
+
+  function setNavOpen(open) {
+    if (!mobileNav) return;
+    mobileNav.classList.toggle("is-open", open);
+    if (navToggle) navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener("click", function () {
+      var open = !mobileNav.classList.contains("is-open");
+      setNavOpen(open);
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      setNavOpen(false);
+    });
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setNavOpen(false);
+  });
+
+  /* Produkt: Thumbnail-Klick (nur Demo-Vorschau) */
+  var mainImg = document.querySelector("[data-product-main-img]");
+  var thumbs = document.querySelectorAll("[data-product-thumb]");
+
+  thumbs.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var src = btn.getAttribute("data-full-src");
+      var alt = btn.getAttribute("data-alt") || "";
+      if (mainImg && src) {
+        mainImg.src = src;
+        mainImg.alt = alt;
+      }
+    });
+  });
+})();

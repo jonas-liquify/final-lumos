@@ -1,0 +1,24 @@
+{
+    "sections": {
+        "header_nav": {
+            "type": "header_nav"
+        },
+        "collection_header": {
+            "type": "collection_header"
+        },
+        "collection_grid": {
+            "type": "collection_grid"
+        },
+        "footer_main": {
+            "type": "footer_main"
+        }
+    },
+    "layout": "collection",
+    "wrapper": "main.kp-main",
+    "order": [
+        "header_nav",
+        "collection_header",
+        "collection_grid",
+        "footer_main"
+    ]
+}

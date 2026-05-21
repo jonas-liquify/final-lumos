@@ -1,0 +1,56 @@
+<div class="kp-inner"><div class="kp-product"><div class="kp-product__gallery"><div class="kp-product__hero-img"><img id="product-main-img" data-product-main-img="" src="{{ product.featured_image | image_url: width: 1200 }}" alt="{{ product.featured_image.alt | escape }}" width="900" height="1125" li-object:src="product.featured_image | image_url: width: 1200" li-object:alt="product.featured_image.alt | escape"></div><div class="kp-product__thumbs" role="list">{% for image in product.images %}    <div li-for="image in product.images">
+                                    <button type="button" data-product-thumb="" data-full-src="{{ image | image_url: width: 1200 }}" data-alt="{{ image.alt }}" li-object:data-full-src="image | image_url: width: 1200" li-object:data-alt="image.alt"><img src="{{ image | image_url: width: 400 }}" alt="" width="200" height="250" li-object:src="image | image_url: width: 400"></button>
+                        </div>
+{% endfor %}</div></div><div>{% if section.settings.show_vendor %}    <div li-if="section.settings.show_vendor">
+    <p class="kp-product__vendor" li-object="product.vendor">{{ product.vendor }}</p>    </div>
+{% endif %}<h1 class="kp-product__title" li-object="product.title">{{ product.title }}</h1><p><button></button></p><p class="kp-price" style="font-size: 1.35rem" li-object="product.price | money">{{ product.price | money }}</p><p class="kp-muted kp-prose" li-object="product.description | strip_html | truncate: 220">{{ product.description | strip_html | truncate: 220 }}</p>{% if product.available == false %}    <div li-if="product.available == false">
+    <span class="kp-tag" li-object:text="'Ausverkauft'">
+{{ 'Ausverkauft' }}
+</span>    </div>
+{% endif %}<form class="kp-product__form" action="/cart/add" method="post" enctype="multipart/form-data" accept-charset="UTF-8"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><div class="kp-stack"><label class="kp-label" for="variant">Variante</label><select class="kp-select" id="variant" name="id">{% for variant in product.variants %}    <option li-for="variant in product.variants" li-object:value="variant.id" li-object:text="variant.title">
+                                    Standard
+                        </option>
+{% endfor %}</select></div><div class="kp-product__row">{% if product.available %}    <span li-if="product.available">
+    <button class="kp-btn kp-btn--primary" type="submit" name="add">
+{{ section.settings.text_button_text_warenkorb }}
+</button>    </span>
+{% endif %}<a class="kp-btn kp-btn--ghost" href="{{ section.settings.url_link_weiter_shoppen }}"> Weiter shoppen </a></div></form><div class="kp-muted kp-prose" style="margin-top: 1.5rem; font-size: 0.9rem">{{ section.settings.html_block_unter_dem_formular }} </div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Main",
+    "class": "kp-section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Produktseite \u2014 Layout"
+        },
+        {
+            "id": "text_button_text_warenkorb",
+            "type": "text",
+            "label": "Button Text Warenkorb",
+            "default": "In den Warenkorb"
+        },
+        {
+            "id": "url_link_weiter_shoppen",
+            "type": "url",
+            "label": "Link Weiter shoppen"
+        },
+        {
+            "id": "html_block_unter_dem_formular",
+            "type": "html",
+            "label": "Block unter dem Formular",
+            "default": "<p>Versandkostenfrei ab 50 \u20ac \u00b7 30 Tage R\u00fcckgabe<\/p>"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Main",
+            "category": "Produkt",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}

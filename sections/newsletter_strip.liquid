@@ -1,0 +1,40 @@
+<div class="kp-inner kp-prose"><h2 class="kp-section__title">
+{{ section.settings.text_newsletter_titel }}
+</h2><p class="kp-muted"> {{ section.settings.textarea_newsletter_beschreibung }} </p><form class="kp-form" action="#" method="post" style="margin-top: 1rem"><label class="kp-label" for="nl-email">E-Mail</label><div class="kp-product__row"><input class="kp-input" id="nl-email" type="email" name="contact[email]" li-object:placeholder="section.settings.nl_placeholder" required="" placeholder="{{ section.settings.nl_placeholder }}"><button class="kp-btn kp-btn--primary" type="submit">
+{{ section.settings.text_absenden_button }}
+</button></div></form></div> {% schema %} {
+    "tag": "section",
+    "name": "Newsletter Strip",
+    "class": "kp-section kp-section--tight",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Newsletter \u2014 erweitert"
+        },
+        {
+            "id": "text_newsletter_titel",
+            "type": "text",
+            "label": "Newsletter Titel",
+            "default": "Community"
+        },
+        {
+            "id": "textarea_newsletter_beschreibung",
+            "type": "textarea",
+            "label": "Newsletter Beschreibung",
+            "default": "Erhalde Trainingstipps und Launch-Infos \u2014 kein Spam, nur Movement."
+        },
+        {
+            "id": "text_absenden_button",
+            "type": "text",
+            "label": "Absenden-Button",
+            "default": "Anmelden"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Newsletter Strip",
+            "category": "Marketing",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

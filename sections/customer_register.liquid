@@ -1,0 +1,17 @@
+<div class="kp-inner"><h1 class="kp-section__title">Konto erstellen</h1><form class="kp-form" action="/account" method="post" accept-charset="UTF-8"><input type="hidden" name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓"><div><label class="kp-label" for="first_name">Vorname</label><input class="kp-input" id="first_name" type="text" name="customer[first_name]" autocomplete="given-name"></div><div><label class="kp-label" for="last_name">Nachname</label><input class="kp-input" id="last_name" type="text" name="customer[last_name]" autocomplete="family-name"></div><div><label class="kp-label" for="email">E-Mail</label><input class="kp-input" id="email" type="email" name="customer[email]" autocomplete="email" required=""></div><div><label class="kp-label" for="password">Passwort</label><input class="kp-input" id="password" type="password" name="customer[password]" autocomplete="new-password" required=""></div><button class="kp-btn kp-btn--primary" type="submit">Registrieren</button><p class="kp-muted" style="margin: 0"><a href="login.html">Bereits ein Konto?</a></p></form></div> {% schema %} {
+    "tag": "section",
+    "name": "Customer Register",
+    "class": "kp-section",
+    "presets": [
+        {
+            "name": "Customer Register",
+            "category": "Konto",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "register"
+        ]
+    }
+} {% endschema %}

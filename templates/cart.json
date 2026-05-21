@@ -1,0 +1,20 @@
+{
+    "sections": {
+        "header_nav": {
+            "type": "header_nav"
+        },
+        "cart_main": {
+            "type": "cart_main"
+        },
+        "footer_main": {
+            "type": "footer_main"
+        }
+    },
+    "layout": "cart",
+    "wrapper": "main.kp-main",
+    "order": [
+        "header_nav",
+        "cart_main",
+        "footer_main"
+    ]
+}
