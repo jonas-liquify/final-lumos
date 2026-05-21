@@ -1,0 +1,76 @@
+<div class="kp-inner"><div class="kp-highlights__head"><span class="kp-eyebrow" li-if="section.settings.highlights_show_eyebrow">
+{{ section.settings.text_eyebrow_label }}
+</span><h2 class="kp-section__title">
+{{ section.settings.text_uberschrift }}
+</h2><p class="kp-section__lead"> {{ section.settings.textarea_beschreibung }} </p></div><div class="kp-highlights__grid" li-cf-theme-blocks="" data-columns="3" li-object:data-columns="section.settings.highlights_columns">
+{% content_for 'blocks' %}
+</div>{% if section.settings.highlights_show_cta %}    <div class="kp-highlights__cta" li-if="section.settings.highlights_show_cta">
+    <a class="kp-btn kp-btn--ghost" href="{{ section.settings.url_cta_link }}"> <span>{{ section.settings.text_cta_text }}</span> </a>    </div>
+{% endif %}</div> {% schema %} {
+    "tag": "section",
+    "name": "Brand Highlights",
+    "class": "kp-section kp-highlights",
+    "blocks": [
+        {
+            "type": "_highlight"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Highlights \u2014 Layout & Optionen"
+        },
+        {
+            "id": "text_eyebrow_label",
+            "type": "text",
+            "label": "Eyebrow-Label",
+            "default": "Warum Kinetic Pro"
+        },
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Gebaut f\u00fcr Performance"
+        },
+        {
+            "id": "textarea_beschreibung",
+            "type": "textarea",
+            "label": "Beschreibung",
+            "default": "Drei Prinzipien, die jedes St\u00fcck definieren \u2014 von der Faser bis zum Schnitt."
+        },
+        {
+            "type": "header",
+            "content": "Block Defaults"
+        },
+        {
+            "id": "url_cta_link",
+            "type": "url",
+            "label": "CTA Link"
+        },
+        {
+            "id": "text_cta_text",
+            "type": "text",
+            "label": "CTA Text",
+            "default": "Mehr \u00fcber die Marke"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Brand Highlights",
+            "category": "Marketing",
+            "blocks": [
+                {
+                    "type": "_highlight"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "index"
+        ]
+    }
+} {% endschema %}

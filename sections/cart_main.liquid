@@ -1,0 +1,24 @@
+<div class="kp-inner"><h1 class="kp-section__title">Warenkorb</h1>{% if cart.item_count == 0 %}    <div li-if="cart.item_count == 0" style="display: none">
+    <p class="kp-muted">Dein Warenkorb ist leer.</p><a class="kp-btn kp-btn--primary" href="collection.html" style="margin-top: 1rem">Weiter shoppen</a>    </div>
+{% endif %}{% if cart.item_count > 0 %}    <form action="/cart" method="post" li-if="cart.item_count > 0">
+    <table class="kp-cart-table"><thead><tr><th>Produkt</th><th>Preis</th><th>Menge</th><th>Zwischensumme</th></tr></thead><tbody>{% for item in cart.items %}    <tr li-for="item in cart.items">
+                                    <td><a href="{{ item.url }}" li-object:href="item.url" li-object:text="item.product.title">
+{{ item.product.title }}
+</a><div class="kp-muted" style="font-size: 0.85rem" li-object="item.variant.title">{{ item.variant.title }}</div></td>
+                            <td li-object="item.price | money">{{ item.price | money }}</td>
+                            <td><input class="kp-qty" type="number" name="updates[]" min="0" value="{{ item.quantity }}" li-object:value="item.quantity"></td>
+                            <td li-object="item.line_price | money">{{ item.line_price | money }}</td>
+                        </tr>
+{% endfor %}</tbody></table><div class="kp-cart-summary"><div class="kp-cart-summary__row"><span>Zwischensumme</span><span li-object="cart.items_subtotal_price | money">{{ cart.items_subtotal_price | money }}</span></div><div class="kp-cart-summary__row kp-cart-summary__total"><span>Gesamt</span><span li-object="cart.total_price | money">{{ cart.total_price | money }}</span></div><button class="kp-btn kp-btn--ghost" type="submit" name="update" style="width: 100%; margin-top: 1rem">Aktualisieren</button><button class="kp-btn kp-btn--primary" type="submit" name="checkout" style="width: 100%; margin-top: 0.75rem">Zur Kasse</button></div>    </form>
+{% endif %}</div> {% schema %} {
+    "tag": "section",
+    "name": "Cart Main",
+    "class": "kp-section",
+    "presets": [
+        {
+            "name": "Cart Main",
+            "category": "Warenkorb",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

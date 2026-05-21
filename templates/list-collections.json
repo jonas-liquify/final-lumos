@@ -1,0 +1,20 @@
+{
+    "sections": {
+        "header_nav": {
+            "type": "header_nav"
+        },
+        "list_collections": {
+            "type": "list_collections"
+        },
+        "footer_main": {
+            "type": "footer_main"
+        }
+    },
+    "layout": "list-collections",
+    "wrapper": "main.kp-main",
+    "order": [
+        "header_nav",
+        "list_collections",
+        "footer_main"
+    ]
+}

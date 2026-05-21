@@ -1,0 +1,58 @@
+<article class="kp-highlight" li-block="_Highlight" li-block:category="Brand" {{ block.shopify_attributes }}>
+                    <div class="kp-highlight__media">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 1000 | image_tag: width: '800', height: '600', loading: 'lazy' }}
+{% else %}
+<img src="https://images.unsplash.com/photo-1517344884509-a0c97ec11bcc?w=800&q=80" alt="" width="800" height="600" loading="lazy">
+{% endif %}</div>
+                    <div class="kp-highlight__body"><span class="kp-highlight__eyebrow" li-if="block.settings.eyebrow != blank">
+{{ block.settings.text_eyebrow_optional }}
+</span><h3 class="kp-highlight__title">
+{{ block.settings.text_titel }}
+</h3><p class="kp-highlight__text"> {{ block.settings.textarea_text }} </p><a class="kp-highlight__link" href="{{ block.settings.url_link_ziel_optional }}" li-if="block.settings.link_url != blank"> <span>{{ block.settings.text_link_text }}</span> </a></div>
+                </article> {% schema %} {
+    "name": "Highlight",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_eyebrow_optional",
+            "type": "text",
+            "label": "Eyebrow (optional)",
+            "default": "Lorem Ipsum"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Atmungsaktive Faser"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Mikroporen-Mesh und Merino-Mix regulieren Temperatur \u2014 auch unter Last."
+        },
+        {
+            "id": "url_link_ziel_optional",
+            "type": "url",
+            "label": "Link-Ziel (optional)"
+        },
+        {
+            "id": "text_link_text",
+            "type": "text",
+            "label": "Link-Text",
+            "default": "Mehr erfahren \u2192"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Highlight",
+            "category": "Brand",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

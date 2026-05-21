@@ -1,0 +1,17 @@
+<div class="kp-inner kp-prose"><h1 class="kp-section__title" li-object="customer.name">{{ customer.name }}</h1><p class="kp-muted" li-object="customer.email">{{ customer.email }}</p><ul class="kp-footer__list" style="margin-top: 2rem"><li><a href="{{ routes.account_addresses_url }}" li-object:href="routes.account_addresses_url">Adressen</a></li><li><a href="{{ routes.account_url }}" li-object:href="routes.account_url">Bestellungen</a></li></ul></div> {% schema %} {
+    "tag": "section",
+    "name": "Customer Account",
+    "class": "kp-section",
+    "presets": [
+        {
+            "name": "Customer Account",
+            "category": "Konto",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "account"
+        ]
+    }
+} {% endschema %}

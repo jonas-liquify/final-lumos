@@ -1,0 +1,78 @@
+<div class="kp-banner__media">{% if section.settings.image_banner_bild %}
+{{ section.settings.image_banner_bild | image_url: width: 2400 | image_tag: width: '1800', height: '1000', loading: 'lazy' }}
+{% else %}
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1800&q=80" alt="" width="1800" height="1000" loading="lazy">
+{% endif %}</div><div class="kp-banner__overlay" aria-hidden="true" style="{{ '--banner-overlay: ' | append: section.settings.banner_overlay_strength }}" li-object:style="'--banner-overlay: ' | append: section.settings.banner_overlay_strength"></div><div class="kp-banner__content kp-inner" data-align="{{ section.settings.banner_text_align }}" li-object:data-align="section.settings.banner_text_align"><span class="kp-eyebrow">
+{{ section.settings.text_eyebrow_optional }}
+</span><h2 class="kp-banner__title">
+{{ section.settings.text_headline }}
+</h2><p class="kp-banner__text"> {{ section.settings.textarea_subtext }} </p><div class="kp-banner__actions"><a class="kp-btn kp-btn--primary" href="{{ section.settings.url_primarer_cta_link }}"> <span>{{ section.settings.text_primarer_cta_text }}</span> </a>{% if section.settings.banner_show_secondary_cta %}    <span li-if="section.settings.banner_show_secondary_cta">
+    <a class="kp-btn kp-btn--ghost" href="{{ section.settings.url_sekundarer_cta_link }}"> <span>{{ section.settings.text_sekundarer_cta_text }}</span> </a>    </span>
+{% endif %}</div></div> {% schema %} {
+    "tag": "section",
+    "name": "Editorial Banner",
+    "class": "kp-banner",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Editorial Banner \u2014 Optionen"
+        },
+        {
+            "id": "image_banner_bild",
+            "type": "image_picker",
+            "label": "Banner-Bild"
+        },
+        {
+            "id": "text_eyebrow_optional",
+            "type": "text",
+            "label": "Eyebrow (optional)",
+            "default": "Neue Kollektion"
+        },
+        {
+            "id": "text_headline",
+            "type": "text",
+            "label": "Headline",
+            "default": "Built to move. Made to last."
+        },
+        {
+            "id": "textarea_subtext",
+            "type": "textarea",
+            "label": "Subtext",
+            "default": "Die SS26-Kollektion: technische Layer und Recovery-Pieces, entwickelt mit Athleten \u2014 getestet im echten Training."
+        },
+        {
+            "id": "url_primarer_cta_link",
+            "type": "url",
+            "label": "Prim\u00e4rer CTA \u2014 Link"
+        },
+        {
+            "id": "text_primarer_cta_text",
+            "type": "text",
+            "label": "Prim\u00e4rer CTA \u2014 Text",
+            "default": "Kollektion entdecken"
+        },
+        {
+            "id": "url_sekundarer_cta_link",
+            "type": "url",
+            "label": "Sekund\u00e4rer CTA \u2014 Link"
+        },
+        {
+            "id": "text_sekundarer_cta_text",
+            "type": "text",
+            "label": "Sekund\u00e4rer CTA \u2014 Text",
+            "default": "Mehr erfahren"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Editorial Banner",
+            "category": "Marketing",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "index"
+        ]
+    }
+} {% endschema %}

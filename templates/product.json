@@ -1,0 +1,20 @@
+{
+    "sections": {
+        "header_nav": {
+            "type": "header_nav"
+        },
+        "product_main": {
+            "type": "product_main"
+        },
+        "footer_main": {
+            "type": "footer_main"
+        }
+    },
+    "layout": "product",
+    "wrapper": "main.kp-main",
+    "order": [
+        "header_nav",
+        "product_main",
+        "footer_main"
+    ]
+}

@@ -1,0 +1,59 @@
+<div class="kp-inner"><div class="kp-section__head"><h2 class="kp-section__title">
+{{ section.settings.text_raster_uberschrift }}
+</h2><a class="kp-section__link" href="{{ section.settings.featured_collection.url }}" li-object:href="section.settings.featured_collection.url"><span>
+{{ section.settings.text_link_text_alle_ansehen }}
+</span></a></div>{% for product in section.settings.collection_featured_collection.products limit: section.settings.collection_featured_collection_limit %}
+<div class="kp-grid">
+    {% for product in section.settings.featured_collection.products %}    <article class="kp-card" li-for="product in section.settings.featured_collection.products">
+                                    <a class="kp-card__media" href="{{ product.url }}" li-object:href="product.url"><img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.featured_image.alt }}" width="600" height="750" loading="lazy" li-object:src="product.featured_image | image_url: width: 800" li-object:alt="product.featured_image.alt"></a>
+                            <div class="kp-card__body"><h3 class="kp-card__title"><a href="{{ product.url }}" li-object:href="product.url" li-object:text="product.title">
+{{ product.title }}
+</a></h3><p class="kp-card__meta"><span class="kp-price" li-object="product.price | money">{{ product.price | money }}</span></p></div>
+                        </article>
+{% endfor %}
+</div>
+{% endfor %}</div> {% schema %} {
+    "tag": "section",
+    "name": "Featured Grid",
+    "class": "kp-section",
+    "settings": [
+        {
+            "id": "text_raster_uberschrift",
+            "type": "text",
+            "label": "Raster-\u00dcberschrift",
+            "default": "Highlights"
+        },
+        {
+            "id": "text_link_text_alle_ansehen",
+            "type": "text",
+            "label": "Link-Text Alle ansehen",
+            "default": "Alle ansehen"
+        },
+        {
+            "id": "collection_featured_collection",
+            "type": "collection",
+            "label": "Featured collection"
+        },
+        {
+            "type": "range",
+            "id": "collection_featured_collection_limit",
+            "min": 1,
+            "max": 99,
+            "step": 1,
+            "label": "Limit: Featured collection",
+            "default": 6
+        }
+    ],
+    "presets": [
+        {
+            "name": "Featured Grid",
+            "category": "Katalog",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "index"
+        ]
+    }
+} {% endschema %}
